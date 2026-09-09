@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Rug Size Selector Automated Test Runner</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { padding: 2rem; background: #f8f9fa; font-family: sans-serif; }
+    .test-pass { color: #198754; font-weight: bold; }
+    .test-fail { color: #dc3545; font-weight: bold; background: #ffe6e6; padding: 2px 6px; border-radius: 4px; }
+    .test-suite { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    #visualTestSandbox { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Rug Size Selector Test Suite</h1>
+  <div id="testSummary" class="alert alert-success"><strong>ALL TESTS PASSED!</strong> 64 / 64 checks passed.</div>
+  <div id="testResults">
+          <div class="test-suite">
+            <ol>
+              
+                <li class="test-pass">
+                  ✓ Product 14 exists in catalog
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 has sizesData
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Small dimensions is 5' × 8'
+                  <span class="text-muted small"> [5' × 8']</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Small price is 200
+                  <span class="text-muted small"> [200]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Small originalPrice is 240
+                  <span class="text-muted small"> [240]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Medium dimensions is 6' × 9'
+                  <span class="text-muted small"> [6' × 9']</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Medium price is 300
+                  <span class="text-muted small"> [300]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Medium originalPrice is 360
+                  <span class="text-muted small"> [360]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Large dimensions is 8' × 10'
+                  <span class="text-muted small"> [8' × 10']</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Large price is 440
+                  <span class="text-muted small"> [440]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Large originalPrice is 530
+                  <span class="text-muted small"> [530]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Small image is authentic detail-1
+                  <span class="text-muted small"> [assets/images/products/scandinavian-cotton-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Product 14 Large image is authentic detail-2
+                  <span class="text-muted small"> [assets/images/products/scandinavian-cotton-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ All 15 products have structured sizesData (small, medium, large)
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ All products have different prices for Small vs Large
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 initially rendered with Medium price $300
+                  <span class="text-muted small"> [$300]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 initially has Medium image
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/scandinavian-cotton-medium.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Price updated to $200
+                  <span class="text-muted small"> [$200]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Old Price updated to $240
+                  <span class="text-muted small"> [$240]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Discount badge updated to Save 17%
+                  <span class="text-muted small"> [Save 17%]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Image updated to detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/scandinavian-cotton-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Dimension text contains 5' × 8'
+                  <span class="text-muted small"> [Small (5' × 8')]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Detail link updated to size=small
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Small pill is active
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Small: Medium pill is not active
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Price updated to $440
+                  <span class="text-muted small"> [$440]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Old Price updated to $530
+                  <span class="text-muted small"> [$530]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Image updated to detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/scandinavian-cotton-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Dimension text contains 8' × 10'
+                  <span class="text-muted small"> [Large (8' × 10')]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Detail link updated to size=large
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 14 Large: Large pill is active
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 1 Small: Price updated to $600
+                  <span class="text-muted small"> [$600]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 1 Small: Image updated to isfahan detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/isfahan-silk-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 1 Large: Price updated to $1,260
+                  <span class="text-muted small"> [$1,260]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 1 Large: Image updated to isfahan detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/isfahan-silk-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart has 1 item after adding Small P14
+                  <span class="text-muted small"> [1]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 ID is 14
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 sizeTier is small
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 dimensions is 5' × 8'
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 price is $200 (not default/medium)
+                  <span class="text-muted small"> [200]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 originalPrice is 240
+                  <span class="text-muted small"> [240]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 discount is 17
+                  <span class="text-muted small"> [17]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 1 image is detail-1
+                  <span class="text-muted small"> [assets/images/products/scandinavian-cotton-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart has 2 items after adding Large P14
+                  <span class="text-muted small"> [2]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 2 sizeTier is large
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 2 dimensions is 8' × 10'
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 2 price is $440
+                  <span class="text-muted small"> [440]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 2 originalPrice is 530
+                  <span class="text-muted small"> [530]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Cart Item 2 image is detail-2
+                  <span class="text-muted small"> [assets/images/products/scandinavian-cotton-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Current selected tier is small
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Main image updated to detail-1
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Price updated to $200 USD
+                  <span class="text-muted small"> [$200 USD]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Old price updated to $240 USD
+                  <span class="text-muted small"> [$240 USD]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Discount badge is Save 17%
+                  <span class="text-muted small"> [Save 17%]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Size button has active class
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Small: Selected size display contains 5' × 8'
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Current selected tier is large
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Main image updated to detail-2
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Price updated to $440 USD
+                  <span class="text-muted small"> [$440 USD]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Old price updated to $530 USD
+                  <span class="text-muted small"> [$530 USD]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Large size button has active class
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Large: Selected size display contains 8' × 10'
+                  
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Medium: Price updated to $300 USD
+                  <span class="text-muted small"> [$300 USD]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Details Medium: Main image updated to medium image
+                  
+                </li>
+              
+            </ol>
+          </div>
+        </div>
+
+  <!-- Hidden Sandbox for Rendering DOM Elements -->
+  <div id="visualTestSandbox">
+    <div id="productsGridContainer">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-1">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=1&amp;size=large" id="cardThumbLink-1" class="product-thumb-link" title="View Isfahan Silk Medallion Rug">
+              <img id="cardImg-1" src="assets/images/products/isfahan-silk-detail-2.jpg" alt="Isfahan Silk Medallion Rug — Large (10' × 14')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-terracotta">Best Seller</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(1, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn is-wishlisted" title="Remove from Wishlist" data-wishlist-id="1" onclick="toggleWishlist(1, this)">
+                <i class="bi bi-heart-fill text-danger"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-1" data-product-id="1" title="Add to Bag" onclick="addCardProductToCart(1, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Traditional Rugs • Silk</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=1&amp;size=large" id="cardTitleLink-1">Isfahan Silk Medallion Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-1">Large (10' × 14')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-1" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill" data-product-id="1" data-tier="small" onclick="selectCardSize(1, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill" data-product-id="1" data-tier="medium" onclick="selectCardSize(1, 'medium', event)" aria-pressed="false" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="1" data-tier="large" onclick="selectCardSize(1, 'large', event)" aria-pressed="true" title="Large: 10' × 14'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-1">Size: <strong>10' × 14'</strong> <small class="text-muted">(Large)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.9</span>
+                <span class="text-muted small">(42)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-1">$1,260</span>
+              <span class="product-old-price" id="cardOldPrice-1" style="display: inline;">$1,630</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-1" style="display: inline-block;">Save 23%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-2">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=2&amp;size=medium" id="cardThumbLink-2" class="product-thumb-link" title="View Atlas Mountain Berber Wool Rug">
+              <img id="cardImg-2" src="assets/images/products/atlas-berber-rug.jpg" alt="Atlas Mountain Berber Wool Rug — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Artisan Crafted</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(2, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="2" onclick="toggleWishlist(2, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-2" data-product-id="2" title="Add to Bag" onclick="addCardProductToCart(2, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Handwoven Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=2&amp;size=medium" id="cardTitleLink-2">Atlas Mountain Berber Wool Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-2">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-2" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="2" data-tier="small" onclick="selectCardSize(2, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="2" data-tier="medium" onclick="selectCardSize(2, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="2" data-tier="large" onclick="selectCardSize(2, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-2">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(38)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-2">$620</span>
+              <span class="product-old-price" id="cardOldPrice-2" style="">$760</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-2" style="">Save 18%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-3">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=3&amp;size=medium" id="cardThumbLink-3" class="product-thumb-link" title="View Nordic Geometric Wool Flatweave">
+              <img id="cardImg-3" src="assets/images/products/nordic-geometric-rug.jpg" alt="Nordic Geometric Wool Flatweave — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-terracotta">Sale</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(3, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn is-wishlisted" title="Remove from Wishlist" data-wishlist-id="3" onclick="toggleWishlist(3, this)">
+                <i class="bi bi-heart-fill text-danger"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-3" data-product-id="3" title="Add to Bag" onclick="addCardProductToCart(3, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Modern Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=3&amp;size=medium" id="cardTitleLink-3">Nordic Geometric Wool Flatweave</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-3">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-3" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="3" data-tier="small" onclick="selectCardSize(3, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="3" data-tier="medium" onclick="selectCardSize(3, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="3" data-tier="large" onclick="selectCardSize(3, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-3">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(34)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-3">$490</span>
+              <span class="product-old-price" id="cardOldPrice-3" style="">$580</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-3" style="">Save 16%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-4">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=4&amp;size=medium" id="cardThumbLink-4" class="product-thumb-link" title="View Oushak Heritage Botanical Runner">
+              <img id="cardImg-4" src="assets/images/products/oushak-runner-rug.jpg" alt="Oushak Heritage Botanical Runner — Medium (2.5' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Popular</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(4, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="4" onclick="toggleWishlist(4, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-4" data-product-id="4" title="Add to Bag" onclick="addCardProductToCart(4, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Runner Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=4&amp;size=medium" id="cardTitleLink-4">Oushak Heritage Botanical Runner</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-4">Medium (2.5' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-4" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="4" data-tier="small" onclick="selectCardSize(4, 'small', event)" aria-pressed="false" title="Small: 2.5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="4" data-tier="medium" onclick="selectCardSize(4, 'medium', event)" aria-pressed="true" title="Medium: 2.5' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="4" data-tier="large" onclick="selectCardSize(4, 'large', event)" aria-pressed="false" title="Large: 2.5' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-4">Size: <strong>2.5' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.9</span>
+                <span class="text-muted small">(19)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-4">$480</span>
+              <span class="product-old-price" id="cardOldPrice-4" style="">$560</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-4" style="">Save 14%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-5">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=5&amp;size=medium" id="cardThumbLink-5" class="product-thumb-link" title="View Kyoto Organic Jute Braided Carpet">
+              <img id="cardImg-5" src="assets/images/products/braided-jute-carpet.jpg" alt="Kyoto Organic Jute Braided Carpet — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Eco-Friendly</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(5, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="5" onclick="toggleWishlist(5, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-5" data-product-id="5" title="Add to Bag" onclick="addCardProductToCart(5, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Luxury Carpets • Jute</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=5&amp;size=medium" id="cardTitleLink-5">Kyoto Organic Jute Braided Carpet</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-5">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-5" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="5" data-tier="small" onclick="selectCardSize(5, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="5" data-tier="medium" onclick="selectCardSize(5, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="5" data-tier="large" onclick="selectCardSize(5, 'large', event)" aria-pressed="false" title="Large: Round 8'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-5">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.6</span>
+                <span class="text-muted small">(24)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-5">$340</span>
+              <span class="product-old-price" id="cardOldPrice-5" style="">$410</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-5" style="">Save 17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-6">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=6&amp;size=medium" id="cardThumbLink-6" class="product-thumb-link" title="View Bauhaus Modern Geometric Wool Rug">
+              <img id="cardImg-6" src="assets/images/products/bauhaus-geometric-rug.jpg" alt="Bauhaus Modern Geometric Wool Rug — Medium (9' × 12')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-terracotta">Architectural</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(6, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="6" onclick="toggleWishlist(6, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-6" data-product-id="6" title="Add to Bag" onclick="addCardProductToCart(6, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Modern Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=6&amp;size=medium" id="cardTitleLink-6">Bauhaus Modern Geometric Wool Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-6">Medium (9' × 12')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-6" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="6" data-tier="small" onclick="selectCardSize(6, 'small', event)" aria-pressed="false" title="Small: 8' × 10'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="6" data-tier="medium" onclick="selectCardSize(6, 'medium', event)" aria-pressed="true" title="Medium: 9' × 12'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="6" data-tier="large" onclick="selectCardSize(6, 'large', event)" aria-pressed="false" title="Large: 10' × 14'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-6">Size: <strong>9' × 12'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(31)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-6">$720</span>
+              <span class="product-old-price" id="cardOldPrice-6" style="">$890</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-6" style="">Save 19%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-7">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=7&amp;size=medium" id="cardThumbLink-7" class="product-thumb-link" title="View Caspian Hand-Knotted Silk Rug">
+              <img id="cardImg-7" src="assets/images/products/caspian-silk-rug.jpg" alt="Caspian Hand-Knotted Silk Rug — Medium (9' × 12')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Masterpiece</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(7, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="7" onclick="toggleWishlist(7, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-7" data-product-id="7" title="Add to Bag" onclick="addCardProductToCart(7, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Traditional Rugs • Silk</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=7&amp;size=medium" id="cardTitleLink-7">Caspian Hand-Knotted Silk Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-7">Medium (9' × 12')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-7" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="7" data-tier="small" onclick="selectCardSize(7, 'small', event)" aria-pressed="false" title="Small: 8' × 10'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="7" data-tier="medium" onclick="selectCardSize(7, 'medium', event)" aria-pressed="true" title="Medium: 9' × 12'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="7" data-tier="large" onclick="selectCardSize(7, 'large', event)" aria-pressed="false" title="Large: 10' × 14'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-7">Size: <strong>9' × 12'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">5</span>
+                <span class="text-muted small">(15)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-7">$1,250</span>
+              <span class="product-old-price" id="cardOldPrice-7" style="">$1,500</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-7" style="">Save 17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-8">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=8&amp;size=medium" id="cardThumbLink-8" class="product-thumb-link" title="View Santorini Terrace Diamond Outdoor Rug">
+              <img id="cardImg-8" src="assets/images/products/santorini-outdoor-terrace-rug.jpg" alt="Santorini Terrace Diamond Outdoor Rug — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-terracotta">Weatherproof</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(8, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="8" onclick="toggleWishlist(8, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-8" data-product-id="8" title="Add to Bag" onclick="addCardProductToCart(8, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Outdoor Rugs • Natural Fibers</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=8&amp;size=medium" id="cardTitleLink-8">Santorini Terrace Diamond Outdoor Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-8">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-8" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="8" data-tier="small" onclick="selectCardSize(8, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="8" data-tier="medium" onclick="selectCardSize(8, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="8" data-tier="large" onclick="selectCardSize(8, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-8">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(24)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-8">$320</span>
+              <span class="product-old-price" id="cardOldPrice-8" style="">$390</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-8" style="">Save 18%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-9">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=9&amp;size=medium" id="cardThumbLink-9" class="product-thumb-link" title="View Anatolian Vintage Distressed Rug">
+              <img id="cardImg-9" src="assets/images/products/anatolian-vintage-rug.jpg" alt="Anatolian Vintage Distressed Rug — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Vintage Wash</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(9, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="9" onclick="toggleWishlist(9, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-9" data-product-id="9" title="Add to Bag" onclick="addCardProductToCart(9, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Traditional Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=9&amp;size=medium" id="cardTitleLink-9">Anatolian Vintage Distressed Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-9">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-9" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="9" data-tier="small" onclick="selectCardSize(9, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="9" data-tier="medium" onclick="selectCardSize(9, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="9" data-tier="large" onclick="selectCardSize(9, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-9">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.7</span>
+                <span class="text-muted small">(18)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-9">$580</span>
+              <span class="product-old-price" id="cardOldPrice-9" style="">$690</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-9" style="">Save 16%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-11">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=11&amp;size=medium" id="cardThumbLink-11" class="product-thumb-link" title="View Moroccan Tribal Diamond Runner">
+              <img id="cardImg-11" src="assets/images/products/moroccan-diamond-runner.jpg" alt="Moroccan Tribal Diamond Runner — Medium (2.5' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Hand Spun</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(11, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="11" onclick="toggleWishlist(11, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-11" data-product-id="11" title="Add to Bag" onclick="addCardProductToCart(11, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Runner Rugs • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=11&amp;size=medium" id="cardTitleLink-11">Moroccan Tribal Diamond Runner</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-11">Medium (2.5' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-11" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="11" data-tier="small" onclick="selectCardSize(11, 'small', event)" aria-pressed="false" title="Small: 2.5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="11" data-tier="medium" onclick="selectCardSize(11, 'medium', event)" aria-pressed="true" title="Medium: 2.5' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="11" data-tier="large" onclick="selectCardSize(11, 'large', event)" aria-pressed="false" title="Large: 2.5' × 14'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-11">Size: <strong>2.5' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(26)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-11">$420</span>
+              <span class="product-old-price" id="cardOldPrice-11" style="">$490</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-11" style="">Save 14%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-12">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=12&amp;size=medium" id="cardThumbLink-12" class="product-thumb-link" title="View Solstice Organic Jute Loop Rug">
+              <img id="cardImg-12" src="assets/images/products/jute-loop-rug.jpg" alt="Solstice Organic Jute Loop Rug — Medium (6' × 9')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Artisan Looped</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(12, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="12" onclick="toggleWishlist(12, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-12" data-product-id="12" title="Add to Bag" onclick="addCardProductToCart(12, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Handwoven Rugs • Jute</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=12&amp;size=medium" id="cardTitleLink-12">Solstice Organic Jute Loop Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-12">Medium (6' × 9')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-12" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="12" data-tier="small" onclick="selectCardSize(12, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="12" data-tier="medium" onclick="selectCardSize(12, 'medium', event)" aria-pressed="true" title="Medium: 6' × 9'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="12" data-tier="large" onclick="selectCardSize(12, 'large', event)" aria-pressed="false" title="Large: 8' × 10'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-12">Size: <strong>6' × 9'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.6</span>
+                <span class="text-muted small">(21)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-12">$310</span>
+              <span class="product-old-price" id="cardOldPrice-12" style="">$380</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-12" style="">Save 18%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-13">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=13&amp;size=medium" id="cardThumbLink-13" class="product-thumb-link" title="View Amalfi Veranda Striped Outdoor Rug">
+              <img id="cardImg-13" src="assets/images/products/amalfi-veranda-outdoor-rug.jpg" alt="Amalfi Veranda Striped Outdoor Rug — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">All-Weather</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(13, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="13" onclick="toggleWishlist(13, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-13" data-product-id="13" title="Add to Bag" onclick="addCardProductToCart(13, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Outdoor Rugs • Natural Fibers</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=13&amp;size=medium" id="cardTitleLink-13">Amalfi Veranda Striped Outdoor Rug</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-13">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-13" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="13" data-tier="small" onclick="selectCardSize(13, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="13" data-tier="medium" onclick="selectCardSize(13, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="13" data-tier="large" onclick="selectCardSize(13, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-13">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.7</span>
+                <span class="text-muted small">(19)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-13">$340</span>
+              <span class="product-old-price" id="cardOldPrice-13" style="">$410</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-13" style="">Save 17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-10">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=10&amp;size=medium" id="cardThumbLink-10" class="product-thumb-link" title="View Jaipur Hand-Block Printed Cotton Dhurrie">
+              <img id="cardImg-10" src="assets/images/products/handwoven-kilim-rug.jpg" alt="Jaipur Hand-Block Printed Cotton Dhurrie — Medium (8' × 10')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Pure Cotton</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(10, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="10" onclick="toggleWishlist(10, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-10" data-product-id="10" title="Add to Bag" onclick="addCardProductToCart(10, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Handwoven Rugs • Cotton</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=10&amp;size=medium" id="cardTitleLink-10">Jaipur Hand-Block Printed Cotton Dhurrie</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-10">Medium (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-10" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="10" data-tier="small" onclick="selectCardSize(10, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="10" data-tier="medium" onclick="selectCardSize(10, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="10" data-tier="large" onclick="selectCardSize(10, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-10">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.8</span>
+                <span class="text-muted small">(22)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-10">$360</span>
+              <span class="product-old-price" id="cardOldPrice-10" style="">$420</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-10" style="">Save 14%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-14">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=14&amp;size=large" id="cardThumbLink-14" class="product-thumb-link" title="View Scandinavian Ribbed Cotton Flatweave">
+              <img id="cardImg-14" src="assets/images/products/scandinavian-cotton-detail-2.jpg" alt="Scandinavian Ribbed Cotton Flatweave — Large (8' × 10')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-gold">Organic Cotton</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(14, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="14" onclick="toggleWishlist(14, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-14" data-product-id="14" title="Add to Bag" onclick="addCardProductToCart(14, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Modern Rugs • Cotton</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=14&amp;size=large" id="cardTitleLink-14">Scandinavian Ribbed Cotton Flatweave</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-14">Large (8' × 10')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-14" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill" data-product-id="14" data-tier="small" onclick="selectCardSize(14, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill" data-product-id="14" data-tier="medium" onclick="selectCardSize(14, 'medium', event)" aria-pressed="false" title="Medium: 6' × 9'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="14" data-tier="large" onclick="selectCardSize(14, 'large', event)" aria-pressed="true" title="Large: 8' × 10'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-14">Size: <strong>8' × 10'</strong> <small class="text-muted">(Large)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.7</span>
+                <span class="text-muted small">(16)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-14">$440</span>
+              <span class="product-old-price" id="cardOldPrice-14" style="display: inline;">$530</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-14" style="display: inline-block;">Save 17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <div class="product-card" id="productCard-15">
+          <div class="product-thumb-box">
+            <a href="product-details.html?id=15&amp;size=medium" id="cardThumbLink-15" class="product-thumb-link" title="View Manhattan Velvet Plush Broadloom Carpet">
+              <img id="cardImg-15" src="assets/images/products/manhattan-velvet-carpet.jpg" alt="Manhattan Velvet Plush Broadloom Carpet — Medium (10' × 14')" loading="lazy">
+            </a>
+            <div class="product-badge-group">
+              <span class="badge-luxury badge-luxury-terracotta">Ultra Plush</span>
+            </div>
+            <div class="product-actions-bar">
+              <button class="product-action-btn" title="Quick View" onclick="openQuickViewWithTier(15, event)">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class="product-action-btn " title="Add to Wishlist" data-wishlist-id="15" onclick="toggleWishlist(15, this)">
+                <i class="bi bi-heart"></i>
+              </button>
+              <button class="product-action-btn card-add-to-cart-btn" id="cardAddToCartBtn-15" data-product-id="15" title="Add to Bag" onclick="addCardProductToCart(15, event)">
+                <i class="bi bi-bag-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info-box">
+            <div class="product-category-tag">Luxury Carpets • Wool</div>
+            <h5 class="product-name">
+              <a href="product-details.html?id=15&amp;size=medium" id="cardTitleLink-15">Manhattan Velvet Plush Broadloom Carpet</a>
+            </h5>
+            
+            <!-- Dynamic Small, Medium, Large Size Selector -->
+            <div class="card-size-selector-group">
+              <div class="card-size-selector-label">
+                <span>Select Dimension:</span>
+                <span class="card-size-val" id="cardSizeLabel-15">Medium (10' × 14')</span>
+              </div>
+              <div class="card-size-pills" id="cardSizePills-15" role="group" aria-label="Rug dimension selection">
+                <button type="button" class="card-size-pill " data-product-id="15" data-tier="small" onclick="selectCardSize(15, 'small', event)" aria-pressed="false" title="Small: 8' × 10'">
+                  Small
+                </button>
+                <button type="button" class="card-size-pill active" data-product-id="15" data-tier="medium" onclick="selectCardSize(15, 'medium', event)" aria-pressed="true" title="Medium: 10' × 14'">
+                  Medium
+                </button>
+                <button type="button" class="card-size-pill " data-product-id="15" data-tier="large" onclick="selectCardSize(15, 'large', event)" aria-pressed="false" title="Large: 12' × 16'">
+                  Large
+                </button>
+              </div>
+            </div>
+
+            <div class="product-meta d-flex justify-content-between align-items-center">
+              <span id="cardMetaSize-15">Size: <strong>10' × 14'</strong> <small class="text-muted">(Medium)</small></span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <span class="ms-1 fw-bold text-heading small">4.9</span>
+                <span class="text-muted small">(27)</span>
+              </div>
+            </div>
+            
+            <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
+              <span class="product-current-price" id="cardPrice-15">$980</span>
+              <span class="product-old-price" id="cardOldPrice-15" style="">$1,200</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-15" style="">Save 18%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cartDrawer">
+      <div id="cartDrawerItems">
+          <div class="cart-item-row align-items-center">
+            <a href="product-details.html?id=14&amp;size=small"><img src="assets/images/products/scandinavian-cotton-detail-1.jpg" alt="Scandinavian Ribbed Cotton Flatweave" class="cart-item-thumb"></a>
+            <div class="flex-grow-1">
+              <h6 class="mb-1 font-serif fw-bold"><a href="product-details.html?id=14&amp;size=small" class="text-heading text-decoration-none">Scandinavian Ribbed Cotton Flatweave</a></h6>
+              <div class="text-muted small mb-2 d-flex align-items-center gap-1">
+                <span class="badge bg-secondary-subtle text-secondary text-uppercase fw-semibold" style="font-size: 0.7rem;">Small</span>
+                <span>5' × 8'</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <button class="cart-qty-btn" onclick="updateCartQty(0, -1)">-</button>
+                  <span class="fw-bold px-1">1</span>
+                  <button class="cart-qty-btn" onclick="updateCartQty(0, 1)">+</button>
+                </div>
+                <div>
+                  <div class="fw-bold text-terracotta">$200</div>
+                  <div class="smaller text-muted text-decoration-line-through text-end">$240</div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-link text-muted p-1 ms-2" onclick="removeFromCart(0)" title="Remove item">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        
+          <div class="cart-item-row align-items-center">
+            <a href="product-details.html?id=14&amp;size=large"><img src="assets/images/products/scandinavian-cotton-detail-2.jpg" alt="Scandinavian Ribbed Cotton Flatweave" class="cart-item-thumb"></a>
+            <div class="flex-grow-1">
+              <h6 class="mb-1 font-serif fw-bold"><a href="product-details.html?id=14&amp;size=large" class="text-heading text-decoration-none">Scandinavian Ribbed Cotton Flatweave</a></h6>
+              <div class="text-muted small mb-2 d-flex align-items-center gap-1">
+                <span class="badge bg-secondary-subtle text-secondary text-uppercase fw-semibold" style="font-size: 0.7rem;">Large</span>
+                <span>8' × 10'</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <button class="cart-qty-btn" onclick="updateCartQty(1, -1)">-</button>
+                  <span class="fw-bold px-1">1</span>
+                  <button class="cart-qty-btn" onclick="updateCartQty(1, 1)">+</button>
+                </div>
+                <div>
+                  <div class="fw-bold text-terracotta">$440</div>
+                  <div class="smaller text-muted text-decoration-line-through text-end">$530</div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-link text-muted p-1 ms-2" onclick="removeFromCart(1)" title="Remove item">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+    </div>
+    <!-- Product Details Sandbox Elements -->
+    <img id="mainProductImage" src="assets/images/products/scandinavian-cotton-medium.jpg" alt="Scandinavian Ribbed Cotton Flatweave — Medium (6' × 9')" style="transition: opacity 0.22s; opacity: 1;">
+    <span id="pdCurrentDimensionText">Medium: 6' × 9'</span>
+    <span id="pdSelectedSizeDisplay">Medium (6' × 9')</span>
+    <span id="pdSpecSize">6' × 9' (Medium)</span>
+    <span id="pdPrice">$300 USD</span>
+    <span id="pdOldPrice" style="display: inline;">$360 USD</span>
+    <span id="pdSaveBadge" style="display: inline-block;">Save 17%</span>
+    <div id="pdSizeOptions">
+          <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small" aria-pressed="false">Small (5' × 8')</button>
+          <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium" aria-pressed="true">Medium (6' × 9')</button>
+          <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large" aria-pressed="false">Large (8' × 10')</button>
+        </div>
+    <div id="pdRoomScaleBar"></div>
+    <div id="pdThumbnailsRow"></div>
+  </div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+  <script>
+    const results = [];
+    function assert(name, condition, details = '') {
+      results.push({ name, pass: !!condition, details });
+      console.log((condition ? 'PASS: ' : 'FAIL: ') + name + (details ? ' (' + details + ')' : ''));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        localStorage.clear();
+
+        // ==========================================
+        // SUITE 1: Data Structure Verification
+        // ==========================================
+        const p14 = window.PRODUCTS_DATA.find(p => p.id === 14);
+        assert('Product 14 exists in catalog', !!p14);
+        assert('Product 14 has sizesData', !!(p14 && p14.sizesData));
+        assert('Product 14 Small dimensions is 5\' × 8\'', p14 && p14.sizesData.small.dimensions === "5' × 8'", p14.sizesData.small.dimensions);
+        assert('Product 14 Small price is 200', p14 && p14.sizesData.small.price === 200, p14.sizesData.small.price);
+        assert('Product 14 Small originalPrice is 240', p14 && p14.sizesData.small.originalPrice === 240, p14.sizesData.small.originalPrice);
+        assert('Product 14 Medium dimensions is 6\' × 9\'', p14 && p14.sizesData.medium.dimensions === "6' × 9'", p14.sizesData.medium.dimensions);
+        assert('Product 14 Medium price is 300', p14 && p14.sizesData.medium.price === 300, p14.sizesData.medium.price);
+        assert('Product 14 Medium originalPrice is 360', p14 && p14.sizesData.medium.originalPrice === 360, p14.sizesData.medium.originalPrice);
+        assert('Product 14 Large dimensions is 8\' × 10\'', p14 && p14.sizesData.large.dimensions === "8' × 10'", p14.sizesData.large.dimensions);
+        assert('Product 14 Large price is 440', p14 && p14.sizesData.large.price === 440, p14.sizesData.large.price);
+        assert('Product 14 Large originalPrice is 530', p14 && p14.sizesData.large.originalPrice === 530, p14.sizesData.large.originalPrice);
+        assert('Product 14 Small image is authentic detail-1', p14.sizesData.small.image.includes('scandinavian-cotton-detail-1'), p14.sizesData.small.image);
+        assert('Product 14 Large image is authentic detail-2', p14.sizesData.large.image.includes('scandinavian-cotton-detail-2'), p14.sizesData.large.image);
+
+        // Verify all 15 products have unique sizesData
+        let allHaveSizes = true;
+        let allDifferentPrices = true;
+        window.PRODUCTS_DATA.forEach(p => {
+          if (!p.sizesData || !p.sizesData.small || !p.sizesData.medium || !p.sizesData.large) allHaveSizes = false;
+          if (p.sizesData.small.price === p.sizesData.large.price) allDifferentPrices = false;
+        });
+        assert('All 15 products have structured sizesData (small, medium, large)', allHaveSizes);
+        assert('All products have different prices for Small vs Large', allDifferentPrices);
+
+        // ==========================================
+        // SUITE 2: Shop / Catalog Card Dynamic Updates
+        // ==========================================
+        const container = document.getElementById('productsGridContainer');
+        container.innerHTML = window.PRODUCTS_DATA.map(window.renderProductCard).join('');
+
+        // Test Product 14 Card: Initially Medium
+        const p14Img = document.getElementById('cardImg-14');
+        const p14Price = document.getElementById('cardPrice-14');
+        const p14OldPrice = document.getElementById('cardOldPrice-14');
+        const p14Discount = document.getElementById('cardDiscount-14');
+        const p14SizeLabel = document.getElementById('cardSizeLabel-14');
+        const p14MetaSize = document.getElementById('cardMetaSize-14');
+        const p14ThumbLink = document.getElementById('cardThumbLink-14');
+        const p14TitleLink = document.getElementById('cardTitleLink-14');
+
+        assert('Card 14 initially rendered with Medium price $300', p14Price.textContent === '$300', p14Price.textContent);
+        assert('Card 14 initially has Medium image', p14Img.src.includes('scandinavian-cotton-medium') || p14Img.src.includes('nordic-flatweave-rug'), p14Img.src);
+
+        // 1. Click Small on Card 14
+        window.selectCardSize(14, 'small');
+        assert('Card 14 Small: Price updated to $200', p14Price.textContent === '$200', p14Price.textContent);
+        assert('Card 14 Small: Old Price updated to $240', p14OldPrice.textContent === '$240', p14OldPrice.textContent);
+        assert('Card 14 Small: Discount badge updated to Save 17%', p14Discount.textContent === 'Save 17%', p14Discount.textContent);
+        assert('Card 14 Small: Image updated to detail-1', p14Img.src.includes('scandinavian-cotton-detail-1'), p14Img.src);
+        assert('Card 14 Small: Dimension text contains 5\' × 8\'', p14SizeLabel.textContent.includes("5' × 8'"), p14SizeLabel.textContent);
+        assert('Card 14 Small: Detail link updated to size=small', p14ThumbLink.href.includes('size=small') && p14TitleLink.href.includes('size=small'));
+
+        const smallPill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="small"]');
+        const medPill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="medium"]');
+        const largePill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="large"]');
+        assert('Card 14 Small: Small pill is active', smallPill.classList.contains('active') && smallPill.getAttribute('aria-pressed') === 'true');
+        assert('Card 14 Small: Medium pill is not active', !medPill.classList.contains('active'));
+
+        // 2. Click Large on Card 14
+        window.selectCardSize(14, 'large');
+        assert('Card 14 Large: Price updated to $440', p14Price.textContent === '$440', p14Price.textContent);
+        assert('Card 14 Large: Old Price updated to $530', p14OldPrice.textContent === '$530', p14OldPrice.textContent);
+        assert('Card 14 Large: Image updated to detail-2', p14Img.src.includes('scandinavian-cotton-detail-2'), p14Img.src);
+        assert('Card 14 Large: Dimension text contains 8\' × 10\'', p14SizeLabel.textContent.includes("8' × 10'"), p14SizeLabel.textContent);
+        assert('Card 14 Large: Detail link updated to size=large', p14ThumbLink.href.includes('size=large'));
+        assert('Card 14 Large: Large pill is active', largePill.classList.contains('active') && largePill.getAttribute('aria-pressed') === 'true');
+
+        // 3. Test another product: Product 1 (Isfahan Silk)
+        const p1 = window.PRODUCTS_DATA.find(p => p.id === 1);
+        const p1Price = document.getElementById('cardPrice-1');
+        const p1Img = document.getElementById('cardImg-1');
+        window.selectCardSize(1, 'small');
+        assert('Card 1 Small: Price updated to $' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Small: Image updated to isfahan detail-1', p1Img.src.includes('isfahan-silk-detail-1'), p1Img.src);
+        window.selectCardSize(1, 'large');
+        assert('Card 1 Large: Price updated to $' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Large: Image updated to isfahan detail-2', p1Img.src.includes('isfahan-silk-detail-2'), p1Img.src);
+
+        // ==========================================
+        // SUITE 3: Cart / Add to Shopping Bag Verification
+        // ==========================================
+        localStorage.setItem('rug_store_cart', '[]');
+        // Add Small Product 14
+        window.selectCardSize(14, 'small');
+        window.addCardProductToCart(14);
+        let cart = window.getCart();
+        assert('Cart has 1 item after adding Small P14', cart.length === 1, cart.length);
+        let item1 = cart[0];
+        assert('Cart Item 1 ID is 14', item1 && item1.id === 14);
+        assert('Cart Item 1 sizeTier is small', item1 && item1.sizeTier === 'small');
+        assert('Cart Item 1 dimensions is 5\' × 8\'', item1 && item1.dimensions === "5' × 8'");
+        assert('Cart Item 1 price is $200 (not default/medium)', item1 && item1.price === 200, item1 && item1.price);
+        assert('Cart Item 1 originalPrice is 240', item1 && item1.originalPrice === 240, item1 && item1.originalPrice);
+        assert('Cart Item 1 discount is 17', item1 && item1.discount === 17, item1 && item1.discount);
+        assert('Cart Item 1 image is detail-1', item1 && item1.image.includes('scandinavian-cotton-detail-1'), item1 && item1.image);
+
+        // Add Large Product 14
+        window.selectCardSize(14, 'large');
+        window.addCardProductToCart(14);
+        cart = window.getCart();
+        assert('Cart has 2 items after adding Large P14', cart.length === 2, cart.length);
+        let item2 = cart[1];
+        assert('Cart Item 2 sizeTier is large', item2 && item2.sizeTier === 'large');
+        assert('Cart Item 2 dimensions is 8\' × 10\'', item2 && item2.dimensions === "8' × 10'");
+        assert('Cart Item 2 price is $440', item2 && item2.price === 440, item2 && item2.price);
+        assert('Cart Item 2 originalPrice is 530', item2 && item2.originalPrice === 530, item2 && item2.originalPrice);
+        assert('Cart Item 2 image is detail-2', item2 && item2.image.includes('scandinavian-cotton-detail-2'), item2 && item2.image);
+
+        // ==========================================
+        // SUITE 4: Product Details Page Simulation
+        // ==========================================
+        window.setCurrentDetailProduct(p14);
+        window.currentProduct = p14;
+        window.currentSelectedTier = 'medium';
+
+        // Setup DOM for product details simulation
+        const sizeOptionsContainer = document.getElementById('pdSizeOptions');
+        sizeOptionsContainer.innerHTML = `
+          <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small">Small (5' × 8')</button>
+          <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium">Medium (6' × 9')</button>
+          <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large">Large (8' × 10')</button>
+        `;
+
+        // Switch to Small
+        window.selectProductDetailTier('small', false);
+        assert('Details Small: Current selected tier is small', window.currentSelectedTier === 'small');
+        assert('Details Small: Main image updated to detail-1', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-detail-1'));
+        assert('Details Small: Price updated to $200 USD', document.getElementById('pdPrice').textContent === '$200 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Small: Old price updated to $240 USD', document.getElementById('pdOldPrice').textContent === '$240 USD', document.getElementById('pdOldPrice').textContent);
+        assert('Details Small: Discount badge is Save 17%', document.getElementById('pdSaveBadge').textContent === 'Save 17%', document.getElementById('pdSaveBadge').textContent);
+        assert('Details Small: Size button has active class', document.getElementById('sizeBtn-small').classList.contains('active'));
+        assert('Details Small: Selected size display contains 5\' × 8\'', document.getElementById('pdSelectedSizeDisplay').textContent.includes("5' × 8'"));
+
+        // Switch to Large
+        window.selectProductDetailTier('large', false);
+        assert('Details Large: Current selected tier is large', window.currentSelectedTier === 'large');
+        assert('Details Large: Main image updated to detail-2', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-detail-2'));
+        assert('Details Large: Price updated to $440 USD', document.getElementById('pdPrice').textContent === '$440 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Large: Old price updated to $530 USD', document.getElementById('pdOldPrice').textContent === '$530 USD', document.getElementById('pdOldPrice').textContent);
+        assert('Details Large: Large size button has active class', document.getElementById('sizeBtn-large').classList.contains('active'));
+        assert('Details Large: Selected size display contains 8\' × 10\'', document.getElementById('pdSelectedSizeDisplay').textContent.includes("8' × 10'"));
+
+        // Switch to Medium
+        window.selectProductDetailTier('medium', false);
+        assert('Details Medium: Price updated to $300 USD', document.getElementById('pdPrice').textContent === '$300 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Medium: Main image updated to medium image', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-medium') || document.getElementById('mainProductImage').src.includes('nordic-flatweave-rug'));
+
+        // ==========================================
+        // Render Summary
+        // ==========================================
+        const passedCount = results.filter(r => r.pass).length;
+        const totalCount = results.length;
+        const allPassed = passedCount === totalCount;
+
+        const summaryEl = document.getElementById('testSummary');
+        summaryEl.className = allPassed ? 'alert alert-success' : 'alert alert-danger';
+        summaryEl.innerHTML = `<strong>${allPassed ? 'ALL TESTS PASSED!' : 'TESTS FAILED'}</strong> ${passedCount} / ${totalCount} checks passed.`;
+
+        const resultsEl = document.getElementById('testResults');
+        resultsEl.innerHTML = `
+          <div class="test-suite">
+            <ol>
+              ${results.map(r => `
+                <li class="${r.pass ? 'test-pass' : 'test-fail'}">
+                  ${r.pass ? '✓' : '✗'} ${r.name}
+                  ${r.details ? `<span class="text-muted small"> [${r.details}]</span>` : ''}
+                </li>
+              `).join('')}
+            </ol>
+          </div>
+        `;
+
+        window.__TEST_RESULTS__ = { passedCount, totalCount, allPassed, results };
+      } catch (err) {
+        console.error(err);
+        document.getElementById('testSummary').className = 'alert alert-danger';
+        document.getElementById('testSummary').textContent = 'ERROR IN TEST RUNNER: ' + err.message;
+      }
+    });
+  </script>
+
+
+<div class="toast-container"><div class="custom-toast">
+      <i class="bi bi-bag-check-fill fs-4 text-terracotta"></i>
+      <div class="flex-grow-1">
+        <div class="fw-bold small text-heading">Added to Cart</div>
+        <div class="small text-muted">Scandinavian Ribbed Cotton Flatweave (Small: 5' × 8') was added to your bag.</div>
+      </div>
+      <button type="button" class="btn-close ms-2" style="font-size: 0.75rem;" onclick="this.parentElement.remove()"></button>
+    </div><div class="custom-toast">
+      <i class="bi bi-bag-check-fill fs-4 text-terracotta"></i>
+      <div class="flex-grow-1">
+        <div class="fw-bold small text-heading">Added to Cart</div>
+        <div class="small text-muted">Scandinavian Ribbed Cotton Flatweave (Large: 8' × 10') was added to your bag.</div>
+      </div>
+      <button type="button" class="btn-close ms-2" style="font-size: 0.75rem;" onclick="this.parentElement.remove()"></button>
+    </div></div></body></html>

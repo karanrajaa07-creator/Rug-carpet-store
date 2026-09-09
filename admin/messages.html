@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Inquiries & Messages — Atelier Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header d-flex justify-content-between align-items-center">
+        <a class="navbar-brand-logo text-heading text-decoration-none fs-5" href="index.html">
+          <i class="bi bi-gem text-gold"></i>
+          <span>ATELIER</span> ADMIN
+        </a>
+      </div>
+      <div class="admin-nav-group flex-grow-1">
+        <div class="admin-nav-label">Management</div>
+        <a href="index.html" class="admin-nav-link"><i class="bi bi-speedometer2"></i> Overview</a>
+        <a href="users.html" class="admin-nav-link"><i class="bi bi-people"></i> Customers & Staff</a>
+        <a href="products.html" class="admin-nav-link"><i class="bi bi-grid"></i> Rug Inventory</a>
+        <a href="orders.html" class="admin-nav-link"><i class="bi bi-box-seam"></i> Orders & Shipments</a>
+        <a href="messages.html" class="admin-nav-link active"><i class="bi bi-chat-dots"></i> Client Inquiries <span class="badge bg-danger ms-auto small">3</span></a>
+        <a href="appointments.html" class="admin-nav-link"><i class="bi bi-calendar-check"></i> Showroom Visits</a>
+        <div class="admin-nav-label mt-3">Intelligence</div>
+        <a href="analytics.html" class="admin-nav-link"><i class="bi bi-graph-up-arrow"></i> Sales Analytics</a>
+        <a href="settings.html" class="admin-nav-link"><i class="bi bi-gear"></i> Store Settings</a>
+        <div class="admin-nav-label mt-3">Public Site</div>
+        <a href="../index.html" class="admin-nav-link"><i class="bi bi-box-arrow-up-right"></i> Live Storefront</a>
+      </div>
+    </aside>
+
+    <div class="admin-main-content">
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="adminSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <h4 class="font-serif fw-bold mb-0">Client Concierge Inbox</h4>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl"><span class="rtl-toggle-text">RTL</span></button>
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-theme"><i class="bi bi-moon-stars theme-toggle-icon"></i></button>
+        </div>
+      </header>
+
+      <main class="p-4 p-md-5">
+        <div class="luxury-card p-4">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead class="bg-subtle small font-serif">
+                <tr>
+                  <th style="width: 40px;"></th>
+                  <th>Sender</th>
+                  <th>Subject</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr class="fw-bold bg-subtle bg-opacity-25">
+                  <td><i class="bi bi-envelope-fill text-terracotta"></i></td>
+                  <td>Sir Jonathan Price</td>
+                  <td>Custom Silk Runner for London Townhouse Hallway</td>
+                  <td>Today, 11:24 AM</td>
+                  <td><span class="badge bg-danger">Unread</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-luxury-primary py-0" data-bs-toggle="modal" data-bs-target="#replyMessageModal">Reply</button>
+                    <button class="btn btn-sm btn-link text-danger p-1" onclick="deleteTableRow(this, 'Message from Jonathan Price')"><i class="bi bi-trash"></i></button>
+                  </td>
+                </tr>
+                <tr class="fw-bold bg-subtle bg-opacity-25">
+                  <td><i class="bi bi-envelope-fill text-terracotta"></i></td>
+                  <td>Studio Giardini Milan</td>
+                  <td>Architectural Trade Application & 3D Sample Box Request</td>
+                  <td>Today, 09:15 AM</td>
+                  <td><span class="badge bg-danger">Unread</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-luxury-primary py-0" data-bs-toggle="modal" data-bs-target="#replyMessageModal">Reply</button>
+                    <button class="btn btn-sm btn-link text-danger p-1" onclick="deleteTableRow(this, 'Message from Studio Giardini')"><i class="bi bi-trash"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-envelope-open text-muted"></i></td>
+                  <td>Genevieve Laurent</td>
+                  <td>Question regarding natural lanolin scent on high-pile wool</td>
+                  <td>Yesterday</td>
+                  <td><span class="badge bg-secondary">Replied</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-0" data-bs-toggle="modal" data-bs-target="#replyMessageModal">View</button>
+                    <button class="btn btn-sm btn-link text-danger p-1" onclick="deleteTableRow(this, 'Message from Genevieve')"><i class="bi bi-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- REPLY MESSAGE MODAL -->
+  <div class="modal fade" id="replyMessageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-serif fw-bold">Concierge Reply</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form onsubmit="sendAdminReply(event)">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Recipient</label>
+              <input type="text" class="form-control" value="Sir Jonathan Price &lt;j.price@mayfair.co.uk&gt;" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Subject</label>
+              <input type="text" class="form-control" value="Re: Custom Silk Runner for London Townhouse Hallway">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Response</label>
+              <textarea class="form-control" rows="5" required placeholder="Type concierge response here...">Dear Sir Jonathan, Thank you for reaching out regarding your London residence hallway runner. Our senior weaver liaison in Isfahan has reviewed your dimensions...</textarea>
+            </div>
+            <button type="submit" class="btn btn-luxury-primary w-100">Send Encrypted Reply</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

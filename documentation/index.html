@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — Atelier Rugs HTML5 Template</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <style>
+    .doc-sidebar {
+      position: sticky;
+      top: 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .doc-sidebar a {
+      color: var(--text-body);
+      padding: 0.4rem 0.8rem;
+      display: block;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+    }
+    .doc-sidebar a:hover, .doc-sidebar a.active {
+      background-color: var(--color-terracotta-soft);
+      color: var(--color-terracotta);
+      font-weight: 600;
+    }
+    pre code {
+      background-color: var(--bg-subtle);
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      display: block;
+      color: var(--text-heading);
+      border: 1px solid var(--border-light);
+      font-size: 0.85rem;
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+</head>
+<body class="bg-body">
+
+  <header class="py-3 bg-surface border-bottom border-custom sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand-logo" href="../index.html">
+        <i class="bi bi-gem text-gold"></i>
+        <span>ATELIER</span> RUGS
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge badge-luxury-terracotta">Version 1.0.0</span>
+        <a href="../index.html" class="btn btn-luxury-primary btn-sm"><i class="bi bi-eye me-1"></i> View Live Template</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row g-5">
+      
+      <!-- Doc Sidebar -->
+      <div class="col-lg-3">
+        <div class="doc-sidebar p-3 luxury-card">
+          <h6 class="font-serif fw-bold text-uppercase small text-muted mb-3">Documentation Index</h6>
+          <nav class="nav flex-column">
+            <a href="#intro" class="active">1. Introduction</a>
+            <a href="#structure">2. Folder Structure</a>
+            <a href="#branding">3. Changing Logo & Fonts</a>
+            <a href="#colors">4. Color Palette & CSS Variables</a>
+            <a href="#products">5. Adding Products in JavaScript</a>
+            <a href="#darkmode">6. Dark Mode & RTL Support</a>
+            <a href="#customsizing">7. Custom Sizing Calculator</a>
+            <a href="#forms">8. Showroom Booking & Forms</a>
+            <a href="#dashboard">9. Admin Dashboard & Charts</a>
+            <a href="#credits">10. Sources & Credits</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Doc Content -->
+      <div class="col-lg-9">
+        
+        <!-- 1. Introduction -->
+        <section id="intro" class="luxury-card p-4 p-md-5 mb-5">
+          <div class="section-tag">ThemeForest Standard</div>
+          <h2 class="font-serif fw-bold mb-3">Rug & Carpet Store HTML5 Template</h2>
+          <p class="text-muted leading-relaxed">
+            Thank you for purchasing or evaluating the <strong>Rug & Carpet Store</strong> HTML5 Template. This template is designed specifically for luxury rug retailers, bespoke carpet ateliers, oriental heirloom galleries, and interior design firms.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-sm-4">
+              <div class="p-3 bg-subtle rounded border border-custom text-center">
+                <div class="fw-bold font-serif fs-4 text-terracotta">17</div>
+                <div class="small text-muted">Public HTML Pages</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 bg-subtle rounded border border-custom text-center">
+                <div class="fw-bold font-serif fs-4 text-gold">8</div>
+                <div class="small text-muted">Admin Dashboard Pages</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 bg-subtle rounded border border-custom text-center">
+                <div class="fw-bold font-serif fs-4 text-heading">100%</div>
+                <div class="small text-muted">Responsive & RTL Ready</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Folder Structure -->
+        <section id="structure" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">2. Folder Structure</h3>
+          <pre><code>rug-carpet-template/
+├── index.html                   # Home 1 - General Store & Services Showcase
+├── home-2.html                  # Home 2 - Luxury Interior Design & Bespoke Atelier
+├── about.html                   # About Us & Heritage Timeline
+├── services.html                # 8-Card Services Grid
+├── service-details.html         # Custom Rug Weaving Deep-Dive
+├── products.html                # E-Commerce Catalog with Sidebar Filters & Sorting
+├── product-details.html         # Product Single Page with Gallery & Reviews
+├── custom-sizing.html           # Dedicated Rug Dimension Calculator & Quote
+├── care-guide.html              # Comprehensive Rug Cleaning & Material Care
+├── blog.html                    # Blog Journal Listing with Categories & Search
+├── blog-details.html            # Single Article with Quotes, Share & Sidebar
+├── pricing.html                 # Pricing Packages (Essential, Premium, Bespoke)
+├── contact.html                 # Contact & Showroom Visit Booking
+├── login.html                   # Client Portal Login
+├── register.html                # Customer Registration
+├── 404.html                     # Custom 404 Page
+├── coming-soon.html             # Countdown Pre-Launch Page
+├── maintenance.html             # Maintenance Mode Page
+│
+├── admin/
+│   ├── index.html               # Admin Dashboard (KPIs, Charts, Orders, Customers)
+│   ├── users.html               # User Management Table & Actions
+│   ├── products.html            # Inventory & Product Catalog Management
+│   ├── orders.html              # Orders List & Status Tracking
+│   ├── messages.html            # Customer Inquiries & Messages Inbox
+│   ├── appointments.html        # Showroom Booking Approvals & Scheduling
+│   ├── analytics.html           # Analytics & Sales/Revenue Charts
+│   └── settings.html            # Store, Theme, Notifications & Profile Settings
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css            # Master Design System, CSS Variables, Components & Dark Mode
+│   │   ├── responsive.css       # Mobile-first Breakpoint Refinements (320px - 1400px)
+│   │   └── rtl.css              # Complete Right-to-Left Layout Overrides
+│   ├── js/
+│   │   ├── main.js              # Sticky Nav, Search, Modals, Stat Counters, Countdown
+│   │   ├── theme.js             # Light/Dark Mode & RTL Controller (localStorage)
+│   │   ├── products.js          # Catalog Database, Filtering, Sorting & Quick View
+│   │   ├── cart.js              # Interactive Cart Drawer, Wishlist, LocalStorage
+│   │   ├── validation.js        # Contact Form, Showroom Booking & Sizing Logic
+│   │   └── dashboard.js         # Admin Charts (Chart.js), Sidebar Toggle, Actions
+│   └── images/
+│
+└── documentation/
+    └── index.html               # This Documentation File</code></pre>
+        </section>
+
+        <!-- 3. Changing Logo & Fonts -->
+        <section id="branding" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">3. Changing Logo & Fonts</h3>
+          <p class="text-muted">
+            The template uses vector icon monograms + Google Fonts. To change the brand text or logo image in any header:
+          </p>
+          <pre><code>&lt;a class="navbar-brand navbar-brand-logo" href="index.html"&gt;
+  &lt;i class="bi bi-gem text-gold"&gt;&lt;/i&gt;
+  &lt;span&gt;YOUR BRAND&lt;/span&gt; STORE
+&lt;/a&gt;</code></pre>
+          <p class="text-muted mt-3">
+            To use a custom PNG or SVG image logo:
+          </p>
+          <pre><code>&lt;a class="navbar-brand" href="index.html"&gt;
+  &lt;img src="assets/images/logo.png" alt="Brand Logo" height="42"&gt;
+&lt;/a&gt;</code></pre>
+        </section>
+
+        <!-- 4. Colors & CSS Variables -->
+        <section id="colors" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">4. Customizing Color Palette</h3>
+          <p class="text-muted">
+            All brand colors are controlled via CSS custom properties in <code>assets/css/style.css</code>:
+          </p>
+          <pre><code>:root {
+  --color-terracotta: #C26D53;       /* Main brand accent */
+  --color-terracotta-hover: #A9563E;
+  --color-gold: #C5A880;             /* Luxury gold accent */
+  --color-sand: #D8C5B4;             /* Earthy neutral tone */
+  --bg-body: #FAF7F2;                /* Warm ivory background */
+}
+
+[data-theme="dark"] {
+  --bg-body: #141210;                /* Deep obsidian charcoal */
+  --bg-surface: #1E1B18;             /* Dark card surface */
+  --color-terracotta: #D77F64;
+}</code></pre>
+        </section>
+
+        <!-- 5. Products Database -->
+        <section id="products" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">5. Adding Products in JavaScript</h3>
+          <p class="text-muted">
+            All product catalog data is defined in <code>assets/js/products.js</code> inside <code>PRODUCTS_DATA</code>:
+          </p>
+          <pre><code>{
+  id: 13,
+  name: 'Samarkand Pomegranate Flatweave',
+  category: 'Traditional Rugs',
+  material: 'Wool',
+  color: 'Terracotta',
+  price: 640,
+  oldPrice: 780,
+  rating: 4.9,
+  reviewsCount: 16,
+  size: "8' x 10'",
+  availableSizes: ["5' x 8'", "8' x 10'", "9' x 12'"],
+  image: 'https://images.unsplash.com/...',
+  badge: 'New Season',
+  badgeColor: 'badge-luxury-terracotta'
+}</code></pre>
+        </section>
+
+        <!-- 6. Dark Mode & RTL -->
+        <section id="darkmode" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">6. Dark Mode & RTL Support</h3>
+          <p class="text-muted">
+            Dark mode and RTL are powered by <code>assets/js/theme.js</code>. The user preference is saved automatically in <code>localStorage</code>.
+          </p>
+          <ul>
+            <li><strong>Toggle Theme:</strong> Click any element with <code>data-action="toggle-theme"</code>.</li>
+            <li><strong>Toggle RTL:</strong> Click any element with <code>data-action="toggle-rtl"</code>.</li>
+          </ul>
+        </section>
+
+        <!-- 7. Custom Sizing -->
+        <section id="customsizing" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">7. Custom Rug Sizing Calculator</h3>
+          <p class="text-muted">
+            Located in <code>custom-sizing.html</code> and powered by <code>assets/js/validation.js</code>. It computes square footage from width × length in Feet, Meters, or Inches, applies material multipliers (Silk = $28/sq ft, Wool = $12.50/sq ft, Jute = $7.50/sq ft), and feeds the quote modal automatically.
+          </p>
+        </section>
+
+        <!-- 8. Forms & Showroom Booking -->
+        <section id="forms" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">8. Showroom Booking & Forms</h3>
+          <p class="text-muted">
+            The Showroom Appointment form in <code>contact.html</code> runs <code>handleShowroomBooking(event)</code>. It validates required inputs, generates an appointment reference code (e.g. <code>RCS-849201</code>), and displays an instant confirmation modal with reservation recap.
+          </p>
+        </section>
+
+        <!-- 9. Admin Dashboard -->
+        <section id="dashboard" class="luxury-card p-4 p-md-5 mb-5">
+          <h3 class="font-serif fw-bold mb-3">9. Admin Dashboard & Charts</h3>
+          <p class="text-muted">
+            The admin directory (<code>admin/</code>) contains 8 full pages. Visual charts are powered by <strong>Chart.js 4.x</strong> linked via CDN and configured in <code>assets/js/dashboard.js</code>. The dashboard automatically syncs with the user's Dark/Light mode preference.
+          </p>
+        </section>
+
+        <!-- 10. Credits -->
+        <section id="credits" class="luxury-card p-4 p-md-5">
+          <h3 class="font-serif fw-bold mb-3">10. Sources & Credits</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+            <li><strong>CSS Framework:</strong> Bootstrap 5.3.3 (https://getbootstrap.com)</li>
+            <li><strong>Icons:</strong> Bootstrap Icons (https://icons.getbootstrap.com)</li>
+            <li><strong>Typography:</strong> Google Fonts (Playfair Display & Plus Jakarta Sans)</li>
+            <li><strong>Charts:</strong> Chart.js 4.4.1 (https://www.chartjs.org)</li>
+            <li><strong>Photography:</strong> Unsplash Royalty-Free Curated Architectural Photography</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-4 bg-surface border-top border-custom text-center small text-muted">
+    © 2026 Atelier Rugs. Documentation.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+</body>
+</html>

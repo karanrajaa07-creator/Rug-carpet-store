@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Atelier Rugs</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <div class="admin-wrapper">
+    
+    <!-- ADMIN SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header d-flex justify-content-between align-items-center">
+        <a class="navbar-brand-logo text-heading text-decoration-none fs-5" href="index.html">
+          <i class="bi bi-gem text-gold"></i>
+          <span>ATELIER</span> ADMIN
+        </a>
+      </div>
+
+      <div class="admin-nav-group flex-grow-1">
+        <div class="admin-nav-label">Management</div>
+        <a href="index.html" class="admin-nav-link active"><i class="bi bi-speedometer2"></i> Overview</a>
+        <a href="users.html" class="admin-nav-link"><i class="bi bi-people"></i> Customers & Staff</a>
+        <a href="products.html" class="admin-nav-link"><i class="bi bi-grid"></i> Rug Inventory</a>
+        <a href="orders.html" class="admin-nav-link"><i class="bi bi-box-seam"></i> Orders & Shipments</a>
+        <a href="messages.html" class="admin-nav-link"><i class="bi bi-chat-dots"></i> Client Inquiries <span class="badge bg-danger ms-auto small">3</span></a>
+        <a href="appointments.html" class="admin-nav-link"><i class="bi bi-calendar-check"></i> Showroom Visits <span class="badge bg-warning text-dark ms-auto small">2</span></a>
+        
+        <div class="admin-nav-label mt-3">Intelligence</div>
+        <a href="analytics.html" class="admin-nav-link"><i class="bi bi-graph-up-arrow"></i> Sales Analytics</a>
+        <a href="settings.html" class="admin-nav-link"><i class="bi bi-gear"></i> Store Settings</a>
+
+        <div class="admin-nav-label mt-3">Public Site</div>
+        <a href="../index.html" class="admin-nav-link"><i class="bi bi-box-arrow-up-right"></i> Live Storefront</a>
+        <a href="../documentation/index.html" class="admin-nav-link"><i class="bi bi-file-earmark-code"></i> Documentation</a>
+      </div>
+
+      <!-- User Profile in Sidebar -->
+      <div class="p-3 border-top border-custom d-flex align-items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Isabella" class="rounded-circle" width="40" height="40">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Isabella Moreno</div>
+          <div class="text-muted small">Atelier Director</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="admin-main-content">
+      
+      <!-- TOPBAR -->
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="adminSidebarToggle">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <h4 class="font-serif fw-bold mb-0 d-none d-sm-block">Executive Dashboard</h4>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- RTL Toggle -->
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl" title="Toggle RTL / LTR layout">
+            <i class="bi bi-translate"></i> <span class="rtl-toggle-text">RTL</span>
+          </button>
+          <!-- Theme Toggle -->
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-theme" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <!-- Notifications -->
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm position-relative" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg" style="width: 280px;">
+              <li><h6 class="dropdown-header">Atelier Alerts</h6></li>
+              <li><a class="dropdown-item small" href="appointments.html"><i class="bi bi-calendar-event text-warning me-2"></i> New Showroom Visit (David K.)</a></li>
+              <li><a class="dropdown-item small" href="orders.html"><i class="bi bi-box text-success me-2"></i> Order #RCS-8492 ($3,080) Shipped</a></li>
+              <li><a class="dropdown-item small" href="messages.html"><i class="bi bi-envelope text-primary me-2"></i> Custom Silk CAD inquiry received</a></li>
+            </ul>
+          </div>
+          <!-- Admin Avatar -->
+          <a href="settings.html" class="d-flex align-items-center gap-2 text-decoration-none">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=100&q=80" alt="Isabella" class="rounded-circle" width="36" height="36">
+          </a>
+        </div>
+      </header>
+
+      <!-- DASHBOARD BODY CONTENT -->
+      <main class="p-4 p-md-5">
+        
+        <!-- Welcome Banner -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+          <div>
+            <h2 class="font-serif fw-bold mb-1">Welcome back, Isabella</h2>
+            <p class="text-muted small mb-0">Here is the active summary of luxury loom commissions, showroom reservations, and revenue.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="products.html" class="btn btn-luxury-outline btn-sm"><i class="bi bi-plus-lg me-1"></i> Add New Rug</a>
+            <a href="orders.html" class="btn btn-luxury-primary btn-sm"><i class="bi bi-download me-1"></i> Export Reports</a>
+          </div>
+        </div>
+
+        <!-- 6 METRIC CARDS -->
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-terracotta"><i class="bi bi-currency-dollar"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Revenue</span>
+                <h4 class="font-serif fw-bold mb-0">$486.2k</h4>
+                <span class="small text-success fw-bold"><i class="bi bi-arrow-up"></i> +18.4%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-gold"><i class="bi bi-bag-check"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Orders</span>
+                <h4 class="font-serif fw-bold mb-0">1,248</h4>
+                <span class="small text-success fw-bold"><i class="bi bi-arrow-up"></i> +12.1%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-blue"><i class="bi bi-people"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Clients</span>
+                <h4 class="font-serif fw-bold mb-0">3,840</h4>
+                <span class="small text-success fw-bold"><i class="bi bi-arrow-up"></i> +24.5%</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-green"><i class="bi bi-grid-3x3"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Rugs</span>
+                <h4 class="font-serif fw-bold mb-0">156</h4>
+                <span class="small text-muted">In Catalog</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-terracotta"><i class="bi bi-hourglass-split"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Pending</span>
+                <h4 class="font-serif fw-bold mb-0">14</h4>
+                <span class="small text-warning fw-bold">Loom Warping</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-2">
+            <div class="admin-metric-card">
+              <div class="admin-metric-icon metric-icon-green"><i class="bi bi-check-circle"></i></div>
+              <div>
+                <span class="text-muted small text-uppercase fw-bold">Delivered</span>
+                <h4 class="font-serif fw-bold mb-0">1,234</h4>
+                <span class="small text-muted">Fulfilled</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHARTS ROW -->
+        <div class="row g-4 mb-4">
+          <!-- Revenue Line Chart -->
+          <div class="col-lg-8">
+            <div class="luxury-card p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h5 class="font-serif fw-bold mb-0">Revenue Trajectory (USD)</h5>
+                  <span class="text-muted small">Comparing 2026 vs 2025 monthly performance</span>
+                </div>
+                <span class="badge badge-luxury-terracotta">+26.8% YoY</span>
+              </div>
+              <div style="height: 300px;">
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Orders Bar Chart -->
+          <div class="col-lg-4">
+            <div class="luxury-card p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h5 class="font-serif fw-bold mb-0">Weekly Orders</h5>
+                  <span class="text-muted small">Daily volume (Mon – Sun)</span>
+                </div>
+                <span class="badge badge-luxury-gold">330 Orders</span>
+              </div>
+              <div style="height: 300px;">
+                <canvas id="ordersChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECENT ORDERS TABLE & SHOWROOM RESERVATIONS -->
+        <div class="row g-4">
+          
+          <!-- Recent Orders -->
+          <div class="col-lg-8">
+            <div class="luxury-card p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="font-serif fw-bold mb-0">Recent Commissions & Orders</h5>
+                <a href="orders.html" class="small text-terracotta text-decoration-none fw-bold">View All Orders <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead class="bg-subtle small font-serif">
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Client</th>
+                      <th>Rug Selected</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="small">
+                    <tr>
+                      <td class="fw-bold">#RCS-9021</td>
+                      <td>Elena Rostova</td>
+                      <td>Isfahan Silk (8' × 10')</td>
+                      <td class="fw-bold text-terracotta">$850</td>
+                      <td><span class="badge bg-success">Delivered</span></td>
+                      <td class="text-end"><a href="orders.html" class="btn btn-sm btn-outline-secondary py-0">View</a></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">#RCS-9022</td>
+                      <td>Marcus Vance</td>
+                      <td>Bespoke Custom Wool (14' × 18')</td>
+                      <td class="fw-bold text-terracotta">$3,080</td>
+                      <td><span class="badge bg-warning text-dark">Loom Weaving</span></td>
+                      <td class="text-end"><a href="orders.html" class="btn btn-sm btn-outline-secondary py-0">View</a></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">#RCS-9023</td>
+                      <td>Sophia Sterling</td>
+                      <td>Atlas Berber Rug (9' × 12')</td>
+                      <td class="fw-bold text-terracotta">$620</td>
+                      <td><span class="badge bg-info text-dark">Shipped</span></td>
+                      <td class="text-end"><a href="orders.html" class="btn btn-sm btn-outline-secondary py-0">View</a></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">#RCS-9024</td>
+                      <td>Alexander Wright</td>
+                      <td>Caspian Silk (9' × 12')</td>
+                      <td class="fw-bold text-terracotta">$1,250</td>
+                      <td><span class="badge bg-warning text-dark">Processing</span></td>
+                      <td class="text-end"><a href="orders.html" class="btn btn-sm btn-outline-secondary py-0">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pending Showroom Reservations -->
+          <div class="col-lg-4">
+            <div class="luxury-card p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="font-serif fw-bold mb-0">Showroom Bookings</h5>
+                <a href="appointments.html" class="small text-terracotta text-decoration-none fw-bold">Manage All <i class="bi bi-arrow-right"></i></a>
+              </div>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="p-3 bg-subtle rounded-3 border border-custom">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold small">David Kensington</span>
+                    <span class="badge bg-primary">Tomorrow</span>
+                  </div>
+                  <div class="small text-muted mb-2"><i class="bi bi-clock me-1"></i> 2:00 PM • 2 Guests</div>
+                  <div class="small text-terracotta fw-bold mb-2">Bespoke Living Room Commission</div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-luxury-primary py-0" onclick="showToast('Approved', 'Showroom booking confirmed and calendar invite dispatched.', 'bi-check2')">Approve</button>
+                    <button class="btn btn-sm btn-outline-secondary py-0" onclick="showToast('Declined', 'Reservation slot released.', 'bi-x')">Decline</button>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-subtle rounded-3 border border-custom">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold small">Lady Vivienne Croft</span>
+                    <span class="badge bg-secondary">Friday</span>
+                  </div>
+                  <div class="small text-muted mb-2"><i class="bi bi-clock me-1"></i> 4:30 PM • 4 Guests</div>
+                  <div class="small text-terracotta fw-bold mb-2">Antique Silk Viewing</div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-luxury-primary py-0" onclick="showToast('Approved', 'Showroom booking confirmed and calendar invite dispatched.', 'bi-check2')">Approve</button>
+                    <button class="btn btn-sm btn-outline-secondary py-0" onclick="showToast('Declined', 'Reservation slot released.', 'bi-x')">Decline</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

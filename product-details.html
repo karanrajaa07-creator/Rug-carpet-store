@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isfahan Silk Medallion Rug — Atelier Rugs</title>
+  <meta name="description" content="Hand-knotted Isfahan medallion rug crafted from pure Mulberry silk and high-twist mountain wool yarn. Available in multiple room dimensions.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PRODUCT BREADCRUMB -->
+  <div class="py-3 bg-subtle-box border-bottom border-custom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="products.html">Collections</a></li>
+          <li class="breadcrumb-item"><a href="products.html?category=Traditional" id="breadcrumbCategoryLink">Traditional Rugs</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbProductName">Isfahan Silk Medallion Rug</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAILS MAIN -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row g-5">
+        
+        <!-- Image Gallery & Thumbnails -->
+        <div class="col-lg-6">
+          <div class="position-sticky" style="top: 100px;">
+            <!-- Main Product Image with Dimension Badge -->
+            <div class="dimension-preview-wrapper mb-3">
+              <div class="dimension-image-badge" id="pdCurrentDimensionTag">
+                <span class="badge-dot"></span>
+                <span id="pdCurrentDimensionText">Medium Dimension: 8' × 10'</span>
+              </div>
+              <img src="assets/images/products/isfahan-silk-rug.jpg" id="mainProductImage" alt="Product Image">
+            </div>
+
+            <!-- Room-Scale Dimension Switcher Bar -->
+            <div class="room-scale-bar mb-3" id="pdRoomScaleBar">
+              <!-- Dynamically populated with Small, Medium, Large dimension quick buttons -->
+            </div>
+
+            <!-- Thumbnails Row (Small, Medium, Large Dimension Views) -->
+            <div class="row g-2" id="pdThumbnailsRow">
+              <!-- Dynamically populated with dimension thumb cards -->
+            </div>
+
+            <!-- Dimension Guide Callout -->
+            <div class="p-3 rounded-3 bg-subtle border border-custom mt-3">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-rulers text-terracotta fs-5"></i>
+                <strong class="small text-heading">Authentic Room Scale Visualization</strong>
+              </div>
+              <p class="small text-muted mb-0">
+                Explore how this exact rug scales within this architectural room. Select any dimension to view authentic proportions without altering furniture, floor, or lighting.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Purchase Information -->
+        <div class="col-lg-6">
+          <div class="section-tag" id="pdBadge">Authentic Hand-Knotted Heritage</div>
+          <h1 class="font-serif fw-bold display-5 mb-2" id="pdTitle">Isfahan Silk Medallion Rug</h1>
+          
+          <!-- Rating & Stock -->
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="rating-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="ms-1 fw-bold text-heading" id="pdRating">4.9</span>
+              <span class="text-muted small" id="pdReviewsCount">(42 verified collector reviews)</span>
+            </div>
+            <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-2 py-1">In Stock • Ready for Placement</span>
+          </div>
+
+          <!-- Price Display -->
+          <div class="d-flex align-items-baseline gap-3 mb-4 pb-3 border-bottom border-custom">
+            <h2 class="font-serif fw-bold text-terracotta mb-0" id="pdPrice">$850 USD</h2>
+            <span class="text-muted text-decoration-line-through fs-5" id="pdOldPrice">$1,100 USD</span>
+            <span class="badge badge-luxury-terracotta" id="pdSaveBadge">Save 23%</span>
+          </div>
+
+          <p class="text-muted mb-4" id="pdDescription">
+            Tied knot-by-knot by master guild weavers in central Persia using natural Mulberry silk wefts on a high-twist wool warp. The symmetrical floral medallion echoes 16th-century Safavid palace tapestries.
+          </p>
+
+          <!-- Specifications Summary -->
+          <div class="row g-2 small mb-4 p-3 bg-subtle rounded-3 border border-custom">
+            <div class="col-6"><strong>Material:</strong> <span id="pdMaterial">Pure Silk & Wool</span></div>
+            <div class="col-6"><strong>Density / Pile:</strong> <span id="pdKnotDensity">600 Knots / Sq Inch</span></div>
+            <div class="col-6"><strong>Origin:</strong> <span id="pdOrigin">Isfahan, Persia</span></div>
+            <div class="col-6"><strong>Style:</strong> <span id="pdStyle">Heritage</span></div>
+          </div>
+
+          <!-- Dimension Selector -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <label class="form-label fw-bold mb-0">Select Dimensions: <span class="text-terracotta fw-semibold ms-1" id="pdSelectedSizeDisplay">8' × 10'</span></label>
+              <a href="custom-sizing.html" class="small text-terracotta text-decoration-none fw-bold"><i class="bi bi-rulers me-1"></i> Custom Dimensions Needed?</a>
+            </div>
+            <div class="d-flex flex-wrap gap-2" id="pdSizeOptions" role="group" aria-label="Rug dimension selection">
+              <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small" onclick="selectProductDetailTier('small')">
+                <span class="fw-bold">Small</span>
+              </button>
+              <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium" onclick="selectProductDetailTier('medium')">
+                <span class="fw-bold">Medium</span>
+              </button>
+              <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large" onclick="selectProductDetailTier('large')">
+                <span class="fw-bold">Large</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Add to Cart & Actions -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="d-flex align-items-center border border-custom rounded bg-surface px-2" style="width: 120px; height: 50px;">
+              <button class="btn btn-sm p-1 border-0" onclick="changeQty(-1)" aria-label="Decrease quantity">-</button>
+              <input type="number" id="pdQuantity" class="form-control form-control-sm text-center border-0 bg-transparent fw-bold" value="1" min="1" max="5" aria-label="Quantity">
+              <button class="btn btn-sm p-1 border-0" onclick="changeQty(1)" aria-label="Increase quantity">+</button>
+            </div>
+            <button type="button" class="btn btn-luxury-primary flex-grow-1 btn-lg" onclick="handleAddToCartFromDetails()">
+              <i class="bi bi-bag-plus me-2"></i> Add to Shopping Bag
+            </button>
+            <button type="button" class="btn btn-outline-dark btn-lg px-4" onclick="handleBuyNow()">
+              Buy Now
+            </button>
+            <button type="button" class="btn btn-luxury-outline" id="pdWishlistBtn" data-wishlist-id="1" onclick="handleToggleWishlistFromDetails()" title="Save to Wishlist" style="height: 50px; width: 50px; display: inline-flex; align-items: center; justify-content: center;">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="d-flex flex-column gap-2 small text-muted pt-3 border-top border-custom">
+            <div class="d-flex align-items-center gap-2"><i class="bi bi-shield-check text-terracotta"></i> 10-Year Weaver Warranty & Authenticity Guarantee</div>
+            <div class="d-flex align-items-center gap-2"><i class="bi bi-truck text-terracotta"></i> Free Insured White-Glove Delivery with In-Room Unrolling</div>
+            <div class="d-flex align-items-center gap-2"><i class="bi bi-arrow-counterclockwise text-terracotta"></i> 30-Day In-Home Trial with Complimentary Return Pickup</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- TABS: DESCRIPTION, SPECIFICATIONS, CARE, REVIEWS -->
+      <div class="mt-5 pt-5 border-top border-custom">
+        <ul class="nav nav-tabs justify-content-center mb-4" id="pdTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active fw-bold font-serif fs-5 px-4" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc-tab-pane" type="button" role="tab">Artisan Story</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold font-serif fs-5 px-4" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs-tab-pane" type="button" role="tab">Specifications</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold font-serif fs-5 px-4" id="care-tab" data-bs-toggle="tab" data-bs-target="#care-tab-pane" type="button" role="tab">Care & Cleaning</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold font-serif fs-5 px-4" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-tab-pane" type="button" role="tab">Reviews (42)</button>
+          </li>
+        </ul>
+
+        <div class="tab-content py-3 max-w-900 mx-auto" id="pdTabContent">
+          <!-- Description Pane -->
+          <div class="tab-pane fade show active" id="desc-tab-pane" role="tabpanel">
+            <h4 class="font-serif fw-bold mb-3">Centuries of Safavid Symmetry</h4>
+            <p class="text-muted leading-relaxed mb-4">
+              The Isfahan medallion design is revered throughout textile history for its mathematical precision and natural curvilinear vine tendrils. Each medallion is plotted by hand on paper cartouches before weaving begins, representing over four months of focused knotting by two generational weavers working concurrently.
+            </p>
+            <p class="text-muted leading-relaxed">
+              The pure Mulberry silk yarn used in the central flora catches natural ambient light dynamically. In low evening lighting, the rug glows with deep copper and terracotta warmth; under morning sun, it reveals shimmering champagne and ecru accents.
+            </p>
+          </div>
+
+          <!-- Specs Pane -->
+          <div class="tab-pane fade" id="specs-tab-pane" role="tabpanel">
+            <table class="table table-bordered">
+              <tbody>
+                <tr><th class="w-25 bg-subtle">Construction</th><td>Hand-Knotted Double Weft</td></tr>
+                <tr><th class="bg-subtle">Knot Count</th><td>Approx. 600 Knots Per Square Inch (KPSI)</td></tr>
+                <tr><th class="bg-subtle">Fiber Composition</th><td>85% Highland Virgin Wool, 15% Mulberry Silk</td></tr>
+                <tr><th class="bg-subtle">Dyes</th><td>100% Mineral & Botanical Natural Vegetable Dyes</td></tr>
+                <tr><th class="bg-subtle">Weaver Origin</th><td>Isfahan Atelier, Persia</td></tr>
+                <tr><th class="bg-subtle">Backing</th><td>Natural Cotton Weft Fringe Endpoints</td></tr>
+                <tr><th class="bg-subtle">Underfloor Heating</th><td>Compatible with all hydronic and electric floor heating systems</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Care Pane -->
+          <div class="tab-pane fade" id="care-tab-pane" role="tabpanel">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h5 class="font-serif fw-bold mb-2">Daily Maintenance</h5>
+                <p class="small text-muted mb-0">Vacuum once weekly using suction-only mode without rotating beater brushes. Rotate the rug 180 degrees every six months to ensure even wear across sunny and high-traffic zones.</p>
+              </div>
+              <div class="col-md-6">
+                <h5 class="font-serif fw-bold mb-2">Spills & Emergencies</h5>
+                <p class="small text-muted mb-0">Blot immediately with a dry white cotton towel — never scrub silk fibers. For wine or coffee, use lukewarm water with a drop of mild wool shampoo.</p>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="care-guide.html" class="btn btn-luxury-outline btn-sm">Read Full Rug Care & Cleaning Guide</a>
+            </div>
+          </div>
+
+          <!-- Reviews Pane -->
+          <div class="tab-pane fade" id="reviews-tab-pane" role="tabpanel">
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-custom">
+              <div>
+                <h4 class="font-serif fw-bold mb-0">Collector Reviews</h4>
+                <span class="text-muted small">Based on 42 verified purchases</span>
+              </div>
+              <button class="btn btn-luxury-primary btn-sm" onclick="showToast('Review Form', 'Thank you. The verified buyer review modal is ready.', 'bi-pencil')">Write a Review</button>
+            </div>
+
+            <!-- Review 1 -->
+            <div class="mb-4 pb-3 border-bottom border-custom">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="fw-bold font-serif">Charlotte Sterling <span class="badge bg-light text-success border ms-2">Verified Buyer</span></div>
+                <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              </div>
+              <p class="small text-muted mb-1">"The photograph cannot capture the iridescent silk sheen. It arrived in three layers of protective cotton muslin with a signed letter from the master weaver. Truly a work of art."</p>
+              <div class="small text-muted opacity-75">Purchased Size: 8' × 10' • October 2025</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="mb-4 pb-3 border-bottom border-custom">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="fw-bold font-serif">Julian Thorne <span class="badge bg-light text-success border ms-2">Verified Buyer</span></div>
+                <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              </div>
+              <p class="small text-muted mb-1">"Our interior decorator recommended this rug for our library. Soft underfoot, perfectly straight selvedge edges, and incredible knot density."</p>
+              <div class="small text-muted opacity-75">Purchased Size: 9' × 12' • December 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RELATED PRODUCTS -->
+  <section class="py-5 bg-surface border-top border-custom">
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <div class="section-tag">Complementary Pieces</div>
+          <h2 class="section-title mb-0">You May Also Admire</h2>
+        </div>
+        <a href="products.html" class="btn btn-luxury-outline">View All Collections</a>
+      </div>
+      <div class="row g-4" id="relatedProductsRow">
+        <!-- Rendered via products.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    let currentProduct = null;
+    let currentSelectedTier = 'medium';
+    let currentSelectedSize = "8' × 10'";
+
+    function selectProductDetailTier(tier, updateUrl = true) {
+      if (!currentProduct) return;
+      if (!currentProduct.sizesData) {
+        if (typeof buildProductSizesData === 'function') {
+          currentProduct.sizesData = buildProductSizesData(currentProduct);
+        }
+      }
+      if (!currentProduct.sizesData) return;
+
+      const normTier = (tier || 'medium').toLowerCase();
+      const tierData = currentProduct.sizesData[normTier] || currentProduct.sizesData.medium || currentProduct.sizesData[Object.keys(currentProduct.sizesData)[0]];
+      if (!tierData) return;
+
+      currentSelectedTier = normTier;
+      currentSelectedSize = tierData.dimensions;
+      currentProduct.size = tierData.dimensions;
+
+      // 1. Smoothly update main image
+      const mainImg = document.getElementById('mainProductImage');
+      if (mainImg) {
+        mainImg.style.transition = 'opacity 0.22s ease';
+        mainImg.style.opacity = '0.35';
+        mainImg.src = tierData.image;
+        mainImg.alt = `${currentProduct.name} — ${tierData.label} (${tierData.dimensions})`;
+        setTimeout(() => {
+          mainImg.style.opacity = '1';
+        }, 40);
+      }
+
+      // 2. Update floating badge
+      const tagText = document.getElementById('pdCurrentDimensionText');
+      if (tagText) {
+        tagText.textContent = `${tierData.label}: ${tierData.dimensions}`;
+      }
+
+      // 3. Highlight room scale buttons
+      document.querySelectorAll('#pdRoomScaleBar .room-scale-btn').forEach(btn => {
+        const isMatch = btn.getAttribute('data-tier') === normTier;
+        btn.classList.toggle('active', isMatch);
+      });
+
+      // 4. Highlight thumbnail cards
+      document.querySelectorAll('#pdThumbnailsRow .dimension-thumb-card').forEach(card => {
+        const isMatch = card.getAttribute('data-tier') === normTier;
+        card.classList.toggle('active', isMatch);
+      });
+
+      // 5. Highlight size pills under Select Dimensions
+      document.querySelectorAll('#pdSizeOptions .size-pill').forEach(pill => {
+        const isMatch = pill.getAttribute('data-tier') === normTier;
+        pill.classList.toggle('active', isMatch);
+        pill.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+      });
+
+      // 6. Update size labels & spec table
+      const displayEl = document.getElementById('pdSelectedSizeDisplay');
+      if (displayEl) {
+        displayEl.textContent = `${tierData.label} (${tierData.dimensions})`;
+      }
+
+      const specSizeEl = document.getElementById('pdSpecSize');
+      if (specSizeEl) {
+        specSizeEl.textContent = `${tierData.dimensions} (${tierData.label})`;
+      }
+
+      // 7. Update price, original price, and discount badge
+      const priceEl = document.getElementById('pdPrice');
+      if (priceEl) {
+        priceEl.textContent = `$${tierData.price.toLocaleString()} USD`;
+      }
+
+      const oldPriceEl = document.getElementById('pdOldPrice');
+      const saveBadgeEl = document.getElementById('pdSaveBadge');
+      if (tierData.originalPrice && tierData.originalPrice > tierData.price) {
+        if (oldPriceEl) {
+          oldPriceEl.textContent = `$${tierData.originalPrice.toLocaleString()} USD`;
+          oldPriceEl.style.display = 'inline';
+        }
+        if (saveBadgeEl) {
+          saveBadgeEl.textContent = `Save ${tierData.discount}%`;
+          saveBadgeEl.style.display = 'inline-block';
+        }
+      } else {
+        if (oldPriceEl) oldPriceEl.style.display = 'none';
+        if (saveBadgeEl) saveBadgeEl.style.display = 'none';
+      }
+
+      // 8. Update browser URL without reload
+      if (updateUrl && window.history && window.history.replaceState) {
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.set('id', currentProduct.id);
+        newUrl.searchParams.set('size', normTier);
+        window.history.replaceState({ id: currentProduct.id, size: normTier }, '', newUrl.toString());
+      }
+    }
+
+    window.selectProductDetailTier = selectProductDetailTier;
+
+    // Alias for legacy or direct dimension view calls
+    function selectDimensionView(viewId) {
+      selectProductDetailTier(viewId);
+    }
+    window.selectDimensionView = selectDimensionView;
+
+    // Alias for legacy button clicks
+    function selectSize(btn) {
+      if (!btn) return;
+      if (typeof btn === 'string') {
+        selectProductDetailTier(btn);
+        return;
+      }
+      const tier = btn.getAttribute('data-tier');
+      if (tier) {
+        selectProductDetailTier(tier);
+        return;
+      }
+      const rawText = (btn.getAttribute('data-size') || btn.textContent || '').trim().toLowerCase();
+      if (rawText.includes('small') || rawText.includes('5\'') || rawText.includes('2.5\' x 8') || rawText.includes('6\' x 9\'')) {
+        selectProductDetailTier('small');
+      } else if (rawText.includes('large') || rawText.includes('9\'') || rawText.includes('10\'') || rawText.includes('12\'')) {
+        selectProductDetailTier('large');
+      } else {
+        selectProductDetailTier('medium');
+      }
+    }
+    window.selectSize = selectSize;
+
+    function changeQty(delta) {
+      const input = document.getElementById('pdQuantity');
+      if (!input) return;
+      let val = parseInt(input.value, 10) + delta;
+      if (val < 1) val = 1;
+      if (val > 5) val = 5;
+      input.value = val;
+    }
+
+    function changeMainImage(src, thumbEl) {
+      const mainImg = document.getElementById('mainProductImage');
+      if (mainImg) mainImg.src = src;
+      document.querySelectorAll('.dimension-thumb-card').forEach(el => el.classList.remove('active'));
+      if (thumbEl) thumbEl.classList.add('active');
+    }
+
+    function handleAddToCartFromDetails() {
+      if (!currentProduct) return;
+      const qtyInput = document.getElementById('pdQuantity');
+      const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+      const tierData = (currentProduct.sizesData && currentProduct.sizesData[currentSelectedTier]) 
+        ? currentProduct.sizesData[currentSelectedTier] 
+        : (currentProduct.sizesData ? currentProduct.sizesData.medium : null);
+
+      if (tierData && typeof window.addToCart === 'function') {
+        window.addToCart(
+          currentProduct, 
+          tierData.dimensions, 
+          qty, 
+          tierData.price, 
+          tierData.image, 
+          tierData.tier, 
+          tierData.originalPrice, 
+          tierData.discount
+        );
+      } else if (typeof window.addToCart === 'function') {
+        window.addToCart(currentProduct, currentProduct.size, qty);
+      }
+    }
+    window.handleAddToCartFromDetails = handleAddToCartFromDetails;
+
+    function handleBuyNow() {
+      if (!currentProduct) return;
+      handleAddToCartFromDetails();
+      setTimeout(() => {
+        window.location.href = 'checkout.html';
+      }, 250);
+    }
+    window.handleBuyNow = handleBuyNow;
+
+    function handleToggleWishlistFromDetails() {
+      if (!currentProduct) return;
+      const btn = document.getElementById('pdWishlistBtn');
+      toggleWishlist(currentProduct.id, btn);
+    }
+    window.handleToggleWishlistFromDetails = handleToggleWishlistFromDetails;
+
+    // Delegated click listener for product detail size controls
+    document.addEventListener('click', function(e) {
+      const tierBtn = e.target.closest('#pdSizeOptions [data-tier], #pdRoomScaleBar [data-tier], #pdThumbnailsRow [data-tier]');
+      if (tierBtn) {
+        e.preventDefault();
+        const tier = tierBtn.getAttribute('data-tier');
+        if (tier) {
+          selectProductDetailTier(tier);
+        }
+      }
+    });
+
+    function loadProductDetails() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const idParam = parseInt(urlParams.get('id'), 10);
+      
+      const product = (window.PRODUCTS_DATA && window.PRODUCTS_DATA.find(p => p.id === idParam)) 
+        || (window.PRODUCTS_DATA ? window.PRODUCTS_DATA[0] : null);
+      
+      if (!product) return;
+      currentProduct = product;
+
+      // Ensure sizesData exists
+      if (!product.sizesData && typeof buildProductSizesData === 'function') {
+        product.sizesData = buildProductSizesData(product);
+      }
+
+      // Check if size parameter is passed in URL (e.g. ?id=1&size=small)
+      const urlSizeParam = (urlParams.get('size') || '').toLowerCase();
+      const initialTier = (['small', 'medium', 'large'].includes(urlSizeParam)) 
+        ? urlSizeParam 
+        : 'medium';
+
+      currentSelectedTier = initialTier;
+
+      // Document Title
+      document.title = `${product.name} — Atelier Rugs`;
+
+      // Breadcrumbs
+      const breadcrumbCategory = document.getElementById('breadcrumbCategoryLink');
+      if (breadcrumbCategory) {
+        breadcrumbCategory.textContent = product.category;
+        const cleanCat = product.category.replace(' Rugs', '').replace(' Luxury', '').trim();
+        breadcrumbCategory.href = `products.html?category=${encodeURIComponent(cleanCat)}`;
+      }
+      const breadcrumbName = document.getElementById('breadcrumbProductName');
+      if (breadcrumbName) breadcrumbName.textContent = product.name;
+
+      // Populate Room Scale Quick-Bar with Small, Medium, Large
+      const scaleBar = document.getElementById('pdRoomScaleBar');
+      if (scaleBar && product.sizesData) {
+        const tiers = ['small', 'medium', 'large'];
+        scaleBar.innerHTML = tiers.map(tierKey => {
+          const t = product.sizesData[tierKey];
+          const isAct = tierKey === initialTier;
+          return `
+            <button type="button" 
+                    id="scaleBtn-${t.tier}"
+                    class="room-scale-btn ${isAct ? 'active' : ''}" 
+                    data-tier="${t.tier}"
+                    onclick="selectProductDetailTier('${t.tier}')">
+              <span class="scale-label">${t.label}</span>
+              <span class="scale-size">${t.dimensions}</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Populate Thumbnails Row (Small, Medium, Large Dimension Cards)
+      const thumbsRow = document.getElementById('pdThumbnailsRow');
+      if (thumbsRow && product.sizesData) {
+        const tiers = ['small', 'medium', 'large'];
+        thumbsRow.innerHTML = tiers.map(tierKey => {
+          const t = product.sizesData[tierKey];
+          const isAct = tierKey === initialTier;
+          return `
+            <div class="col-4">
+              <div class="dimension-thumb-card ${isAct ? 'active' : ''}" 
+                   id="dimThumbCard-${t.tier}"
+                   data-tier="${t.tier}"
+                   onclick="selectProductDetailTier('${t.tier}')"
+                   title="View ${t.label} (${t.dimensions})">
+                <img src="${t.image}" alt="${product.name} ${t.label}">
+                <div class="dimension-thumb-tag">${t.label.toUpperCase()}: ${t.dimensions}</div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Title & Badge
+      const titleEl = document.getElementById('pdTitle');
+      if (titleEl) titleEl.textContent = product.name;
+
+      const badgeEl = document.getElementById('pdBadge');
+      if (badgeEl) {
+        badgeEl.textContent = product.badge ? `${product.badge} • Handcrafted Masterpiece` : 'Curated Artisan Piece';
+      }
+
+      // Rating & Reviews
+      const ratingEl = document.getElementById('pdRating');
+      if (ratingEl) ratingEl.textContent = product.rating;
+      const reviewsEl = document.getElementById('pdReviewsCount');
+      if (reviewsEl) reviewsEl.textContent = `(${product.reviewsCount} verified collector reviews)`;
+      const reviewsTab = document.getElementById('reviews-tab');
+      if (reviewsTab) reviewsTab.textContent = `Reviews (${product.reviewsCount})`;
+
+      // Description
+      const descEl = document.getElementById('pdDescription');
+      if (descEl) descEl.textContent = product.description;
+
+      // Specs Summary
+      const matEl = document.getElementById('pdMaterial');
+      if (matEl) matEl.textContent = `${product.material} (${product.style})`;
+      const knotEl = document.getElementById('pdKnotDensity');
+      if (knotEl) {
+        if (product.material.toLowerCase().includes('silk')) knotEl.textContent = '600 Knots / Sq Inch (KPSI)';
+        else if (product.material.toLowerCase().includes('wool')) knotEl.textContent = '350 KPSI Hand-Knotted';
+        else if (product.material.toLowerCase().includes('cotton')) knotEl.textContent = 'Tight Flatweave Ribbed';
+        else knotEl.textContent = 'High-Density Chunky Braid';
+      }
+      let originText = 'Atelier Heritage Looms';
+      if (product.name.includes('Isfahan') || product.name.includes('Caspian')) originText = 'Isfahan Atelier, Persia';
+      else if (product.name.includes('Berber') || product.name.includes('Moroccan') || product.name.includes('Atlas')) originText = 'Atlas Mountains, Morocco';
+      else if (product.name.includes('Nordic') || product.name.includes('Scandinavian')) originText = 'Copenhagen Guild, Scandinavia';
+      else if (product.name.includes('Oushak') || product.name.includes('Anatolian')) originText = 'Anatolia & Usak, Turkey';
+      else if (product.name.includes('Kyoto') || product.name.includes('Bengal') || product.name.includes('Solstice')) originText = 'Bengal Weavers, India';
+      else if (product.name.includes('Jaipur')) originText = 'Jaipur Artisan Cluster, India';
+      else if (product.name.includes('Santorini') || product.name.includes('Amalfi')) originText = 'Mediterranean Atelier, Italy/Greece';
+
+      const originEl = document.getElementById('pdOrigin');
+      if (originEl) originEl.textContent = originText;
+
+      const styleEl = document.getElementById('pdStyle');
+      if (styleEl) styleEl.textContent = `${product.style} Design`;
+
+      // Populate Size Pills under Select Dimensions
+      const sizesContainer = document.getElementById('pdSizeOptions');
+      if (sizesContainer && product.sizesData) {
+        const tiers = ['small', 'medium', 'large'];
+        sizesContainer.innerHTML = tiers.map(tierKey => {
+          const t = product.sizesData[tierKey];
+          const isAct = tierKey === initialTier;
+          return `
+            <button type="button" 
+                    id="sizeBtn-${t.tier}"
+                    class="btn size-pill ${isAct ? 'active' : ''}" 
+                    data-tier="${t.tier}" 
+                    aria-pressed="${isAct ? 'true' : 'false'}"
+                    onclick="selectProductDetailTier('${t.tier}')">
+              <span class="fw-bold">${t.label}</span> <span class="size-pill-dim text-muted">(${t.dimensions})</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Activate Initial Size Tier (updates image, price, discounts, labels, without replacing URL history redundantly)
+      selectProductDetailTier(initialTier, false);
+
+      // Wishlist Button
+      const wishBtn = document.getElementById('pdWishlistBtn');
+      if (wishBtn) {
+        wishBtn.setAttribute('data-wishlist-id', product.id);
+        const isWishlisted = typeof window.getWishlist === 'function' && window.getWishlist().includes(product.id);
+        const icon = wishBtn.querySelector('i');
+        if (icon) {
+          icon.className = `bi ${isWishlisted ? 'bi-heart-fill text-danger' : 'bi-heart'}`;
+        }
+      }
+
+      // Artisan Story Tab Pane
+      const descTabPane = document.getElementById('desc-tab-pane');
+      if (descTabPane) {
+        descTabPane.innerHTML = `
+          <h4 class="font-serif fw-bold mb-3">${product.name} — Craftsmanship & Heritage</h4>
+          <p class="text-muted leading-relaxed mb-4">
+            ${product.description}
+          </p>
+          <p class="text-muted leading-relaxed">
+            Every thread in this piece undergoes meticulous sorting, hand-spinning, and natural botanical dying before being anchored onto upright timber looms. The tactile interaction between organic ${product.material} and ambient lighting infuses architectural residences with warmth, depth, and unmistakable character.
+          </p>
+        `;
+      }
+
+      // Specs Table Tab Pane
+      const specsTabPane = document.getElementById('specs-tab-pane');
+      if (specsTabPane) {
+        specsTabPane.innerHTML = `
+          <table class="table table-bordered">
+            <tbody>
+              <tr><th class="w-25 bg-subtle">Product Name</th><td>${product.name}</td></tr>
+              <tr><th class="bg-subtle">Category</th><td>${product.category}</td></tr>
+              <tr><th class="bg-subtle">Primary Material</th><td>${product.material} (100% Organic & Ethically Sourced)</td></tr>
+              <tr><th class="bg-subtle">Weaving Style</th><td>${product.style} Weave</td></tr>
+              <tr><th class="bg-subtle">Artisan Origin</th><td>${originText}</td></tr>
+              <tr><th class="bg-subtle">Selected Dimensions</th><td id="pdSpecSize">${(product.sizesData[initialTier] || product.sizesData.medium).dimensions} (${(product.sizesData[initialTier] || product.sizesData.medium).label})</td></tr>
+              <tr><th class="bg-subtle">Underfloor Heating</th><td>Compatible with all hydronic and electric radiant floor heating systems</td></tr>
+              <tr><th class="bg-subtle">Care Instructions</th><td>Professional rug cleaning recommended; vacuum without beater bar</td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      // Related Products (excluding current product)
+      const relatedRow = document.getElementById('relatedProductsRow');
+      if (relatedRow && window.PRODUCTS_DATA && window.renderProductCard) {
+        const related = window.PRODUCTS_DATA
+          .filter(p => p.id !== product.id)
+          .slice(0, 3);
+        relatedRow.innerHTML = related.map(renderProductCard).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadProductDetails();
+    });
+  </script>
+</body>
+</html>

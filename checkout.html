@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Atelier Rugs & Architectural Carpets</title>
+  <meta name="description" content="Secure luxury checkout for Atelier Rugs. Complimentary white-glove placement, 30-day in-home trial, and certified museum-grade provenance.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB & SECURITY HERO STRIP -->
+  <section class="py-4 bg-subtle-box border-bottom border-custom">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb small mb-1">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="products.html">Shop</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+            </ol>
+          </nav>
+          <h1 class="display-6 font-serif fw-bold mb-0">Secure Luxury Checkout</h1>
+        </div>
+        <div class="d-flex align-items-center gap-3 text-muted small">
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill">
+            <i class="bi bi-shield-lock-fill me-1"></i> 256-Bit SSL Encrypted
+          </span>
+          <span class="d-none d-sm-inline">•</span>
+          <span class="d-none d-sm-inline"><i class="bi bi-truck text-terracotta me-1"></i> White-Glove In-Home Placement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CHECKOUT SECTION -->
+  <section class="checkout-page-section">
+    <div class="container">
+
+      <!-- Trust Guarantees Row -->
+      <div class="checkout-trust-banner d-none d-md-flex justify-content-around align-items-center">
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-patch-check-fill text-gold fs-4"></i>
+          <div>
+            <div class="fw-bold small text-heading">100% Certified Provenance</div>
+            <div class="text-muted smaller">Individual certificate signed by master weaver guild</div>
+          </div>
+        </div>
+        <div class="vr opacity-25"></div>
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-house-door-fill text-terracotta fs-4"></i>
+          <div>
+            <div class="fw-bold small text-heading">Complimentary Room Placement</div>
+            <div class="text-muted smaller">White-glove unrolling, padding &amp; packaging removal</div>
+          </div>
+        </div>
+        <div class="vr opacity-25"></div>
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-arrow-repeat text-success fs-4"></i>
+          <div>
+            <div class="fw-bold small text-heading">30-Day In-Home Trial</div>
+            <div class="text-muted smaller">Full refund guarantee with free insured return pickup</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form & Order Summary Layout -->
+      <form id="checkoutForm" novalidate>
+        <div class="row g-4 g-lg-5">
+          
+          <!-- LEFT COLUMN: CHECKOUT FORM -->
+          <div class="col-lg-7">
+
+            <!-- 1. Customer Information -->
+            <div class="checkout-card">
+              <div class="checkout-card-header">
+                <h2 class="checkout-card-title">
+                  <span class="checkout-step-num">1</span>
+                  <span>Customer Information</span>
+                </h2>
+                <span class="small text-muted">Already a collector? <a href="login.html" class="text-terracotta fw-bold">Sign In</a></span>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-7">
+                  <label for="checkoutEmail" class="checkout-form-label">Email Address *</label>
+                  <input type="email" class="checkout-form-control" id="checkoutEmail" placeholder="name@domain.com" required>
+                  <div class="form-text smaller">Your order receipt and Guild Certificate of Authenticity will be delivered here.</div>
+                </div>
+                <div class="col-md-5">
+                  <label for="checkoutPhone" class="checkout-form-label">Phone Number *</label>
+                  <input type="tel" class="checkout-form-control" id="checkoutPhone" placeholder="+1 (555) 000-0000" required>
+                  <div class="form-text smaller">Required for white-glove delivery appointment scheduling.</div>
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletterCheck" checked>
+                    <label class="form-check-label small text-muted" for="newsletterCheck">
+                      Keep me informed of private loom releases, seasonal exhibitions, and fiber care journals.
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Shipping & White-Glove Placement Address -->
+            <div class="checkout-card">
+              <div class="checkout-card-header">
+                <h2 class="checkout-card-title">
+                  <span class="checkout-step-num">2</span>
+                  <span>Shipping &amp; In-Home Placement Address</span>
+                </h2>
+              </div>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="checkoutFirstName" class="checkout-form-label">First Name *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutFirstName" placeholder="Eleanor" required>
+                </div>
+                <div class="col-sm-6">
+                  <label for="checkoutLastName" class="checkout-form-label">Last Name *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutLastName" placeholder="Vanderbilt" required>
+                </div>
+                <div class="col-12">
+                  <label for="checkoutCompany" class="checkout-form-label">Company / Design Firm <span class="text-muted fw-normal">(Optional)</span></label>
+                  <input type="text" class="checkout-form-control" id="checkoutCompany" placeholder="Atelier Architecture &amp; Interiors">
+                </div>
+                <div class="col-12">
+                  <label for="checkoutAddress" class="checkout-form-label">Street Address *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutAddress" placeholder="740 Park Avenue" required>
+                </div>
+                <div class="col-12">
+                  <label for="checkoutApt" class="checkout-form-label">Apartment, Suite, Unit, Penthouse <span class="text-muted fw-normal">(Optional)</span></label>
+                  <input type="text" class="checkout-form-control" id="checkoutApt" placeholder="Penthouse B">
+                </div>
+                <div class="col-md-5">
+                  <label for="checkoutCity" class="checkout-form-label">City *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutCity" placeholder="New York" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="checkoutState" class="checkout-form-label">State / Province *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutState" placeholder="NY" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="checkoutZip" class="checkout-form-label">Postal / ZIP Code *</label>
+                  <input type="text" class="checkout-form-control" id="checkoutZip" placeholder="10021" required>
+                </div>
+                <div class="col-12">
+                  <label for="checkoutCountry" class="checkout-form-label">Country *</label>
+                  <select class="checkout-form-control" id="checkoutCountry">
+                    <option value="US" selected>United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="AU">Australia</option>
+                  </select>
+                </div>
+                <div class="col-12 mt-3">
+                  <label for="checkoutNotes" class="checkout-form-label">White-Glove Placement Instructions <span class="text-muted fw-normal">(Optional)</span></label>
+                  <textarea class="checkout-form-control" id="checkoutNotes" rows="2" placeholder="e.g., Deliver to 2nd-floor master salon. Rug pad placement required under existing sectional."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Delivery Method -->
+            <div class="checkout-card">
+              <div class="checkout-card-header">
+                <h2 class="checkout-card-title">
+                  <span class="checkout-step-num">3</span>
+                  <span>Delivery &amp; Service Level</span>
+                </h2>
+              </div>
+              <div class="d-flex flex-column gap-3">
+                
+                <!-- Method 1: Complimentary White-Glove -->
+                <label class="checkout-selection-box active" for="shippingOptionWhiteGlove">
+                  <div class="d-flex align-items-start gap-3">
+                    <input class="form-check-input mt-1 shipping-radio" type="radio" name="shippingMethod" id="shippingOptionWhiteGlove" value="0" checked>
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="fw-bold text-heading font-serif fs-6">Complimentary Insured White-Glove Placement</span>
+                        <span class="badge bg-success-subtle text-success fw-bold">FREE</span>
+                      </div>
+                      <p class="text-muted small mb-0">Includes scheduled 2-hour appointment window, indoor delivery, rug pad alignment, precision positioning, and removal of all packing materials.</p>
+                    </div>
+                  </div>
+                </label>
+
+                <!-- Method 2: Priority Express -->
+                <label class="checkout-selection-box" for="shippingOptionExpress">
+                  <div class="d-flex align-items-start gap-3">
+                    <input class="form-check-input mt-1 shipping-radio" type="radio" name="shippingMethod" id="shippingOptionExpress" value="120">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="fw-bold text-heading font-serif fs-6">Priority Air Freight &amp; Expedited Placement</span>
+                        <span class="fw-bold text-heading font-serif">$120</span>
+                      </div>
+                      <p class="text-muted small mb-0">Expedited dispatch within 24 hours with dedicated express courier transport and weekend placement options.</p>
+                    </div>
+                  </div>
+                </label>
+
+                <!-- Method 3: Showroom Pickup -->
+                <label class="checkout-selection-box" for="shippingOptionPickup">
+                  <div class="d-flex align-items-start gap-3">
+                    <input class="form-check-input mt-1 shipping-radio" type="radio" name="shippingMethod" id="shippingOptionPickup" value="0">
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="fw-bold text-heading font-serif fs-6">Private Atelier Showroom Handover</span>
+                        <span class="badge bg-secondary-subtle text-secondary fw-bold">Complimentary</span>
+                      </div>
+                      <p class="text-muted small mb-0">Curator packaging &amp; personal inspection handover at 542 Madison Ave, New York gallery. Ready within 48 hours.</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- 4. Payment Method -->
+            <div class="checkout-card">
+              <div class="checkout-card-header">
+                <h2 class="checkout-card-title">
+                  <span class="checkout-step-num">4</span>
+                  <span>Payment Method</span>
+                </h2>
+                <div class="d-flex gap-2">
+                  <i class="bi bi-credit-card-2-front text-muted fs-5"></i>
+                  <i class="bi bi-shield-check text-success fs-5"></i>
+                </div>
+              </div>
+
+              <!-- Payment Type Selectors -->
+              <div class="d-flex flex-column gap-3 mb-4">
+                
+                <!-- Credit Card Option -->
+                <label class="checkout-selection-box active" for="payCardRadio">
+                  <div class="d-flex align-items-center gap-3">
+                    <input class="form-check-input payment-radio" type="radio" name="paymentType" id="payCardRadio" value="card" checked>
+                    <div class="flex-grow-1 d-flex justify-content-between align-items-center">
+                      <span class="fw-bold text-heading">Credit / Debit Card</span>
+                      <div class="d-flex gap-2 align-items-center text-muted small">
+                        <i class="bi bi-credit-card-fill fs-5 text-terracotta"></i>
+                        <span>Visa • Mastercard • Amex</span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <!-- Card Form Fields -->
+                <div class="p-3 bg-subtle-box rounded border border-custom" id="cardFieldsContainer">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="checkoutCardNumber" class="checkout-form-label">Card Number *</label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-surface border-light"><i class="bi bi-credit-card text-muted"></i></span>
+                        <input type="text" class="checkout-form-control" id="checkoutCardNumber" placeholder="4242 •••• •••• 4242" maxlength="19" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="checkoutCardName" class="checkout-form-label">Name on Card *</label>
+                      <input type="text" class="checkout-form-control" id="checkoutCardName" placeholder="Eleanor Vanderbilt" required>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                      <label for="checkoutCardExpiry" class="checkout-form-label">Expires (MM/YY) *</label>
+                      <input type="text" class="checkout-form-control" id="checkoutCardExpiry" placeholder="08/28" maxlength="5" required>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                      <label for="checkoutCardCvv" class="checkout-form-label">CVV / CVC *</label>
+                      <input type="password" class="checkout-form-control" id="checkoutCardCvv" placeholder="•••" maxlength="4" required>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Wire Transfer Option -->
+                <label class="checkout-selection-box" for="payWireRadio">
+                  <div class="d-flex align-items-center gap-3">
+                    <input class="form-check-input payment-radio" type="radio" name="paymentType" id="payWireRadio" value="wire">
+                    <div class="flex-grow-1 d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="fw-bold text-heading">Concierge Wire Transfer / Trade Invoice</span>
+                        <div class="text-muted smaller">Ideal for architectural interior firms &amp; high-value acquisitions</div>
+                      </div>
+                      <i class="bi bi-bank fs-5 text-muted"></i>
+                    </div>
+                  </div>
+                </label>
+
+                <!-- Wire Information Box -->
+                <div class="p-3 bg-subtle-box rounded border border-custom d-none" id="wireFieldsContainer">
+                  <div class="small text-muted">
+                    <p class="mb-2 fw-semibold text-heading">Private Bank Wire Instructions:</p>
+                    <p class="mb-0">Upon submitting your order, our dedicated finance concierge will issue a pro-forma commercial invoice and lock your chosen rug reservations for 5 business days pending receipt of funds.</p>
+                  </div>
+                </div>
+
+                <!-- Affirm / Installments Option -->
+                <label class="checkout-selection-box" for="payAffirmRadio">
+                  <div class="d-flex align-items-center gap-3">
+                    <input class="form-check-input payment-radio" type="radio" name="paymentType" id="payAffirmRadio" value="affirm">
+                    <div class="flex-grow-1 d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="fw-bold text-heading">Affirm • 4 Interest-Free Payments</span>
+                        <div class="text-muted smaller">Pay quarterly with zero fees or interest on approval</div>
+                      </div>
+                      <span class="badge bg-light text-dark border">0% APR</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Billing Address Checkbox -->
+              <div class="pt-3 border-top border-custom">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="sameBillingCheck" checked>
+                  <label class="form-check-label small fw-semibold text-heading" for="sameBillingCheck">
+                    Billing address is identical to shipping and white-glove placement address
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROMINENT PLACE ORDER CTA (DESKTOP / MOBILE) -->
+            <div class="mt-4 mb-5">
+              <button type="submit" class="btn btn-luxury-primary btn-lg w-100 py-3 fs-5 fw-bold shadow-lg" id="placeOrderBtn">
+                <i class="bi bi-shield-lock-fill me-2"></i> Place Order • <span class="btn-order-total-amount">$3,400</span>
+              </button>
+              <div class="text-center text-muted smaller mt-2">
+                <i class="bi bi-info-circle me-1"></i> By placing this order, you confirm acceptance of the Atelier Rugs bespoke acquisition agreement, insured transit terms, and 30-day in-home trial policy.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: STICKY ORDER SUMMARY -->
+          <div class="col-lg-5">
+            <div class="checkout-summary-card">
+              <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom border-custom">
+                <h3 class="font-serif fw-bold h5 mb-0">Order Summary (<span id="checkoutItemCountBadge">1</span>)</h3>
+                <button type="button" class="btn btn-link text-terracotta text-decoration-none small p-0 fw-semibold" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer">
+                  Edit Bag <i class="bi bi-pencil-square ms-1"></i>
+                </button>
+              </div>
+
+              <!-- Itemized Products List -->
+              <div class="checkout-cart-items-wrapper mb-4" id="checkoutCartItems">
+                <!-- Dynamically rendered by JavaScript -->
+              </div>
+
+              <!-- Promo Code Input -->
+              <div class="mb-4 pt-3 border-top border-custom">
+                <label for="promoCodeInput" class="checkout-form-label mb-1">Trade Discount / Promotion Code</label>
+                <div class="input-group">
+                  <input type="text" class="checkout-form-control" id="promoCodeInput" placeholder="Try 'ATELIER10'">
+                  <button class="btn btn-luxury-outline px-3" type="button" id="applyPromoBtn">Apply</button>
+                </div>
+                <div id="promoFeedback" class="small mt-1 d-none"></div>
+              </div>
+
+              <!-- Cost Calculation Breakdown -->
+              <div class="pt-3 border-top border-custom">
+                <div class="checkout-cost-row">
+                  <span class="text-muted">Cart Subtotal</span>
+                  <span class="fw-semibold text-heading" id="checkoutSubtotalDisplay">$3,400</span>
+                </div>
+                <div class="checkout-cost-row">
+                  <span class="text-muted">White-Glove In-Home Delivery</span>
+                  <span class="text-success fw-bold" id="checkoutShippingDisplay">FREE</span>
+                </div>
+                <div class="checkout-cost-row d-none" id="checkoutDiscountRow">
+                  <span class="text-success fw-semibold">Trade Discount Applied</span>
+                  <span class="text-success fw-bold" id="checkoutDiscountDisplay">-$0</span>
+                </div>
+                <div class="checkout-cost-row">
+                  <span class="text-muted">Estimated Insurance &amp; Taxes</span>
+                  <span class="text-muted" id="checkoutTaxDisplay">Included</span>
+                </div>
+                <div class="checkout-cost-total">
+                  <span>Grand Total</span>
+                  <span class="text-terracotta fs-3 font-serif fw-bold" id="checkoutGrandTotalDisplay">$3,400</span>
+                </div>
+              </div>
+
+              <!-- Security Badges Box -->
+              <div class="mt-4 p-3 bg-subtle-box rounded border border-custom">
+                <div class="d-flex flex-column gap-2 smaller text-muted">
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-shield-check text-success fs-5"></i>
+                    <span><strong>100% Secure Checkout</strong> — End-to-end encrypted protocol.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-box-seam text-terracotta fs-5"></i>
+                    <span><strong>Insured White-Glove Delivery</strong> — Zero transit risk.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-award text-gold fs-5"></i>
+                    <span><strong>Certified Master Guild Provenance</strong> — Lifetime authenticity.</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- LUXURY ORDER CONFIRMATION MODAL -->
+  <div class="modal fade" id="orderConfirmationModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="orderConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content order-success-modal-content">
+        
+        <!-- Animated Success Seal -->
+        <div class="order-success-seal mx-auto">
+          <i class="bi bi-check-lg"></i>
+        </div>
+
+        <span class="badge badge-luxury-gold mb-3 mx-auto">COMMISSION CONFIRMED</span>
+        <h2 class="display-6 font-serif fw-bold text-heading mb-2" id="orderConfirmationModalLabel">
+          Thank You! Your Order Has Been Placed Successfully
+        </h2>
+        <p class="text-muted mb-4 max-w-600 mx-auto">
+          We are honored to welcome this artisan masterpiece into your sanctuary. A detailed acquisition dossier and authenticated invoice have been dispatched to your email.
+        </p>
+
+        <!-- Order Summary Pill Grid -->
+        <div class="bg-subtle-box p-4 rounded-3 border border-custom mb-4 text-start">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="smaller text-muted text-uppercase fw-bold">Order Number</div>
+              <div class="fw-bold font-serif fs-5 text-terracotta" id="confirmedOrderId">#AR-2026-84920</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="smaller text-muted text-uppercase fw-bold">Date of Acquisition</div>
+              <div class="fw-semibold text-heading" id="confirmedOrderDate">September 7, 2026</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="smaller text-muted text-uppercase fw-bold">Final Amount Paid</div>
+              <div class="fw-bold font-serif fs-5 text-heading" id="confirmedOrderTotal">$3,400</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="smaller text-muted text-uppercase fw-bold">Placement Concierge</div>
+              <div class="fw-semibold text-heading"><i class="bi bi-telephone text-terracotta me-1"></i> Dedicated White-Glove Liaison</div>
+            </div>
+            <div class="col-12 pt-2 border-top border-custom">
+              <div class="smaller text-muted text-uppercase fw-bold">Delivery &amp; Room Destination</div>
+              <div class="fw-semibold text-heading" id="confirmedOrderAddress">740 Park Avenue, Penthouse B, New York, NY 10021</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Purchased Rugs Breakdown -->
+        <div class="text-start mb-4">
+          <h5 class="font-serif fw-bold mb-3">Acquired Pieces</h5>
+          <div id="confirmedOrderItemsList" class="d-flex flex-column gap-2">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 pt-3 border-top border-custom">
+          <a href="products.html" class="btn btn-luxury-primary btn-lg px-4" id="continueShoppingBtn">
+            <i class="bi bi-grid me-2"></i> Continue Shopping
+          </a>
+          <button type="button" class="btn btn-luxury-outline btn-lg px-4" onclick="window.print()">
+            <i class="bi bi-printer me-2"></i> Print Dossier Receipt
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="footer-text mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Artisan Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- CHECKOUT PAGE LOGIC -->
+  <script>
+    (function () {
+      'use strict';
+
+      let discountPercentage = 0;
+      let activeShippingCost = 0;
+
+      // Card Formatting Helper
+      const cardInput = document.getElementById('checkoutCardNumber');
+      if (cardInput) {
+        cardInput.addEventListener('input', function (e) {
+          let val = e.target.value.replace(/\D/g, '').substring(0, 16);
+          let sections = [];
+          for (let i = 0; i < val.length; i += 4) {
+            sections.push(val.substring(i, i + 4));
+          }
+          e.target.value = sections.join(' ');
+        });
+      }
+
+      // Expiration Formatting Helper
+      const expiryInput = document.getElementById('checkoutCardExpiry');
+      if (expiryInput) {
+        expiryInput.addEventListener('input', function (e) {
+          let val = e.target.value.replace(/\D/g, '').substring(0, 4);
+          if (val.length >= 3) {
+            e.target.value = val.substring(0, 2) + '/' + val.substring(2);
+          } else {
+            e.target.value = val;
+          }
+        });
+      }
+
+      // Shipping Method Selection Listeners
+      document.querySelectorAll('.shipping-radio').forEach(radio => {
+        radio.addEventListener('change', function () {
+          document.querySelectorAll('.shipping-radio').forEach(r => {
+            r.closest('.checkout-selection-box').classList.toggle('active', r.checked);
+          });
+          activeShippingCost = parseFloat(this.value) || 0;
+          renderCheckoutSummary();
+        });
+      });
+
+      // Payment Type Selection Listeners
+      document.querySelectorAll('.payment-radio').forEach(radio => {
+        radio.addEventListener('change', function () {
+          document.querySelectorAll('.payment-radio').forEach(r => {
+            r.closest('.checkout-selection-box').classList.toggle('active', r.checked);
+          });
+          const cardBox = document.getElementById('cardFieldsContainer');
+          const wireBox = document.getElementById('wireFieldsContainer');
+          if (this.value === 'card') {
+            if (cardBox) cardBox.classList.remove('d-none');
+            if (wireBox) wireBox.classList.add('d-none');
+          } else if (this.value === 'wire') {
+            if (cardBox) cardBox.classList.add('d-none');
+            if (wireBox) wireBox.classList.remove('d-none');
+          } else {
+            if (cardBox) cardBox.classList.add('d-none');
+            if (wireBox) wireBox.classList.add('d-none');
+          }
+        });
+      });
+
+      // Promo Code Handler
+      const applyPromoBtn = document.getElementById('applyPromoBtn');
+      const promoInput = document.getElementById('promoCodeInput');
+      const promoFeedback = document.getElementById('promoFeedback');
+      const discountRow = document.getElementById('checkoutDiscountRow');
+      const discountDisplay = document.getElementById('checkoutDiscountDisplay');
+
+      if (applyPromoBtn && promoInput) {
+        applyPromoBtn.addEventListener('click', function () {
+          const code = promoInput.value.trim().toUpperCase();
+          if (code === 'ATELIER10') {
+            discountPercentage = 0.10;
+            promoFeedback.className = 'small text-success mt-1 fw-bold';
+            promoFeedback.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> ATELIER10 applied: 10% private collector discount!';
+            promoFeedback.classList.remove('d-none');
+            if (discountRow) discountRow.classList.remove('d-none');
+          } else if (code === 'ARCHITECT15') {
+            discountPercentage = 0.15;
+            promoFeedback.className = 'small text-success mt-1 fw-bold';
+            promoFeedback.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> ARCHITECT15 applied: 15% accredited trade discount!';
+            promoFeedback.classList.remove('d-none');
+            if (discountRow) discountRow.classList.remove('d-none');
+          } else if (code === '') {
+            discountPercentage = 0;
+            promoFeedback.classList.add('d-none');
+            if (discountRow) discountRow.classList.add('d-none');
+          } else {
+            discountPercentage = 0;
+            promoFeedback.className = 'small text-danger mt-1';
+            promoFeedback.innerHTML = '<i class="bi bi-exclamation-circle-fill me-1"></i> Invalid code. Try "ATELIER10" for 10% off.';
+            promoFeedback.classList.remove('d-none');
+            if (discountRow) discountRow.classList.add('d-none');
+          }
+          renderCheckoutSummary();
+        });
+      }
+
+      // Quantity manipulation directly in Checkout Summary
+      window.changeCheckoutQty = function (index, delta) {
+        if (typeof window.updateCartQty === 'function') {
+          window.updateCartQty(index, delta);
+          renderCheckoutSummary();
+        }
+      };
+
+      window.removeCheckoutItem = function (index) {
+        if (typeof window.removeFromCart === 'function') {
+          window.removeFromCart(index);
+          renderCheckoutSummary();
+        }
+      };
+
+      // Render Order Summary
+      function renderCheckoutSummary() {
+        const cart = (typeof window.getCart === 'function') ? window.getCart() : [];
+        const itemsContainer = document.getElementById('checkoutCartItems');
+        const countBadge = document.getElementById('checkoutItemCountBadge');
+        const subtotalEl = document.getElementById('checkoutSubtotalDisplay');
+        const shippingEl = document.getElementById('checkoutShippingDisplay');
+        const grandTotalEl = document.getElementById('checkoutGrandTotalDisplay');
+        const btnTotalEls = document.querySelectorAll('.btn-order-total-amount');
+
+        if (!itemsContainer) return;
+
+        if (cart.length === 0) {
+          itemsContainer.innerHTML = `
+            <div class="text-center py-4">
+              <i class="bi bi-bag-x display-5 text-muted mb-2 d-block"></i>
+              <h6 class="fw-bold">Your Bag is Empty</h6>
+              <p class="text-muted smaller mb-3">Please choose an artisan rug from our catalog to complete an order.</p>
+              <a href="products.html" class="btn btn-luxury-primary btn-sm">Explore Rugs &amp; Carpets</a>
+            </div>
+          `;
+          if (countBadge) countBadge.textContent = '0';
+          if (subtotalEl) subtotalEl.textContent = '$0';
+          if (shippingEl) shippingEl.textContent = 'FREE';
+          if (grandTotalEl) grandTotalEl.textContent = '$0';
+          btnTotalEls.forEach(el => el.textContent = '$0');
+          return;
+        }
+
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const discountAmount = Math.round(subtotal * discountPercentage);
+        const finalTotal = Math.max(0, subtotal - discountAmount + activeShippingCost);
+
+        if (countBadge) countBadge.textContent = totalItems;
+        if (subtotalEl) subtotalEl.textContent = `$${subtotal.toLocaleString()}`;
+
+        if (discountDisplay && discountAmount > 0) {
+          discountDisplay.textContent = `-$${discountAmount.toLocaleString()}`;
+        }
+
+        if (shippingEl) {
+          shippingEl.textContent = activeShippingCost === 0 ? 'FREE' : `$${activeShippingCost}`;
+          shippingEl.className = activeShippingCost === 0 ? 'text-success fw-bold' : 'fw-bold text-heading';
+        }
+
+        const formattedGrandTotal = `$${finalTotal.toLocaleString()}`;
+        if (grandTotalEl) grandTotalEl.textContent = formattedGrandTotal;
+        btnTotalEls.forEach(el => el.textContent = formattedGrandTotal);
+
+        // Render line items
+        itemsContainer.innerHTML = cart.map((item, idx) => `
+          <div class="checkout-item-row">
+            <img src="${item.image}" alt="${item.name}" class="checkout-item-thumb">
+            <div class="flex-grow-1 min-w-0">
+              <h6 class="font-serif fw-bold text-heading text-truncate mb-0">${item.name}</h6>
+              <div class="text-muted smaller mb-1">Dimensions: ${item.size}</div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <button type="button" class="cart-qty-btn" onclick="changeCheckoutQty(${idx}, -1)">-</button>
+                  <span class="small fw-bold px-1">${item.quantity}</span>
+                  <button type="button" class="cart-qty-btn" onclick="changeCheckoutQty(${idx}, 1)">+</button>
+                </div>
+                <div class="fw-bold text-terracotta font-serif">$${(item.price * item.quantity).toLocaleString()}</div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-link text-muted p-1" onclick="removeCheckoutItem(${idx})" title="Remove">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        `).join('');
+      }
+
+      // Handle Place Order Submit
+      const checkoutForm = document.getElementById('checkoutForm');
+      const placeOrderBtn = document.getElementById('placeOrderBtn');
+
+      if (checkoutForm) {
+        checkoutForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const cart = (typeof window.getCart === 'function') ? window.getCart() : [];
+          if (cart.length === 0) {
+            if (window.showToast) {
+              window.showToast('Bag is Empty', 'Please select a rug from the catalog first.', 'bi-bag-x');
+            } else {
+              alert('Your shopping bag is empty.');
+            }
+            return;
+          }
+
+          // Validate required fields
+          const requiredIds = ['checkoutEmail', 'checkoutPhone', 'checkoutFirstName', 'checkoutLastName', 'checkoutAddress', 'checkoutCity', 'checkoutState', 'checkoutZip'];
+          let isValid = true;
+          let firstInvalid = null;
+
+          requiredIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+              if (!el.value.trim()) {
+                el.classList.add('is-invalid');
+                isValid = false;
+                if (!firstInvalid) firstInvalid = el;
+              } else {
+                el.classList.remove('is-invalid');
+              }
+            }
+          });
+
+          // If credit card selected, validate card details
+          const activePayment = document.querySelector('input[name="paymentType"]:checked')?.value || 'card';
+          if (activePayment === 'card') {
+            const cardNumEl = document.getElementById('checkoutCardNumber');
+            const cardNameEl = document.getElementById('checkoutCardName');
+            const cardExpEl = document.getElementById('checkoutCardExpiry');
+            const cardCvvEl = document.getElementById('checkoutCardCvv');
+
+            [cardNumEl, cardNameEl, cardExpEl, cardCvvEl].forEach(el => {
+              if (el && !el.value.trim()) {
+                el.classList.add('is-invalid');
+                isValid = false;
+                if (!firstInvalid) firstInvalid = el;
+              } else if (el) {
+                el.classList.remove('is-invalid');
+              }
+            });
+          }
+
+          if (!isValid) {
+            if (firstInvalid) {
+              firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              firstInvalid.focus();
+            }
+            if (window.showToast) {
+              window.showToast('Incomplete Information', 'Please fill in all highlighted fields.', 'bi-exclamation-triangle');
+            }
+            return;
+          }
+
+          // Loading State
+          const originalBtnHtml = placeOrderBtn.innerHTML;
+          placeOrderBtn.disabled = true;
+          placeOrderBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Securing Order &amp; Generating Authenticity Certificate...';
+
+          setTimeout(() => {
+            // Generate Random Order Reference
+            const orderNum = 'AR-2026-' + Math.floor(10000 + Math.random() * 90000);
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+            const firstName = document.getElementById('checkoutFirstName')?.value.trim() || '';
+            const lastName = document.getElementById('checkoutLastName')?.value.trim() || '';
+            const address = document.getElementById('checkoutAddress')?.value.trim() || '';
+            const apt = document.getElementById('checkoutApt')?.value.trim() || '';
+            const city = document.getElementById('checkoutCity')?.value.trim() || '';
+            const state = document.getElementById('checkoutState')?.value.trim() || '';
+            const zip = document.getElementById('checkoutZip')?.value.trim() || '';
+            const fullAddress = `${firstName} ${lastName} • ${address}${apt ? ', ' + apt : ''}, ${city}, ${state} ${zip}`;
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const discountAmount = Math.round(subtotal * discountPercentage);
+            const finalTotal = Math.max(0, subtotal - discountAmount + activeShippingCost);
+            const formattedTotal = `$${finalTotal.toLocaleString()}`;
+
+            // Populate Modal Content
+            document.getElementById('confirmedOrderId').textContent = '#' + orderNum;
+            document.getElementById('confirmedOrderDate').textContent = dateStr;
+            document.getElementById('confirmedOrderTotal').textContent = formattedTotal;
+            document.getElementById('confirmedOrderAddress').textContent = fullAddress;
+
+            const modalItemsEl = document.getElementById('confirmedOrderItemsList');
+            if (modalItemsEl) {
+              modalItemsEl.innerHTML = cart.map(item => `
+                <div class="d-flex align-items-center justify-content-between p-2 rounded bg-surface border border-light">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="${item.image}" alt="${item.name}" class="rounded object-fit-cover" width="48" height="48">
+                    <div>
+                      <div class="fw-bold font-serif small text-heading">${item.name}</div>
+                      <div class="smaller text-muted">Dimensions: ${item.size} • Qty: ${item.quantity}</div>
+                    </div>
+                  </div>
+                  <div class="fw-bold font-serif text-terracotta small">$${(item.price * item.quantity).toLocaleString()}</div>
+                </div>
+              `).join('');
+            }
+
+            // Trigger Modal
+            const modalEl = document.getElementById('orderConfirmationModal');
+            if (modalEl && window.bootstrap) {
+              const modalInstance = new bootstrap.Modal(modalEl);
+              modalInstance.show();
+            }
+
+            // Clear Cart in Storage & update badges
+            if (typeof window.clearCart === 'function') {
+              window.clearCart();
+            }
+
+            // Reset Button
+            placeOrderBtn.disabled = false;
+            placeOrderBtn.innerHTML = originalBtnHtml;
+
+          }, 900);
+        });
+      }
+
+      // Initial Render on Page Load
+      document.addEventListener('DOMContentLoaded', () => {
+        renderCheckoutSummary();
+      });
+
+    })();
+  </script>
+</body>
+</html>

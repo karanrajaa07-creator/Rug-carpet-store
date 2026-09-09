@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Architectural Proportions of Room Framing — The Weave Journal</title>
+  <meta name="description" content="Discover how architects calculate floor reveals and rug proportions to ground furniture and elevate residential acoustic luxury.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ARTICLE HEADER & BODY -->
+  <article class="article-details-page pt-4 pt-md-5 pb-5">
+    <div class="container">
+      <div class="article-header-wrapper text-center">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb small justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="blog.html">Journal</a></li>
+            <li class="breadcrumb-item active" id="breadcrumbCategory">Interior Architecture</li>
+          </ol>
+        </nav>
+
+        <!-- Category Badge -->
+        <div class="mb-3">
+          <span class="badge badge-luxury-terracotta" id="articleCategoryBadge">Interior Architecture</span>
+        </div>
+
+        <!-- Article Title (Responsive Serif Heading) -->
+        <h1 class="article-main-title" id="articleTitle">
+          The Architectural Proportions of Room Framing: Sizing Your Rug to Anchor Furniture
+        </h1>
+        
+        <!-- Metadata Row (Author, Date, Read Time) -->
+        <div class="article-metadata-row">
+          <div class="d-flex align-items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=120&q=80" 
+                 alt="Author Avatar" 
+                 class="article-author-avatar" 
+                 id="articleAuthorAvatar">
+            <div class="text-start">
+              <div class="fw-bold text-heading" id="articleAuthorName">Isabella Moreno</div>
+              <div class="small text-muted" id="articleAuthorRole">Principal Interior Architect</div>
+            </div>
+          </div>
+          <span class="text-muted d-none d-sm-inline">•</span>
+          <div class="d-flex align-items-center gap-1 small text-muted">
+            <i class="bi bi-calendar3 text-terracotta"></i>
+            <span id="articleDate">September 2, 2026</span>
+          </div>
+          <span class="text-muted d-none d-sm-inline">•</span>
+          <div class="d-flex align-items-center gap-1 small text-muted">
+            <i class="bi bi-clock text-terracotta"></i>
+            <span id="articleReadTime">7 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image (Directly below metadata, proper aspect ratio, never cropped incorrectly or overflowing) -->
+      <div class="article-hero-media-wrapper mb-5">
+        <img src="assets/images/products/caspian-silk-rug.jpg" 
+             alt="Article Hero Visual" 
+             class="article-hero-image" 
+             id="articleHeroImg">
+        <div class="article-image-caption" id="articleImageCaption">
+          Custom 16' × 22' Caspian silk-wool rug anchoring a minimalist conversation zone.
+        </div>
+      </div>
+
+      <!-- Main Article & Sidebar -->
+      <div class="row g-5 max-w-1100 mx-auto">
+        <div class="col-lg-8">
+          <!-- Social Sharing Bar -->
+          <div class="d-flex align-items-center gap-2 mb-4 pb-3 border-bottom border-custom">
+            <span class="small text-muted fw-bold me-2">Share Essay:</span>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 34px; height: 34px;"><i class="bi bi-pinterest"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 34px; height: 34px;"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 34px; height: 34px;"><i class="bi bi-twitter-x"></i></a>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="copyArticleLink()"><i class="bi bi-link-45deg me-1"></i> Copy Link</button>
+          </div>
+
+          <!-- Body Content -->
+          <div class="article-body font-serif-lead text-body leading-relaxed" id="articleBody">
+            <!-- Dynamically populated from BLOG_ARTICLES_DATA -->
+          </div>
+
+          <!-- Previous / Next Navigation -->
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3 mt-5 pt-4 border-top border-custom" id="articleNavFooter">
+            <a href="#" id="prevArticleLink" class="text-decoration-none text-muted small">
+              <i class="bi bi-arrow-left me-1"></i> Previous: <strong id="prevArticleTitle" class="text-heading">...</strong>
+            </a>
+            <a href="#" id="nextArticleLink" class="text-decoration-none text-muted small text-sm-end">
+              Next: <strong id="nextArticleTitle" class="text-heading">...</strong> <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 105px;">
+            <!-- Search Widget -->
+            <div class="luxury-card p-4 mb-4">
+              <h5 class="font-serif fw-bold mb-3">Search Journal</h5>
+              <form action="blog.html" method="GET">
+                <div class="input-group">
+                  <input type="text" name="q" class="form-control" placeholder="Search essays...">
+                  <button class="btn btn-luxury-primary" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Recent Articles Widget -->
+            <div class="luxury-card p-4 mb-4">
+              <h5 class="font-serif fw-bold mb-3">More From The Journal</h5>
+              <div class="d-flex flex-column gap-3" id="sidebarRecentArticles">
+                <!-- Dynamically populated with other article links & thumbnails -->
+              </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="luxury-card p-4 mb-4">
+              <h5 class="font-serif fw-bold mb-3">Curated Topics</h5>
+              <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=interior" class="text-decoration-none text-heading">Interior Architecture</a> 
+                  <span class="badge bg-light text-dark border">2</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=materials" class="text-decoration-none text-heading">Materials &amp; Fibers</a> 
+                  <span class="badge bg-light text-dark border">1</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=guide" class="text-decoration-none text-heading">Buying &amp; Appraisals</a> 
+                  <span class="badge bg-light text-dark border">1</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=care" class="text-decoration-none text-heading">Conservation &amp; Care</a> 
+                  <span class="badge bg-light text-dark border">2</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=decor" class="text-decoration-none text-heading">Home Decor &amp; Styling</a> 
+                  <span class="badge bg-light text-dark border">1</span>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <a href="blog.html?cat=trends" class="text-decoration-none text-heading">Design Trends</a> 
+                  <span class="badge bg-light text-dark border">1</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="luxury-card p-4 text-center">
+              <i class="bi bi-envelope-open text-terracotta fs-2 mb-2 d-inline-block"></i>
+              <h5 class="font-serif fw-bold mb-2">The Sunday Dispatch</h5>
+              <p class="small text-muted mb-3">Receive our curated weekend essay on interior architecture, fiber provenance, and collector acquisitions.</p>
+              <form onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" class="form-control form-control-sm mb-2" placeholder="Your email address" required>
+                <button type="submit" class="btn btn-luxury-primary btn-sm w-100">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/blog-data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- DYNAMIC ARTICLE DETAIL RENDERER -->
+  <script>
+    (function () {
+      'use strict';
+
+      function loadArticle() {
+        if (!window.BLOG_ARTICLES_DATA || !window.getBlogArticle) return;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+        const article = window.getBlogArticle(articleId);
+
+        if (!article) return;
+
+        // 1. Update Document Title
+        document.title = `${article.title} — Atelier Rugs Journal`;
+
+        // 2. Breadcrumbs & Badge
+        const breadcrumbCat = document.getElementById('breadcrumbCategory');
+        if (breadcrumbCat) breadcrumbCat.textContent = article.categoryName;
+
+        const catBadge = document.getElementById('articleCategoryBadge');
+        if (catBadge) {
+          catBadge.textContent = article.categoryName;
+          catBadge.className = `badge ${article.badgeClass || 'badge-luxury-terracotta'}`;
+        }
+
+        // 3. Article Title (large elegant serif, fully visible below navbar)
+        const titleEl = document.getElementById('articleTitle');
+        if (titleEl) titleEl.textContent = article.title;
+
+        // 4. Author & Metadata
+        const avatarEl = document.getElementById('articleAuthorAvatar');
+        if (avatarEl) {
+          avatarEl.src = article.authorAvatar;
+          avatarEl.alt = article.author;
+        }
+
+        const authorNameEl = document.getElementById('articleAuthorName');
+        if (authorNameEl) authorNameEl.textContent = article.author;
+
+        const authorRoleEl = document.getElementById('articleAuthorRole');
+        if (authorRoleEl) authorRoleEl.textContent = article.authorRole;
+
+        const dateEl = document.getElementById('articleDate');
+        if (dateEl) dateEl.textContent = article.date;
+
+        const readTimeEl = document.getElementById('articleReadTime');
+        if (readTimeEl) readTimeEl.textContent = article.readTime;
+
+        // 5. Matching Hero Image (directly below metadata, proper aspect ratio, never cropped incorrectly)
+        const heroImg = document.getElementById('articleHeroImg');
+        if (heroImg) {
+          heroImg.src = article.image;
+          heroImg.alt = article.imageAlt || article.title;
+        }
+
+        const imgCaption = document.getElementById('articleImageCaption');
+        if (imgCaption) {
+          imgCaption.textContent = article.imageCaption || `${article.title} • Atelier Rugs Archive`;
+        }
+
+        // 6. Article Body Content
+        const bodyEl = document.getElementById('articleBody');
+        if (bodyEl) {
+          bodyEl.innerHTML = article.content;
+        }
+
+        // 7. Previous & Next Navigation
+        const currentIndex = window.BLOG_ARTICLES_DATA.findIndex(a => a.id === article.id);
+        const validIndex = currentIndex >= 0 ? currentIndex : 0;
+        const prevIndex = (validIndex - 1 + window.BLOG_ARTICLES_DATA.length) % window.BLOG_ARTICLES_DATA.length;
+        const nextIndex = (validIndex + 1) % window.BLOG_ARTICLES_DATA.length;
+
+        const prevArticle = window.BLOG_ARTICLES_DATA[prevIndex];
+        const nextArticle = window.BLOG_ARTICLES_DATA[nextIndex];
+
+        const prevLink = document.getElementById('prevArticleLink');
+        const prevTitle = document.getElementById('prevArticleTitle');
+        if (prevLink && prevTitle && prevArticle) {
+          prevLink.href = `blog-details.html?id=${prevArticle.id}`;
+          prevTitle.textContent = prevArticle.title;
+        }
+
+        const nextLink = document.getElementById('nextArticleLink');
+        const nextTitle = document.getElementById('nextArticleTitle');
+        if (nextLink && nextTitle && nextArticle) {
+          nextLink.href = `blog-details.html?id=${nextArticle.id}`;
+          nextTitle.textContent = nextArticle.title;
+        }
+
+        // 8. Sidebar Recent Articles
+        const sidebarRecent = document.getElementById('sidebarRecentArticles');
+        if (sidebarRecent) {
+          const otherArticles = window.BLOG_ARTICLES_DATA.filter(a => a.id !== article.id).slice(0, 4);
+          sidebarRecent.innerHTML = otherArticles.map(a => `
+            <a href="blog-details.html?id=${a.id}" class="d-flex gap-3 text-decoration-none align-items-center group-hover-link">
+              <img src="${a.image}" alt="${a.title}" class="rounded-3 object-fit-cover flex-shrink-0" width="68" height="68">
+              <div>
+                <h6 class="font-serif fw-bold mb-1 text-heading small line-clamp-2">${a.title}</h6>
+                <span class="text-muted smaller d-block">${a.readTime} • ${a.author}</span>
+              </div>
+            </a>
+          `).join('');
+        }
+
+        // Scroll smoothly to top on load/change
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      window.copyArticleLink = function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            if (window.showToast) {
+              window.showToast('Link Copied', 'Article link copied to clipboard.', 'bi-link-45deg');
+            } else {
+              alert('Link copied to clipboard!');
+            }
+          });
+        } else if (window.showToast) {
+          window.showToast('Link Copied', 'Article link copied to clipboard.', 'bi-link-45deg');
+        }
+      };
+
+      // Load on page load
+      document.addEventListener('DOMContentLoaded', loadArticle);
+
+      // Support browser back/forward navigation
+      window.addEventListener('popstate', loadArticle);
+    })();
+  </script>
+</body>
+</html>

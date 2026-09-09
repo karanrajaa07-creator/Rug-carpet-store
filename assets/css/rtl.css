@@ -1,0 +1,120 @@
+/* ==========================================================================
+   RUG & CARPET STORE - RTL (RIGHT-TO-LEFT) STYLESHEET
+   Supports Arabic, Hebrew, and Persian layouts
+   ========================================================================== */
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* --- 1. GENERAL TEXT & SPACING REVERSALS --- */
+html[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+html[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+html[dir="rtl"] .section-tag::before {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Back to top repositioned for RTL */
+html[dir="rtl"] .back-to-top-btn {
+  right: auto;
+  left: 1.5rem;
+}
+
+/* --- 2. HEADER & NAVIGATION --- */
+html[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+html[dir="rtl"] .nav-link {
+  text-align: right;
+}
+html[dir="rtl"] .dropdown-menu {
+  text-align: right;
+}
+html[dir="rtl"] .dropdown-toggle::after {
+  margin-left: 0;
+  margin-right: 0.35em;
+}
+html[dir="rtl"] .dropdown-item:hover,
+html[dir="rtl"] .dropdown-item:focus {
+  padding-left: 1.25rem;
+  padding-right: 1.5rem;
+}
+html[dir="rtl"] .header-badge {
+  right: auto;
+  left: -4px;
+}
+
+/* --- 3. PRODUCT CARDS --- */
+html[dir="rtl"] .product-badge-group {
+  left: auto;
+  right: 0.85rem;
+}
+
+/* --- 4. OFFCANVAS CART DRAWER --- */
+html[dir="rtl"] .offcanvas-end {
+  right: auto !important;
+  left: 0 !important;
+  transform: translateX(-100%) !important;
+  border-left: none !important;
+  border-right: 1px solid var(--border-light) !important;
+}
+html[dir="rtl"] .offcanvas-end.show {
+  transform: none !important;
+}
+
+/* --- 5. TOAST NOTIFICATIONS --- */
+html[dir="rtl"] .toast-container {
+  right: auto;
+  left: 2rem;
+}
+html[dir="rtl"] .custom-toast {
+  border-left: 1px solid var(--border-light);
+  border-right: 4px solid var(--color-terracotta);
+  animation: slideInLeft 0.3s ease-out;
+}
+
+/* --- 6. ADMIN DASHBOARD RTL --- */
+html[dir="rtl"] .admin-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-light);
+}
+@media (max-width: 991.98px) {
+  html[dir="rtl"] .admin-sidebar {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+  html[dir="rtl"] .admin-sidebar.show {
+    transform: translateX(0);
+  }
+}
+html[dir="rtl"] .admin-nav-link {
+  border-left: none;
+  border-right: 3px solid transparent;
+}
+html[dir="rtl"] .admin-nav-link:hover,
+html[dir="rtl"] .admin-nav-link.active {
+  border-left-color: transparent;
+  border-right-color: var(--color-terracotta);
+}
+
+/* --- 7. DIRECTIONAL ICONS FLIP --- */
+html[dir="rtl"] .bi-arrow-right,
+html[dir="rtl"] .bi-chevron-right,
+html[dir="rtl"] .fa-arrow-right,
+html[dir="rtl"] .fa-chevron-right {
+  transform: scaleX(-1);
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}

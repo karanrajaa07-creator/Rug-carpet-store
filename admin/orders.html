@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders & White-Glove Shipments — Atelier Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header d-flex justify-content-between align-items-center">
+        <a class="navbar-brand-logo text-heading text-decoration-none fs-5" href="index.html">
+          <i class="bi bi-gem text-gold"></i>
+          <span>ATELIER</span> ADMIN
+        </a>
+      </div>
+      <div class="admin-nav-group flex-grow-1">
+        <div class="admin-nav-label">Management</div>
+        <a href="index.html" class="admin-nav-link"><i class="bi bi-speedometer2"></i> Overview</a>
+        <a href="users.html" class="admin-nav-link"><i class="bi bi-people"></i> Customers & Staff</a>
+        <a href="products.html" class="admin-nav-link"><i class="bi bi-grid"></i> Rug Inventory</a>
+        <a href="orders.html" class="admin-nav-link active"><i class="bi bi-box-seam"></i> Orders & Shipments</a>
+        <a href="messages.html" class="admin-nav-link"><i class="bi bi-chat-dots"></i> Client Inquiries</a>
+        <a href="appointments.html" class="admin-nav-link"><i class="bi bi-calendar-check"></i> Showroom Visits</a>
+        <div class="admin-nav-label mt-3">Intelligence</div>
+        <a href="analytics.html" class="admin-nav-link"><i class="bi bi-graph-up-arrow"></i> Sales Analytics</a>
+        <a href="settings.html" class="admin-nav-link"><i class="bi bi-gear"></i> Store Settings</a>
+        <div class="admin-nav-label mt-3">Public Site</div>
+        <a href="../index.html" class="admin-nav-link"><i class="bi bi-box-arrow-up-right"></i> Live Storefront</a>
+      </div>
+    </aside>
+
+    <div class="admin-main-content">
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="adminSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <h4 class="font-serif fw-bold mb-0">Client Orders & White-Glove Shipments</h4>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl"><span class="rtl-toggle-text">RTL</span></button>
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-theme"><i class="bi bi-moon-stars theme-toggle-icon"></i></button>
+        </div>
+      </header>
+
+      <main class="p-4 p-md-5">
+        <div class="luxury-card p-4">
+          <!-- Filters -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-5">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text bg-subtle"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search order number or client name...">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <select class="form-select form-select-sm">
+                <option selected>All Fulfillment States</option>
+                <option>Delivered & Placed</option>
+                <option>Loom Weaving (Bespoke)</option>
+                <option>Shipped / White-Glove In Transit</option>
+                <option>Processing / Warping Loom</option>
+              </select>
+            </div>
+            <div class="col-md-3 text-end">
+              <button class="btn btn-outline-secondary btn-sm" onclick="showToast('Export', 'Orders CSV compiled and downloaded.', 'bi-download')">
+                <i class="bi bi-download me-1"></i> Export CSV
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead class="bg-subtle small font-serif">
+                <tr>
+                  <th>Order Ref</th>
+                  <th>Client</th>
+                  <th>Purchased Item</th>
+                  <th>Order Date</th>
+                  <th>Total Amount</th>
+                  <th>Payment</th>
+                  <th>Fulfillment Status</th>
+                  <th class="text-end">Details</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr>
+                  <td class="fw-bold">#RCS-9021</td>
+                  <td>Elena Rostova</td>
+                  <td>Isfahan Silk (8' × 10')</td>
+                  <td>Sep 01, 2026</td>
+                  <td class="fw-bold text-terracotta">$850</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success border border-success">Paid (Amex)</span></td>
+                  <td>
+                    <select class="form-select form-select-sm" onchange="updateOrderStatus(this)">
+                      <option selected>Delivered</option>
+                      <option>In Transit</option>
+                      <option>Loom Weaving</option>
+                    </select>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-0" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#RCS-9022</td>
+                  <td>Marcus Vance</td>
+                  <td>Bespoke Wool & Silk (14' × 18')</td>
+                  <td>Aug 29, 2026</td>
+                  <td class="fw-bold text-terracotta">$3,080</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success border border-success">Paid (Wire)</span></td>
+                  <td>
+                    <select class="form-select form-select-sm" onchange="updateOrderStatus(this)">
+                      <option>Delivered</option>
+                      <option selected>Loom Weaving</option>
+                      <option>In Transit</option>
+                    </select>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-0" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#RCS-9023</td>
+                  <td>Sophia Sterling</td>
+                  <td>Atlas Berber Rug (9' × 12')</td>
+                  <td>Aug 27, 2026</td>
+                  <td class="fw-bold text-terracotta">$620</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success border border-success">Paid (Visa)</span></td>
+                  <td>
+                    <select class="form-select form-select-sm" onchange="updateOrderStatus(this)">
+                      <option>Delivered</option>
+                      <option selected>In Transit</option>
+                      <option>Processing</option>
+                    </select>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-0" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#RCS-9024</td>
+                  <td>Alexander Wright</td>
+                  <td>Caspian Silk (9' × 12')</td>
+                  <td>Aug 25, 2026</td>
+                  <td class="fw-bold text-terracotta">$1,250</td>
+                  <td><span class="badge bg-success bg-opacity-10 text-success border border-success">Paid (Mastercard)</span></td>
+                  <td>
+                    <select class="form-select form-select-sm" onchange="updateOrderStatus(this)">
+                      <option>Delivered</option>
+                      <option>In Transit</option>
+                      <option selected>Processing</option>
+                    </select>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary py-0" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ORDER DETAILS MODAL -->
+  <div class="modal fade" id="orderDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-serif fw-bold">Commission Manifest #RCS-9022</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <strong>Client:</strong> Marcus Vance<br>
+              <strong>Email:</strong> marcus@vance.com<br>
+              <strong>Phone:</strong> +1 (415) 892-0192
+            </div>
+            <div class="col-sm-6 text-sm-end">
+              <strong>Shipping Destination:</strong><br>
+              2400 Pacific Heights Blvd<br>
+              San Francisco, CA 94115
+            </div>
+          </div>
+
+          <div class="p-3 bg-subtle rounded-3 border border-custom mb-3">
+            <h6 class="font-serif fw-bold mb-2">Item Specifications:</h6>
+            <div class="d-flex justify-content-between">
+              <span>Bespoke Handwoven Wool & Silk Carpet (14' × 18')</span>
+              <span class="fw-bold text-terracotta">$3,080.00</span>
+            </div>
+            <div class="text-muted" style="font-size: 0.75rem;">Custom dye: Pantone Warm Sand 14-1118 • Hand-serged edge with 1/2" natural rubber pad</div>
+          </div>
+
+          <div class="d-flex justify-content-between pt-2 border-top border-custom">
+            <span>White-Glove In-Home Placement:</span>
+            <span class="text-success fw-bold">COMPLIMENTARY</span>
+          </div>
+          <div class="d-flex justify-content-between fs-5 font-serif fw-bold mt-2">
+            <span>Total Settled:</span>
+            <span class="text-terracotta">$3,080.00 USD</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-luxury-primary btn-sm" onclick="showToast('Invoice', 'Receipt dispatched to customer email.', 'bi-printer')"><i class="bi bi-printer me-1"></i> Print Packing Slip</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

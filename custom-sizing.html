@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Rug Sizing Studio & Calculator — Atelier Rugs</title>
+  <meta name="description" content="Calculate custom rug dimensions down to the inch. Select pure wool, silk, or jute, pick bespoke border finishes, and receive instant price estimates and CAD proofs.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 bg-subtle-box border-bottom border-custom text-center">
+    <div class="container py-4">
+      <div class="section-tag justify-content-center">Atelier Engineering</div>
+      <h1 class="display-4 font-serif fw-bold mb-3">Custom Rug Dimension Studio</h1>
+      <p class="section-desc mx-auto">
+        Never let standard showroom sizes dictate your architectural layout. Configure dimensions to the exact inch, select handwoven raw fibers, choose edge finishes, and receive real-time price estimations.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        
+        <!-- Left: Interactive Form -->
+        <div class="col-lg-7">
+          <div class="calc-card">
+            <h3 class="font-serif fw-bold mb-4"><i class="bi bi-sliders text-terracotta me-2"></i> Configure Your Specifications</h3>
+
+            <!-- 1. Shape Selection -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">1. Select Rug Shape:</label>
+              <div class="row g-2">
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="shape-picker-btn active" data-shape="rectangular" onclick="selectRugShape(this, 'rectangular')">
+                    <i class="bi bi-square fs-3 d-block mb-1"></i>
+                    <span class="small fw-bold">Rectangle</span>
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="shape-picker-btn" data-shape="round" onclick="selectRugShape(this, 'round')">
+                    <i class="bi bi-circle fs-3 d-block mb-1"></i>
+                    <span class="small fw-bold">Round</span>
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="shape-picker-btn" data-shape="runner" onclick="selectRugShape(this, 'runner')">
+                    <i class="bi bi-distribute-vertical fs-3 d-block mb-1"></i>
+                    <span class="small fw-bold">Runner</span>
+                  </button>
+                </div>
+                <div class="col-6 col-sm-3">
+                  <button type="button" class="shape-picker-btn" data-shape="oval" onclick="selectRugShape(this, 'oval')">
+                    <i class="bi bi-egg fs-3 d-block mb-1"></i>
+                    <span class="small fw-bold">Oval</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Dimensions & Units -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">2. Specify Dimensions:</label>
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <label class="small text-muted">Measurement Unit</label>
+                  <select id="calcUnit" class="form-select">
+                    <option value="feet" selected>Feet (ft)</option>
+                    <option value="meters">Meters (m)</option>
+                    <option value="inches">Inches (in)</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <label class="small text-muted">Width</label>
+                  <input type="number" id="calcWidth" class="form-control" value="9" min="2" max="60" step="0.5">
+                </div>
+                <div class="col-sm-4">
+                  <label class="small text-muted">Length / Diameter</label>
+                  <input type="number" id="calcLength" class="form-control" value="12" min="2" max="60" step="0.5">
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Material Selection -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">3. Select Raw Fiber Material:</label>
+              <select id="calcMaterial" class="form-select form-select-lg">
+                <option value="wool" selected>Highland New Zealand Wool ($12.50 / sq ft) — Resilient & Soft</option>
+                <option value="silk">Pure Mulberry Silk ($28.00 / sq ft) — Royal Sheen & 600 KPSI</option>
+                <option value="wool-silk">New Zealand Wool & Bamboo Silk Blend ($22.00 / sq ft)</option>
+                <option value="jute">Hand-Braided Organic Bengal Jute ($7.50 / sq ft) — Natural Wabi-Sabi</option>
+                <option value="cotton">Organic Cotton Flatweave ($6.00 / sq ft) — Reversible & Washable</option>
+              </select>
+            </div>
+
+            <!-- 4. Border & Selvedge Finish -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">4. Edge & Border Finish:</label>
+              <select id="calcBorder" class="form-select">
+                <option value="serged" selected>Hand-Serged Overlocked Yarn Edge (Included)</option>
+                <option value="fringe">Classic Cotton Fringe Tassels (+ $65)</option>
+                <option value="leather-binding">Hand-Stitched Italian Calfskin Leather Binding (+ $110)</option>
+                <option value="blind-hem">Concealed Blind-Hem Modern Border (+ $45)</option>
+              </select>
+            </div>
+
+            <!-- 5. Upload Reference (Optional) -->
+            <div class="mb-4">
+              <label class="form-label fw-bold">5. Upload Architectural Plan or Color Board (Optional):</label>
+              <input type="file" class="form-control" accept="image/*,.pdf">
+              <span class="small text-muted">Accepts JPG, PNG, PDF up to 15MB.</span>
+            </div>
+
+            <button type="button" class="btn btn-luxury-primary btn-lg w-100" onclick="openCustomQuoteModal()">
+              <i class="bi bi-file-earmark-text me-2"></i> Request Custom CAD Proof & Quote
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Live Estimation Summary -->
+        <div class="col-lg-5">
+          <div class="sticky-top" style="top: 100px;">
+            <div class="price-estimate-card mb-4 shadow-lg">
+              <span class="badge badge-luxury-gold mb-3">Live Atelier Quotation</span>
+              <div class="mb-3">
+                <div class="small text-light opacity-75">Estimated Total Investment:</div>
+                <div class="price-estimate-amount" id="calcPriceDisplay">$1,350</div>
+              </div>
+
+              <div class="border-top border-secondary pt-3 mt-3 d-flex flex-column gap-2 small">
+                <div class="d-flex justify-content-between text-light">
+                  <span>Surface Area:</span>
+                  <span class="fw-bold text-white" id="calcSqFtDisplay">108 sq ft</span>
+                </div>
+                <div class="d-flex justify-content-between text-light">
+                  <span>Production Time:</span>
+                  <span class="fw-bold text-gold" id="calcLeadTimeDisplay">6 - 8 Weeks (Artisan Loomed)</span>
+                </div>
+                <div class="d-flex justify-content-between text-light">
+                  <span>Weaving Technique:</span>
+                  <span class="fw-bold text-white">Vertical Hand-Loomed Knot</span>
+                </div>
+                <div class="d-flex justify-content-between text-light">
+                  <span>Insured Shipping:</span>
+                  <span class="fw-bold text-success">Complimentary Worldwide</span>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-top border-secondary">
+                <button class="btn btn-luxury-gold w-100" onclick="openCustomQuoteModal()">
+                  Finalize Quote Request
+                </button>
+              </div>
+            </div>
+
+            <!-- What You Receive Box -->
+            <div class="luxury-card p-4">
+              <h5 class="font-serif fw-bold mb-3">Included with Every Bespoke Order</h5>
+              <ul class="list-unstyled d-flex flex-column gap-2 small text-muted mb-0">
+                <li><i class="bi bi-check-circle-fill text-terracotta me-2"></i> Physical 1' × 1' strike-off sample delivered prior to loom warping</li>
+                <li><i class="bi bi-check-circle-fill text-terracotta me-2"></i> High-resolution 3D room rendering with your exact colorways</li>
+                <li><i class="bi bi-check-circle-fill text-terracotta me-2"></i> Bi-weekly artisan video & photo updates from the weaver's bench</li>
+                <li><i class="bi bi-check-circle-fill text-terracotta me-2"></i> 100% Fit Guarantee with complimentary local technician adjustments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS STEP-BY-STEP -->
+  <section class="py-5 bg-surface border-top border-custom">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag justify-content-center">Bespoke Protocol</div>
+        <h2 class="section-title">How Custom Sizing Works</h2>
+      </div>
+
+      <div class="row g-4 text-center">
+        <div class="col-md-3">
+          <div class="p-4 luxury-card h-100">
+            <span class="badge bg-terracotta text-white rounded-circle fs-4 mb-3" style="width: 50px; height: 50px; line-height: 38px;">1</span>
+            <h5 class="font-serif fw-bold">Configure Dimensions</h5>
+            <p class="small text-muted mb-0">Input length, width, and shape using our studio tool above to receive real-time estimates.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 luxury-card h-100">
+            <span class="badge bg-terracotta text-white rounded-circle fs-4 mb-3" style="width: 50px; height: 50px; line-height: 38px;">2</span>
+            <h5 class="font-serif fw-bold">CAD & Strike-Off</h5>
+            <p class="small text-muted mb-0">Our atelier weaves a 1' × 1' strike-off sample for your tactile approval in your home.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 luxury-card h-100">
+            <span class="badge bg-terracotta text-white rounded-circle fs-4 mb-3" style="width: 50px; height: 50px; line-height: 38px;">3</span>
+            <h5 class="font-serif fw-bold">Master Knotting</h5>
+            <p class="small text-muted mb-0">Generational artisans knot your rug over 6 to 10 weeks, using certified organic highland fibers.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 luxury-card h-100">
+            <span class="badge bg-terracotta text-white rounded-circle fs-4 mb-3" style="width: 50px; height: 50px; line-height: 38px;">4</span>
+            <h5 class="font-serif fw-bold">White-Glove Placement</h5>
+            <p class="small text-muted mb-0">Delivered directly into your residence, unfurled, padded, and inspected to perfection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM QUOTE MODAL -->
+  <div class="modal fade" id="customQuoteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-serif fw-bold">Request Official Custom Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="quoteSpecsSummary"></div>
+          <form onsubmit="handleCustomQuoteSubmit(event)">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Full Name *</label>
+              <input type="text" class="form-control" required placeholder="Lord Julian Vance">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Email Address *</label>
+              <input type="email" class="form-control" required placeholder="julian@residence.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Phone Number</label>
+              <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Special Notes or Color Preferences</label>
+              <textarea class="form-control" rows="3" placeholder="Matching Farrow & Ball Mouse's Back paint, low pile for dining chairs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-luxury-primary w-100">Dispatch Quote & Request Strike-Off</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

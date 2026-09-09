@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Flagship Showroom Booking — Atelier Rugs</title>
+  <meta name="description" content="Visit our Madison Avenue flagship showroom in New York. Book a private bespoke rug appointment or contact our interior concierge team.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="py-5 bg-subtle-box border-bottom border-custom text-center">
+    <div class="container py-4">
+      <div class="section-tag justify-content-center">Connect With Us</div>
+      <h1 class="display-4 font-serif fw-bold mb-3">Visit Our Showroom or Inquire Online</h1>
+      <p class="section-desc mx-auto">
+        Experience hand-knotted textures in natural daylight, review custom loom strike-off samples, or consult with our interior design specialists.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO CARDS -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-2 mb-3"><i class="bi bi-geo-alt"></i></div>
+            <h5 class="font-serif fw-bold mb-1">Flagship Showroom</h5>
+            <p class="small text-muted mb-0">542 Madison Avenue, 4th Floor<br>New York, NY 10022</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-2 mb-3"><i class="bi bi-telephone"></i></div>
+            <h5 class="font-serif fw-bold mb-1">Telephone Concierge</h5>
+            <p class="small text-muted mb-0">+1 (800) 482-RUGS<br>Direct: +1 (212) 555-0194</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-2 mb-3"><i class="bi bi-envelope"></i></div>
+            <h5 class="font-serif fw-bold mb-1">Digital Correspondence</h5>
+            <p class="small text-muted mb-0">concierge@rugcarpetstore.com<br>trade@rugcarpetstore.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-2 mb-3"><i class="bi bi-clock"></i></div>
+            <h5 class="font-serif fw-bold mb-1">Showroom Hours</h5>
+            <p class="small text-muted mb-0">Mon – Fri: 10:00 AM – 7:00 PM<br>Saturday: 11:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWROOM BOOKING & CONTACT FORMS -->
+  <section class="py-5 bg-surface border-top border-bottom border-custom" id="showroomBooking">
+    <div class="container py-4">
+      <div class="row g-5">
+        
+        <!-- Dedicated Showroom Appointment Form -->
+        <div class="col-lg-7">
+          <div class="calc-card">
+            <span class="badge badge-luxury-terracotta mb-2">VIP Reservation</span>
+            <h2 class="font-serif fw-bold mb-2">Book a Private Showroom Viewing</h2>
+            <p class="small text-muted mb-4">
+              Schedule a dedicated one-on-one session with our senior rug curators. Enjoy fine refreshments while experiencing our rare antique collections and bespoke fiber samples.
+            </p>
+
+            <form onsubmit="handleShowroomBooking(event)" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="apptName">Full Name *</label>
+                  <input type="text" id="apptName" class="form-control" required placeholder="Elena Rostova">
+                  <div class="invalid-feedback">Please provide your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="apptEmail">Email Address *</label>
+                  <input type="email" id="apptEmail" class="form-control" required placeholder="elena@studio.com">
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="apptPhone">Phone Number *</label>
+                  <input type="tel" id="apptPhone" class="form-control" required placeholder="+1 (212) 555-0199">
+                  <div class="invalid-feedback">Please enter your phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="apptVisitors">Number of Visitors</label>
+                  <select id="apptVisitors" class="form-select">
+                    <option value="1 Guest">1 Person</option>
+                    <option value="2 Guests" selected>2 Persons</option>
+                    <option value="3 Guests">3 Persons</option>
+                    <option value="Design Team (4+)">Design Team (4+ Guests)</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="apptDate">Preferred Date *</label>
+                  <input type="date" id="apptDate" class="form-control" required>
+                  <div class="invalid-feedback">Please choose a preferred visit date.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="apptTime">Preferred Time Slot</label>
+                  <select id="apptTime" class="form-select">
+                    <option>10:30 AM – Morning Light</option>
+                    <option selected>01:30 PM – Afternoon Session</option>
+                    <option>04:00 PM – Sunset Light</option>
+                    <option>06:00 PM – Twilight Viewing</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="apptService">Primary Interest</label>
+                  <select id="apptService" class="form-select">
+                    <option selected>Bespoke Custom Rug Commission</option>
+                    <option>Antique & Traditional Persian Medallions</option>
+                    <option>Modern Architectural Flatweaves & Wool</option>
+                    <option>Trade Program / Complete Residence Project</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Special Requests / Room Plans (Optional)</label>
+                  <textarea class="form-control" rows="3" placeholder="Tell us about your room dimensions, color palette, or furniture layout..."></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-luxury-primary btn-lg w-100">
+                    <i class="bi bi-calendar-check me-2"></i> Confirm Showroom Appointment
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: General Inquiries Form & Map Placeholder -->
+        <div class="col-lg-5">
+          <!-- General Contact Form -->
+          <div class="luxury-card p-4 mb-4">
+            <h4 class="font-serif fw-bold mb-2">Send a General Inquiry</h4>
+            <p class="small text-muted mb-3">Our concierge responds within 1 business day.</p>
+            <form onsubmit="handleContactSubmit(event)" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-sm" placeholder="Your Name *" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-sm" placeholder="Your Email *" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-sm" placeholder="Subject">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control form-control-sm" rows="3" placeholder="Your message..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-luxury-outline btn-sm w-100">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Real Interactive Map -->
+          <div class="luxury-card overflow-hidden">
+            <div class="p-3 bg-subtle border-bottom border-custom d-flex justify-content-between align-items-center">
+              <span class="small fw-bold"><i class="bi bi-pin-map-fill text-terracotta me-1"></i> Manhattan Showroom Location</span>
+              <a href="https://maps.google.com/?q=542+Madison+Avenue,+New+York,+NY+10022" target="_blank" rel="noopener" class="small text-terracotta text-decoration-none fw-semibold">Open in Google Maps <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div id="showroomMap" style="height: 280px; width: 100%; z-index: 1;"></div>
+            <div class="p-3 bg-subtle border-top border-custom d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div>
+                <div class="fw-bold font-serif small">542 Madison Avenue</div>
+                <div class="text-muted-custom smaller">Between 54th &amp; 55th Streets, Manhattan</div>
+              </div>
+              <span class="badge bg-gold text-dark">Valet Parking Available</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT CONFIRMATION MODAL -->
+  <div class="modal fade" id="bookingConfirmationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-body">
+          <div class="rounded-circle bg-success bg-opacity-10 text-success d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-check2-circle display-4"></i>
+          </div>
+          <h3 class="font-serif fw-bold mb-1">Appointment Reserved</h3>
+          <p class="text-muted small mb-3">We have reserved your private showroom session.</p>
+
+          <div class="p-3 bg-subtle rounded-3 border border-custom mb-3">
+            <div class="small text-muted text-uppercase fw-bold">Confirmation Reference</div>
+            <div class="font-serif fs-4 fw-bold text-terracotta" id="bookingRefCode">RCS-984210</div>
+          </div>
+
+          <div id="bookingSummaryDetails" class="mb-4"></div>
+
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-luxury-primary" data-bs-dismiss="modal">Add to Calendar & Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Manhattan Showroom Real Interactive Map Initializer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mapContainer = document.getElementById('showroomMap');
+      if (!mapContainer || typeof L === 'undefined') return;
+
+      // Coordinates for 542 Madison Ave, New York, NY 10022
+      const lat = 40.76075;
+      const lng = -73.97345;
+
+      const map = L.map('showroomMap', {
+        center: [lat, lng],
+        zoom: 16,
+        scrollWheelZoom: false
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+      }).addTo(map);
+
+      // Custom luxury terracotta marker with diamond icon
+      const customIcon = L.divIcon({
+        className: 'custom-map-pin',
+        html: '<div style="background:#C26D53;color:white;width:38px;height:38px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.35);border:2.5px solid white;"><i class="bi bi-gem" style="transform:rotate(45deg);font-size:16px;"></i></div>',
+        iconSize: [38, 38],
+        iconAnchor: [19, 38],
+        popupAnchor: [0, -34]
+      });
+
+      const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+      marker.bindPopup(
+        '<div style="min-width:180px;padding:2px 0;">' +
+          '<div style="font-family:\'Playfair Display\',Georgia,serif;font-weight:700;font-size:1rem;color:#231F1C;margin-bottom:2px;">Atelier Rugs</div>' +
+          '<div style="font-size:0.8rem;color:#766E65;line-height:1.35;">542 Madison Ave, 4th Floor<br>New York, NY 10022</div>' +
+          '<div style="margin-top:6px;"><a href="https://maps.google.com/?q=542+Madison+Avenue,+New+York,+NY+10022" target="_blank" rel="noopener" style="color:#C26D53;font-size:0.75rem;font-weight:600;text-decoration:none;">Get Directions &rarr;</a></div>' +
+        '</div>'
+      ).openPopup();
+
+      setTimeout(function () {
+        map.invalidateSize();
+      }, 250);
+    });
+  </script>
+</body>
+</html>

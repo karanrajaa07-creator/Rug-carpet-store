@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rugs & Carpets Catalog — Handwoven, Modern, Silk & Wool</title>
+  <meta name="description" content="Explore our curated catalog of artisan hand-knotted oriental rugs, modern wool flatweaves, natural jute carpets, and hallway runners with multi-facet filters.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CATALOG HERO BANNER -->
+  <section class="py-5 bg-subtle-box border-bottom border-custom">
+    <div class="container py-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Catalog</li>
+        </ol>
+      </nav>
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+        <div>
+          <div class="section-tag">Curated Portfolio</div>
+          <h1 class="display-5 font-serif fw-bold mb-2">Artisan Rugs & Architectural Carpets</h1>
+          <p class="section-desc mb-0">Filtered by weave type, natural fibers, harmonious palettes, and dimensions.</p>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="custom-sizing.html" class="btn btn-luxury-outline">
+            <i class="bi bi-rulers me-1"></i> Need Custom Dimensions?
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG CONTENT -->
+  <section class="py-5">
+    <div class="container py-3">
+
+      <!-- Catalog Control Bar (Showing count & Sort dropdown) -->
+      <div class="catalog-control-bar d-flex flex-column flex-sm-row justify-content-between align-items-sm-center pb-3 mb-4 border-bottom border-custom gap-3">
+        <div class="small text-muted">
+          Showing <span class="fw-bold text-heading" id="productsFoundCount">12</span> artisan pieces
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <label class="small text-muted text-nowrap" for="sortSelect">Sort By:</label>
+          <select class="form-select form-select-sm" id="sortSelect" onchange="filterAndRenderProducts()" style="width: 180px;">
+            <option value="popularity">Most Popular</option>
+            <option value="rating">Highest Rated</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 3-COLUMN DESKTOP LAYOUT: Filter Sidebar | Product Grid | Promotional Cards -->
+      <div class="row g-4 catalog-main-row">
+        
+        <!-- 1. SIDEBAR FILTERS (Left Column) -->
+        <div class="col-lg-3 col-12 catalog-sidebar-col">
+          <div class="filter-sidebar" id="catalogFilterSidebar">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="font-serif fw-bold mb-0"><i class="bi bi-sliders me-2 text-terracotta"></i> Filter By</h5>
+              <button class="btn btn-link text-muted small p-0 text-decoration-none" onclick="resetFilters()">Reset All</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Category</div>
+              <div class="d-flex flex-column gap-2 small">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catAll" value="all" checked onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catAll">All Categories</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catHandwoven" value="Handwoven" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catHandwoven">Handwoven Rugs</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catModern" value="Modern" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catModern">Modern & Geometric</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catTraditional" value="Traditional" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catTraditional">Traditional & Oriental</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catOutdoor" value="Outdoor" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catOutdoor">Outdoor & Patio</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catRunner" value="Runner" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catRunner">Hallway Runners</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="filterCategory" id="catCarpets" value="Carpets" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="catCarpets">Luxury Carpets</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Material Filter -->
+            <div class="filter-group">
+              <div class="filter-title">Material</div>
+              <div class="d-flex flex-column gap-2 small">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="filterMaterial" id="matWool" value="wool" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="matWool">Highland Wool</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="filterMaterial" id="matSilk" value="silk" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="matSilk">Mulberry Silk</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="filterMaterial" id="matJute" value="jute" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="matJute">Organic Jute</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="filterMaterial" id="matCotton" value="cotton" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="matCotton">Pure Cotton</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="filterMaterial" id="matNatural" value="natural fibers" onchange="filterAndRenderProducts()">
+                  <label class="form-check-label" for="matNatural">Natural Fibers & Linen</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Color Palette Swatches -->
+            <div class="filter-group">
+              <div class="filter-title">Color Palette</div>
+              <div class="color-swatch-picker">
+                <div class="color-swatch" style="background-color: #FAF7F2;" data-color="Cream" title="Cream / Ecru" onclick="selectColorFilter(this)"></div>
+                <div class="color-swatch" style="background-color: #C26D53;" data-color="Terracotta" title="Terracotta / Rust" onclick="selectColorFilter(this)"></div>
+                <div class="color-swatch" style="background-color: #D8C5B4;" data-color="Sand" title="Sand / Oat" onclick="selectColorFilter(this)"></div>
+                <div class="color-swatch" style="background-color: #2A231E;" data-color="Charcoal" title="Charcoal / Espresso" onclick="selectColorFilter(this)"></div>
+                <div class="color-swatch" style="background-color: #C5A880;" data-color="Gold" title="Gold / Bronze" onclick="selectColorFilter(this)"></div>
+              </div>
+            </div>
+
+            <!-- Price Slider -->
+            <div class="filter-group">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="filter-title mb-0">Max Price</span>
+                <span class="fw-bold text-terracotta" id="priceSliderValue">$1,500</span>
+              </div>
+              <input type="range" class="form-range" id="priceRangeSlider" min="200" max="1500" step="50" value="1500" oninput="updatePriceSlider(this.value)">
+              <div class="d-flex justify-content-between small text-muted">
+                <span>$200</span>
+                <span>$1,500+</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. PRODUCT GRID (Main Column) -->
+        <div class="col-lg-9 col-12 catalog-products-col">
+          <!-- Active Filter Pill Banner -->
+          <div id="activeFilterBanner" class="alert alert-light border border-custom justify-content-between align-items-center mb-4 py-2 px-3 rounded-3" style="display: none;">
+            <div class="small">
+              <span class="text-muted me-1"><i class="bi bi-funnel-fill text-terracotta me-1"></i> Active Filter:</span>
+              <strong id="activeFilterText" class="text-heading"></strong>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="resetFilters()">
+              Clear Filter <i class="bi bi-x"></i>
+            </button>
+          </div>
+
+          <div class="row g-4" id="productsGridContainer">
+            <!-- Dynamically populated via products.js -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6 footer-services-col">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFCANVAS CART DRAWER -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-serif fw-bold" id="qvTitle">Product Name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6"><img src="" id="qvImage" class="rounded-3 w-100 object-fit-cover" style="max-height: 380px;"></div>
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+              <div>
+                <div class="small text-muted mb-1"><span id="qvCategory"></span> • <span id="qvMaterial"></span></div>
+                <h3 class="font-serif fw-bold text-terracotta mb-2" id="qvPrice">$0</h3>
+                <div class="rating-stars mb-3"><i class="bi bi-star-fill"></i> <span id="qvRating" class="ms-1 fw-bold"></span> <span id="qvReviews" class="text-muted small"></span></div>
+                <p class="small text-muted" id="qvDesc"></p>
+                <div class="mb-3"><label class="form-label small fw-bold">Size:</label><div id="qvSizes" class="d-flex flex-wrap"></div></div>
+              </div>
+              <button type="button" id="qvAddToCartBtn" class="btn btn-luxury-primary"><i class="bi bi-bag-plus me-1"></i> Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-4">
+          <h5 class="font-serif fw-bold mb-3">Search Collections</h5>
+          <form id="siteSearchForm">
+            <div class="input-group">
+              <input type="text" id="siteSearchInput" class="form-control form-control-lg" placeholder="Search rugs...">
+              <button class="btn btn-luxury-primary" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function updatePriceSlider(val) {
+      document.getElementById('priceSliderValue').textContent = `$${parseInt(val).toLocaleString()}`;
+      filterAndRenderProducts();
+    }
+
+    function selectColorFilter(el) {
+      const isActive = el.classList.contains('active');
+      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+      if (!isActive) el.classList.add('active');
+      filterAndRenderProducts();
+    }
+
+    // Check URL search, material, or category param
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let filterLabels = [];
+
+      const catParam = urlParams.get('category');
+      if (catParam) {
+        const catLower = catParam.toLowerCase();
+        const radios = Array.from(document.querySelectorAll('input[name="filterCategory"]'));
+        const targetRadio = radios.find(r => {
+          const val = r.value.toLowerCase();
+          return val === catLower || val.includes(catLower) || catLower.includes(val);
+        });
+        if (targetRadio) {
+          targetRadio.checked = true;
+          const labelText = targetRadio.nextElementSibling ? targetRadio.nextElementSibling.textContent.trim() : catParam;
+          filterLabels.push(`Category: ${labelText}`);
+        }
+      }
+
+      const matParam = urlParams.get('material');
+      if (matParam) {
+        const matLower = matParam.toLowerCase();
+        const checkboxes = Array.from(document.querySelectorAll('input[name="filterMaterial"]'));
+        const targetCb = checkboxes.find(cb => {
+          const val = cb.value.toLowerCase();
+          return val === matLower || val.includes(matLower) || matLower.includes(val);
+        });
+        if (targetCb) {
+          targetCb.checked = true;
+          const labelText = targetCb.nextElementSibling ? targetCb.nextElementSibling.textContent.trim() : matParam;
+          filterLabels.push(`Material: ${labelText}`);
+        }
+      }
+
+      const qParam = urlParams.get('q');
+      if (qParam && qParam.trim()) {
+        const searchInput = document.getElementById('siteSearchInput');
+        if (searchInput) searchInput.value = qParam.trim();
+        filterLabels.push(`Search: "${qParam.trim()}"`);
+      }
+
+      const banner = document.getElementById('activeFilterBanner');
+      const bannerText = document.getElementById('activeFilterText');
+      if (filterLabels.length > 0 && banner && bannerText) {
+        bannerText.textContent = filterLabels.join(' • ');
+        banner.style.display = 'flex';
+      }
+
+      filterAndRenderProducts();
+    });
+  </script>
+</body>
+</html>

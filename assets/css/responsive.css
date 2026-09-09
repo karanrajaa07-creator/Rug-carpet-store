@@ -1,0 +1,217 @@
+/* ==========================================================================
+   RUG & CARPET STORE - RESPONSIVE STYLESHEET
+   Mobile-First Breakpoint Refinements
+   ========================================================================== */
+
+/* --- 1. EXTRA LARGE DESKTOPS (1400px and up) --- */
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+/* --- 2. LAPTOPS & DESKTOPS (992px to 1199px) --- */
+@media (max-width: 1199.98px) {
+  .hero-home-1 {
+    min-height: auto;
+    padding: 3.5rem 0;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .pricing-card {
+    padding: 2rem 1.5rem;
+  }
+  .admin-sidebar {
+    width: 240px;
+  }
+}
+
+/* --- 3. TABLETS (768px to 991px) --- */
+@media (max-width: 991.98px) {
+  .top-bar .top-bar-contact {
+    display: none !important;
+  }
+  
+  .site-header {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-collapse {
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-lg);
+    margin-top: 1rem;
+    border: 1px solid var(--border-light);
+  }
+  .nav-link {
+    padding: 0.75rem 0 !important;
+  }
+  .nav-link:not(.dropdown-toggle)::after {
+    display: none;
+  }
+  .dropdown-menu {
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    background-color: var(--bg-subtle);
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--radius-sm);
+  }
+  .dropdown-item {
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-home-1 {
+    text-align: center;
+    padding: 2.5rem 0 3.5rem;
+  }
+  .hero-home-1 .hero-btn-group {
+    justify-content: center;
+  }
+  .hero-floating-card {
+    position: static;
+    margin-top: 1.5rem;
+    text-align: left;
+  }
+
+  .before-after-box {
+    height: 380px;
+  }
+
+  .calc-card {
+    padding: 1.75rem;
+  }
+
+  /* Admin Sidebar on Tablet/Mobile becomes Offcanvas */
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+  .admin-sidebar.show {
+    transform: translateX(0);
+  }
+  .admin-sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1025;
+  }
+  .admin-sidebar-backdrop.show {
+    display: block;
+  }
+
+  .filter-sidebar {
+    position: static !important;
+    top: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    margin-bottom: 2rem;
+  }
+
+  .editorial-promo-stack {
+    position: static !important;
+    top: auto !important;
+    margin-top: 1.5rem;
+  }
+}
+
+/* --- 4. PHONES / MOBILE (576px to 767px) --- */
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .display-4 {
+    font-size: 2.2rem;
+  }
+
+  .before-after-box {
+    height: 320px;
+  }
+
+  .cart-drawer {
+    width: 100% !important;
+  }
+
+  .back-to-top-btn {
+    right: 1rem;
+    bottom: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .admin-topbar {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* --- 5. SMALL PHONES (320px to 575px) --- */
+@media (max-width: 575.98px) {
+  .navbar-brand-logo {
+    font-size: 1.35rem;
+  }
+  .header-action-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .hero-btn-group .btn {
+    width: 100%;
+  }
+
+  .product-thumb-box {
+    padding-top: 100%;
+  }
+  .product-actions-bar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    bottom: 0.5rem;
+  }
+
+  .category-card {
+    height: 240px;
+  }
+  .category-card-overlay {
+    padding: 1.25rem;
+  }
+  .category-card-title {
+    font-size: 1.2rem;
+  }
+
+  .before-after-box {
+    height: 260px;
+  }
+
+  .price-estimate-card {
+    padding: 1.25rem;
+  }
+  .price-estimate-amount {
+    font-size: 2.2rem;
+  }
+
+  .custom-toast {
+    min-width: calc(100vw - 2rem);
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .admin-metric-card {
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+  .admin-metric-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+}

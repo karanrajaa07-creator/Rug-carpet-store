@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rug Size Selector Automated Test Runner</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { padding: 2rem; background: #f8f9fa; font-family: sans-serif; }
+    .test-pass { color: #198754; font-weight: bold; }
+    .test-fail { color: #dc3545; font-weight: bold; background: #ffe6e6; padding: 2px 6px; border-radius: 4px; }
+    .test-suite { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    #visualTestSandbox { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Rug Size Selector Test Suite</h1>
+  <div id="testSummary" class="alert alert-info">Running tests...</div>
+  <div id="testResults"></div>
+
+  <!-- Hidden Sandbox for Rendering DOM Elements -->
+  <div id="visualTestSandbox">
+    <div id="productsGridContainer"></div>
+    <div id="cartDrawer">
+      <div id="cartDrawerItems"></div>
+    </div>
+    <!-- Product Details Sandbox Elements -->
+    <img id="mainProductImage" src="">
+    <span id="pdCurrentDimensionText"></span>
+    <span id="pdSelectedSizeDisplay"></span>
+    <span id="pdSpecSize"></span>
+    <span id="pdPrice"></span>
+    <span id="pdOldPrice"></span>
+    <span id="pdSaveBadge"></span>
+    <div id="pdSizeOptions"></div>
+    <div id="pdRoomScaleBar"></div>
+    <div id="pdThumbnailsRow"></div>
+  </div>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+  <script>
+    const results = [];
+    function assert(name, condition, details = '') {
+      results.push({ name, pass: !!condition, details });
+      console.log((condition ? 'PASS: ' : 'FAIL: ') + name + (details ? ' (' + details + ')' : ''));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        localStorage.clear();
+
+        // ==========================================
+        // SUITE 1: Data Structure Verification
+        // ==========================================
+        const p14 = window.PRODUCTS_DATA.find(p => p.id === 14);
+        assert('Product 14 exists in catalog', !!p14);
+        assert('Product 14 has sizesData', !!(p14 && p14.sizesData));
+        assert('Product 14 Small dimensions is 5\' × 8\'', p14 && p14.sizesData.small.dimensions === "5' × 8'", p14.sizesData.small.dimensions);
+        assert('Product 14 Small price is 200', p14 && p14.sizesData.small.price === 200, p14.sizesData.small.price);
+        assert('Product 14 Small originalPrice is 240', p14 && p14.sizesData.small.originalPrice === 240, p14.sizesData.small.originalPrice);
+        assert('Product 14 Medium dimensions is 6\' × 9\'', p14 && p14.sizesData.medium.dimensions === "6' × 9'", p14.sizesData.medium.dimensions);
+        assert('Product 14 Medium price is 300', p14 && p14.sizesData.medium.price === 300, p14.sizesData.medium.price);
+        assert('Product 14 Medium originalPrice is 360', p14 && p14.sizesData.medium.originalPrice === 360, p14.sizesData.medium.originalPrice);
+        assert('Product 14 Large dimensions is 8\' × 10\'', p14 && p14.sizesData.large.dimensions === "8' × 10'", p14.sizesData.large.dimensions);
+        assert('Product 14 Large price is 440', p14 && p14.sizesData.large.price === 440, p14.sizesData.large.price);
+        assert('Product 14 Large originalPrice is 530', p14 && p14.sizesData.large.originalPrice === 530, p14.sizesData.large.originalPrice);
+        assert('Product 14 Small image is authentic detail-1', p14.sizesData.small.image.includes('scandinavian-cotton-detail-1'), p14.sizesData.small.image);
+        assert('Product 14 Large image is authentic detail-2', p14.sizesData.large.image.includes('scandinavian-cotton-detail-2'), p14.sizesData.large.image);
+
+        // Verify all 15 products have unique sizesData
+        let allHaveSizes = true;
+        let allDifferentPrices = true;
+        window.PRODUCTS_DATA.forEach(p => {
+          if (!p.sizesData || !p.sizesData.small || !p.sizesData.medium || !p.sizesData.large) allHaveSizes = false;
+          if (p.sizesData.small.price === p.sizesData.large.price) allDifferentPrices = false;
+        });
+        assert('All 15 products have structured sizesData (small, medium, large)', allHaveSizes);
+        assert('All products have different prices for Small vs Large', allDifferentPrices);
+
+        // ==========================================
+        // SUITE 2: Shop / Catalog Card Dynamic Updates
+        // ==========================================
+        const container = document.getElementById('productsGridContainer');
+        container.innerHTML = window.PRODUCTS_DATA.map(window.renderProductCard).join('');
+
+        // Test Product 14 Card: Initially Medium
+        const p14Img = document.getElementById('cardImg-14');
+        const p14Price = document.getElementById('cardPrice-14');
+        const p14OldPrice = document.getElementById('cardOldPrice-14');
+        const p14Discount = document.getElementById('cardDiscount-14');
+        const p14SizeLabel = document.getElementById('cardSizeLabel-14');
+        const p14MetaSize = document.getElementById('cardMetaSize-14');
+        const p14ThumbLink = document.getElementById('cardThumbLink-14');
+        const p14TitleLink = document.getElementById('cardTitleLink-14');
+
+        assert('Card 14 initially rendered with Medium price $300', p14Price.textContent === '$300', p14Price.textContent);
+        assert('Card 14 initially has Medium image', p14Img.src.includes('scandinavian-cotton-medium') || p14Img.src.includes('nordic-flatweave-rug'), p14Img.src);
+
+        // 1. Click Small on Card 14
+        window.selectCardSize(14, 'small');
+        assert('Card 14 Small: Price updated to $200', p14Price.textContent === '$200', p14Price.textContent);
+        assert('Card 14 Small: Old Price updated to $240', p14OldPrice.textContent === '$240', p14OldPrice.textContent);
+        assert('Card 14 Small: Discount badge updated to Save 17%', p14Discount.textContent === 'Save 17%', p14Discount.textContent);
+        assert('Card 14 Small: Image updated to detail-1', p14Img.src.includes('scandinavian-cotton-detail-1'), p14Img.src);
+        assert('Card 14 Small: Dimension text contains 5\' × 8\'', p14SizeLabel.textContent.includes("5' × 8'"), p14SizeLabel.textContent);
+        assert('Card 14 Small: Detail link updated to size=small', p14ThumbLink.href.includes('size=small') && p14TitleLink.href.includes('size=small'));
+
+        const smallPill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="small"]');
+        const medPill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="medium"]');
+        const largePill = document.querySelector('#cardSizePills-14 .card-size-pill[data-tier="large"]');
+        assert('Card 14 Small: Small pill is active', smallPill.classList.contains('active') && smallPill.getAttribute('aria-pressed') === 'true');
+        assert('Card 14 Small: Medium pill is not active', !medPill.classList.contains('active'));
+
+        // 2. Click Large on Card 14
+        window.selectCardSize(14, 'large');
+        assert('Card 14 Large: Price updated to $440', p14Price.textContent === '$440', p14Price.textContent);
+        assert('Card 14 Large: Old Price updated to $530', p14OldPrice.textContent === '$530', p14OldPrice.textContent);
+        assert('Card 14 Large: Image updated to detail-2', p14Img.src.includes('scandinavian-cotton-detail-2'), p14Img.src);
+        assert('Card 14 Large: Dimension text contains 8\' × 10\'', p14SizeLabel.textContent.includes("8' × 10'"), p14SizeLabel.textContent);
+        assert('Card 14 Large: Detail link updated to size=large', p14ThumbLink.href.includes('size=large'));
+        assert('Card 14 Large: Large pill is active', largePill.classList.contains('active') && largePill.getAttribute('aria-pressed') === 'true');
+
+        // 3. Test another product: Product 1 (Isfahan Silk)
+        const p1 = window.PRODUCTS_DATA.find(p => p.id === 1);
+        const p1Price = document.getElementById('cardPrice-1');
+        const p1Img = document.getElementById('cardImg-1');
+        window.selectCardSize(1, 'small');
+        assert('Card 1 Small: Price updated to $' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Small: Image updated to isfahan detail-1', p1Img.src.includes('isfahan-silk-detail-1'), p1Img.src);
+        window.selectCardSize(1, 'large');
+        assert('Card 1 Large: Price updated to $' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Large: Image updated to isfahan detail-2', p1Img.src.includes('isfahan-silk-detail-2'), p1Img.src);
+
+        // ==========================================
+        // SUITE 3: Cart / Add to Shopping Bag Verification
+        // ==========================================
+        localStorage.setItem('rug_store_cart', '[]');
+        // Add Small Product 14
+        window.selectCardSize(14, 'small');
+        window.addCardProductToCart(14);
+        let cart = window.getCart();
+        assert('Cart has 1 item after adding Small P14', cart.length === 1, cart.length);
+        let item1 = cart[0];
+        assert('Cart Item 1 ID is 14', item1 && item1.id === 14);
+        assert('Cart Item 1 sizeTier is small', item1 && item1.sizeTier === 'small');
+        assert('Cart Item 1 dimensions is 5\' × 8\'', item1 && item1.dimensions === "5' × 8'");
+        assert('Cart Item 1 price is $200 (not default/medium)', item1 && item1.price === 200, item1 && item1.price);
+        assert('Cart Item 1 originalPrice is 240', item1 && item1.originalPrice === 240, item1 && item1.originalPrice);
+        assert('Cart Item 1 discount is 17', item1 && item1.discount === 17, item1 && item1.discount);
+        assert('Cart Item 1 image is detail-1', item1 && item1.image.includes('scandinavian-cotton-detail-1'), item1 && item1.image);
+
+        // Add Large Product 14
+        window.selectCardSize(14, 'large');
+        window.addCardProductToCart(14);
+        cart = window.getCart();
+        assert('Cart has 2 items after adding Large P14', cart.length === 2, cart.length);
+        let item2 = cart[1];
+        assert('Cart Item 2 sizeTier is large', item2 && item2.sizeTier === 'large');
+        assert('Cart Item 2 dimensions is 8\' × 10\'', item2 && item2.dimensions === "8' × 10'");
+        assert('Cart Item 2 price is $440', item2 && item2.price === 440, item2 && item2.price);
+        assert('Cart Item 2 originalPrice is 530', item2 && item2.originalPrice === 530, item2 && item2.originalPrice);
+        assert('Cart Item 2 image is detail-2', item2 && item2.image.includes('scandinavian-cotton-detail-2'), item2 && item2.image);
+
+        // ==========================================
+        // SUITE 4: Product Details Page Simulation
+        // ==========================================
+        window.setCurrentDetailProduct(p14);
+        window.currentProduct = p14;
+        window.currentSelectedTier = 'medium';
+
+        // Setup DOM for product details simulation
+        const sizeOptionsContainer = document.getElementById('pdSizeOptions');
+        sizeOptionsContainer.innerHTML = `
+          <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small">Small (5' × 8')</button>
+          <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium">Medium (6' × 9')</button>
+          <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large">Large (8' × 10')</button>
+        `;
+
+        // Switch to Small
+        window.selectProductDetailTier('small', false);
+        assert('Details Small: Current selected tier is small', window.currentSelectedTier === 'small');
+        assert('Details Small: Main image updated to detail-1', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-detail-1'));
+        assert('Details Small: Price updated to $200 USD', document.getElementById('pdPrice').textContent === '$200 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Small: Old price updated to $240 USD', document.getElementById('pdOldPrice').textContent === '$240 USD', document.getElementById('pdOldPrice').textContent);
+        assert('Details Small: Discount badge is Save 17%', document.getElementById('pdSaveBadge').textContent === 'Save 17%', document.getElementById('pdSaveBadge').textContent);
+        assert('Details Small: Size button has active class', document.getElementById('sizeBtn-small').classList.contains('active'));
+        assert('Details Small: Selected size display contains 5\' × 8\'', document.getElementById('pdSelectedSizeDisplay').textContent.includes("5' × 8'"));
+
+        // Switch to Large
+        window.selectProductDetailTier('large', false);
+        assert('Details Large: Current selected tier is large', window.currentSelectedTier === 'large');
+        assert('Details Large: Main image updated to detail-2', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-detail-2'));
+        assert('Details Large: Price updated to $440 USD', document.getElementById('pdPrice').textContent === '$440 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Large: Old price updated to $530 USD', document.getElementById('pdOldPrice').textContent === '$530 USD', document.getElementById('pdOldPrice').textContent);
+        assert('Details Large: Large size button has active class', document.getElementById('sizeBtn-large').classList.contains('active'));
+        assert('Details Large: Selected size display contains 8\' × 10\'', document.getElementById('pdSelectedSizeDisplay').textContent.includes("8' × 10'"));
+
+        // Switch to Medium
+        window.selectProductDetailTier('medium', false);
+        assert('Details Medium: Price updated to $300 USD', document.getElementById('pdPrice').textContent === '$300 USD', document.getElementById('pdPrice').textContent);
+        assert('Details Medium: Main image updated to medium image', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-medium') || document.getElementById('mainProductImage').src.includes('nordic-flatweave-rug'));
+
+        // ==========================================
+        // Render Summary
+        // ==========================================
+        const passedCount = results.filter(r => r.pass).length;
+        const totalCount = results.length;
+        const allPassed = passedCount === totalCount;
+
+        const summaryEl = document.getElementById('testSummary');
+        summaryEl.className = allPassed ? 'alert alert-success' : 'alert alert-danger';
+        summaryEl.innerHTML = `<strong>${allPassed ? 'ALL TESTS PASSED!' : 'TESTS FAILED'}</strong> ${passedCount} / ${totalCount} checks passed.`;
+
+        const resultsEl = document.getElementById('testResults');
+        resultsEl.innerHTML = `
+          <div class="test-suite">
+            <ol>
+              ${results.map(r => `
+                <li class="${r.pass ? 'test-pass' : 'test-fail'}">
+                  ${r.pass ? '✓' : '✗'} ${r.name}
+                  ${r.details ? `<span class="text-muted small"> [${r.details}]</span>` : ''}
+                </li>
+              `).join('')}
+            </ol>
+          </div>
+        `;
+
+        window.__TEST_RESULTS__ = { passedCount, totalCount, allPassed, results };
+      } catch (err) {
+        console.error(err);
+        document.getElementById('testSummary').className = 'alert alert-danger';
+        document.getElementById('testSummary').textContent = 'ERROR IN TEST RUNNER: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

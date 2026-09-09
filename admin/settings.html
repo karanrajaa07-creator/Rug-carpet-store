@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Settings & Preferences — Atelier Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header d-flex justify-content-between align-items-center">
+        <a class="navbar-brand-logo text-heading text-decoration-none fs-5" href="index.html">
+          <i class="bi bi-gem text-gold"></i>
+          <span>ATELIER</span> ADMIN
+        </a>
+      </div>
+      <div class="admin-nav-group flex-grow-1">
+        <div class="admin-nav-label">Management</div>
+        <a href="index.html" class="admin-nav-link"><i class="bi bi-speedometer2"></i> Overview</a>
+        <a href="users.html" class="admin-nav-link"><i class="bi bi-people"></i> Customers & Staff</a>
+        <a href="products.html" class="admin-nav-link"><i class="bi bi-grid"></i> Rug Inventory</a>
+        <a href="orders.html" class="admin-nav-link"><i class="bi bi-box-seam"></i> Orders & Shipments</a>
+        <a href="messages.html" class="admin-nav-link"><i class="bi bi-chat-dots"></i> Client Inquiries</a>
+        <a href="appointments.html" class="admin-nav-link"><i class="bi bi-calendar-check"></i> Showroom Visits</a>
+        <div class="admin-nav-label mt-3">Intelligence</div>
+        <a href="analytics.html" class="admin-nav-link"><i class="bi bi-graph-up-arrow"></i> Sales Analytics</a>
+        <a href="settings.html" class="admin-nav-link active"><i class="bi bi-gear"></i> Store Settings</a>
+        <div class="admin-nav-label mt-3">Public Site</div>
+        <a href="../index.html" class="admin-nav-link"><i class="bi bi-box-arrow-up-right"></i> Live Storefront</a>
+      </div>
+    </aside>
+
+    <div class="admin-main-content">
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none" id="adminSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <h4 class="font-serif fw-bold mb-0">Store & Profile Settings</h4>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl"><span class="rtl-toggle-text">RTL</span></button>
+          <button class="btn btn-sm btn-outline-secondary" data-action="toggle-theme"><i class="bi bi-moon-stars theme-toggle-icon"></i></button>
+        </div>
+      </header>
+
+      <main class="p-4 p-md-5">
+        <div class="luxury-card p-4">
+          <ul class="nav nav-tabs mb-4" id="settingsTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active fw-bold small" data-bs-toggle="tab" data-bs-target="#profile-tab">Admin Profile</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fw-bold small" data-bs-toggle="tab" data-bs-target="#store-tab">Store & Currency</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fw-bold small" data-bs-toggle="tab" data-bs-target="#notifications-tab">Notifications</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fw-bold small" data-bs-toggle="tab" data-bs-target="#theme-tab">Theme & Appearance</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="settingsTabContent">
+            
+            <!-- Tab 1: Profile -->
+            <div class="tab-pane fade show active" id="profile-tab">
+              <form onsubmit="event.preventDefault(); showToast('Saved', 'Profile settings updated successfully.', 'bi-check2');">
+                <div class="row g-3 max-w-700">
+                  <div class="col-12 d-flex align-items-center gap-3 mb-3">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" alt="Isabella" class="rounded-circle" width="70" height="70">
+                    <div>
+                      <button type="button" class="btn btn-outline-secondary btn-sm" onclick="showToast('Avatar', 'Upload file dialogue ready.', 'bi-image')">Change Avatar</button>
+                      <div class="small text-muted mt-1">PNG, JPG up to 5MB</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Full Name</label>
+                    <input type="text" class="form-control" value="Isabella Moreno">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Email Address</label>
+                    <input type="email" class="form-control" value="isabella@rugcarpetstore.com">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">New Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••">
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-luxury-primary btn-sm">Save Profile Changes</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 2: Store -->
+            <div class="tab-pane fade" id="store-tab">
+              <form onsubmit="event.preventDefault(); showToast('Store Saved', 'E-commerce parameters updated.', 'bi-check2');">
+                <div class="row g-3 max-w-700">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Store Brand Name</label>
+                    <input type="text" class="form-control" value="Rug & Carpet Store">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Default Currency</label>
+                    <select class="form-select">
+                      <option selected>USD ($) — United States Dollar</option>
+                      <option>EUR (€) — Euro</option>
+                      <option>GBP (£) — British Pound</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Free Shipping Threshold ($ USD)</label>
+                    <input type="number" class="form-control" value="500">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold">Estimated Tax Rate (%)</label>
+                    <input type="number" class="form-control" value="8.875" step="0.001">
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-luxury-primary btn-sm">Save Store Parameters</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 3: Notifications -->
+            <div class="tab-pane fade" id="notifications-tab">
+              <form onsubmit="event.preventDefault(); showToast('Preferences Saved', 'Notification thresholds updated.', 'bi-check2');">
+                <div class="max-w-700 d-flex flex-column gap-3">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="notifAppt" checked>
+                    <label class="form-check-label small fw-bold" for="notifAppt">Showroom Visit Instant Alerts (Email & SMS)</label>
+                    <div class="text-muted small">Receive immediate notifications when clients book a Madison Ave appointment.</div>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="notifOrder" checked>
+                    <label class="form-check-label small fw-bold" for="notifOrder">Order Confirmation Dispatch</label>
+                    <div class="text-muted small">Send automated digital receipts and courier tracking numbers.</div>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="notifStock" checked>
+                    <label class="form-check-label small fw-bold" for="notifStock">Low Stock Threshold Warnings</label>
+                    <div class="text-muted small">Alert curator when an heirloom piece inventory drops below 2 units.</div>
+                  </div>
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-luxury-primary btn-sm">Save Notifications</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tab 4: Theme & Appearance -->
+            <div class="tab-pane fade" id="theme-tab">
+              <div class="max-w-700">
+                <div class="d-flex justify-content-between align-items-center p-3 bg-subtle rounded-3 mb-3">
+                  <div>
+                    <h6 class="fw-bold mb-1">Color Palette (Dark / Light Mode)</h6>
+                    <span class="small text-muted">Toggle between warm ivory light mode and obsidian dark mode.</span>
+                  </div>
+                  <button class="btn btn-luxury-outline btn-sm" data-action="toggle-theme">
+                    <i class="bi bi-moon-stars me-1"></i> Switch Mode
+                  </button>
+                </div>
+                <div class="d-flex justify-content-between align-items-center p-3 bg-subtle rounded-3">
+                  <div>
+                    <h6 class="fw-bold mb-1">Right-To-Left (RTL) Layout Direction</h6>
+                    <span class="small text-muted">Supports Arabic, Hebrew, and Persian regional layouts.</span>
+                  </div>
+                  <button class="btn btn-luxury-outline btn-sm" data-action="toggle-rtl">
+                    <i class="bi bi-translate me-1"></i> Switch RTL / LTR
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

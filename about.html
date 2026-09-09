@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Heritage & Artisan Story — Atelier Rugs</title>
+  <meta name="description" content="Learn about our 15-year history of preserving master hand-knotting traditions, ethical wool sourcing, and bespoke rug craftsmanship.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg p-0">
+        <a class="navbar-brand navbar-brand-logo" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span>ATELIER</span> RUGS
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
+          <i class="bi bi-list fs-2 text-heading"></i>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- Header Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
+            <i class="bi bi-moon-stars theme-toggle-icon"></i>
+          </button>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
+            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          </button>
+          <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="header-badge wishlist-count-badge">2</span>
+          </a>
+          <button class="header-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" title="Shopping Bag">
+            <i class="bi bi-bag"></i>
+            <span class="header-badge cart-count-badge">1</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="py-5 bg-subtle-box border-bottom border-custom">
+    <div class="container py-4 text-center">
+      <div class="section-tag justify-content-center">Our Heritage</div>
+      <h1 class="display-4 font-serif fw-bold mb-3">Honoring The Loom, Empowering The Artisan</h1>
+      <p class="section-desc mx-auto">
+        Founded on the belief that a truly exceptional rug is not manufactured — it is born from patience, natural mountain fibers, and generational hand-knotting pedigree.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPANY INTRODUCTION & MISSION -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="assets/images/products/artisan-loom-weaving.jpg" alt="Master weaver working at loom" class="rounded-4 shadow-lg w-100">
+            <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-surface text-heading rounded-3 shadow border border-custom">
+              <span class="fw-bold font-serif fs-5 d-block">Hand-Knotted with Honor</span>
+              <span class="small text-muted">Fair-trade certified weaver collectives</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-tag">Since 2008</div>
+          <h2 class="section-title">Where Architectural Vision Meets Antique Loom Mastery</h2>
+          <p class="text-muted mb-4">
+            For nearly two decades, Rug & Carpet Store has served as the bridge between historic weaver villages across Persia, the Atlas Mountains, Anatolia, and Varanasi, and the world’s most refined architectural residences.
+          </p>
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6">
+              <h5 class="font-serif fw-bold text-terracotta mb-2"><i class="bi bi-bullseye me-2"></i> Our Mission</h5>
+              <p class="small text-muted mb-0">To ensure ancient hand-weaving arts thrive in modern homes by producing non-toxic, bespoke heirloom textiles of unyielding quality.</p>
+            </div>
+            <div class="col-sm-6">
+              <h5 class="font-serif fw-bold text-gold mb-2"><i class="bi bi-eye me-2"></i> Our Vision</h5>
+              <p class="small text-muted mb-0">To lead the luxury floorcovering world in zero-carbon handlooms, 100% biodegradable natural dyes, and lifelong restoration care.</p>
+            </div>
+          </div>
+          <a href="services.html" class="btn btn-luxury-primary">Explore Our Atelier Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE COUNTERS / STATS SECTION -->
+  <section class="py-5 bg-dark-luxury text-white">
+    <div class="container py-4">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <h2 class="display-4 font-serif fw-bold text-gold mb-1">
+            <span class="counter-value" data-target="15">15</span>+
+          </h2>
+          <span class="text-light opacity-75">Years Experience</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="display-4 font-serif fw-bold text-gold mb-1">
+            <span class="counter-value" data-target="5000">5,000</span>+
+          </h2>
+          <span class="text-light opacity-75">Rugs Sold Worldwide</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="display-4 font-serif fw-bold text-gold mb-1">
+            <span class="counter-value" data-target="50">50</span>+
+          </h2>
+          <span class="text-light opacity-75">Artisan Loom Partners</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="display-4 font-serif fw-bold text-gold mb-1">
+            <span class="counter-value" data-target="98">98</span>%
+          </h2>
+          <span class="text-light opacity-75">Happy Clients & Designers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / OUR STORY -->
+  <section class="py-5 bg-surface border-top border-bottom border-custom">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag justify-content-center">Milestones</div>
+        <h2 class="section-title">The Evolution of Our Atelier</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="luxury-card p-4 h-100">
+            <span class="text-terracotta font-serif fw-bold fs-3 d-block mb-2">2008</span>
+            <h5 class="fw-bold font-serif mb-2">The Genesis</h5>
+            <p class="text-muted small mb-0">Founded as a boutique curator of rare semi-antique Persian and Caucasian runner rugs in Soho, New York.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="luxury-card p-4 h-100">
+            <span class="text-gold font-serif fw-bold fs-3 d-block mb-2">2016</span>
+            <h5 class="fw-bold font-serif mb-2">Direct Guild Alliances</h5>
+            <p class="text-muted small mb-0">Established direct ethical partnerships with 50+ weaver families across Morocco, Turkey, and Kashmir, bypassing middleman markups.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="luxury-card p-4 h-100">
+            <span class="text-terracotta font-serif fw-bold fs-3 d-block mb-2">2026</span>
+            <h5 class="fw-bold font-serif mb-2">The Digital Atelier</h5>
+            <p class="text-muted small mb-0">Launched our proprietary custom sizing studio and white-glove global delivery network serving penthouses and villas across 40 countries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRAFTSMANSHIP & CORE VALUES -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag justify-content-center">Pillars of Integrity</div>
+        <h2 class="section-title">Our Guiding Values</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-1 mb-3"><i class="bi bi-shield-heart"></i></div>
+            <h5 class="font-serif fw-bold mb-2">Ethical Fair Compensation</h5>
+            <p class="text-muted small mb-0">Our weavers receive living wages, healthcare endowments, and safe daylight loom workshops.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-1 mb-3"><i class="bi bi-droplet-half"></i></div>
+            <h5 class="font-serif fw-bold mb-2">Vegetable Mineral Dyes</h5>
+            <p class="text-muted small mb-0">Walnut shells, madder root, indigo, and pomegranate rinds create timeless abrash shades that never emit VOCs.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-1 mb-3"><i class="bi bi-infinity"></i></div>
+            <h5 class="font-serif fw-bold mb-2">Century Durability</h5>
+            <p class="text-muted small mb-0">Double-weft hand-knotted architecture designed to outlive machine-made rugs by several generations.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="luxury-card p-4 text-center h-100">
+            <div class="text-terracotta fs-1 mb-3"><i class="bi bi-recycle"></i></div>
+            <h5 class="font-serif fw-bold mb-2">100% Biodegradable</h5>
+            <p class="text-muted small mb-0">Crafted from earth-given wool, cotton, and silk fibers that return organically to the soil without synthetic microplastics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM MEMBERS -->
+  <section class="py-5 bg-surface border-top border-custom">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag justify-content-center">The Curators</div>
+        <h2 class="section-title">Meet Our Leadership Team</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card overflow-hidden text-center h-100">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Isabella Moreno" class="w-100 object-fit-cover" style="height: 280px;">
+            <div class="p-3">
+              <h5 class="font-serif fw-bold mb-0">Isabella Moreno</h5>
+              <span class="text-terracotta small fw-bold">Founder & Creative Director</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card overflow-hidden text-center h-100">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="David Sterling" class="w-100 object-fit-cover" style="height: 280px;">
+            <div class="p-3">
+              <h5 class="font-serif fw-bold mb-0">David Sterling</h5>
+              <span class="text-terracotta small fw-bold">Master Loom Liaison</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card overflow-hidden text-center h-100">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Amina Al-Mansoor" class="w-100 object-fit-cover" style="height: 280px;">
+            <div class="p-3">
+              <h5 class="font-serif fw-bold mb-0">Amina Al-Mansoor</h5>
+              <span class="text-terracotta small fw-bold">Lead Textile Conservator</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="luxury-card overflow-hidden text-center h-100">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=500&q=80" alt="Julian Meyer" class="w-100 object-fit-cover" style="height: 280px;">
+            <div class="p-3">
+              <h5 class="font-serif fw-bold mb-0">Julian Meyer</h5>
+              <span class="text-terracotta small fw-bold">Head of Bespoke Sizing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="py-5 bg-subtle-box text-center">
+    <div class="container py-4">
+      <div class="max-w-700 mx-auto">
+        <h2 class="section-title mb-3">Begin Your Custom Rug Journey</h2>
+        <p class="section-desc mx-auto mb-4">Visit our Madison Avenue showroom or order complimentary fiber sample swatches to your studio.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="contact.html#showroomBooking" class="btn btn-luxury-primary btn-lg">Book Showroom Visit</a>
+          <a href="custom-sizing.html" class="btn btn-luxury-outline btn-lg">Custom Sizing Calculator</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- FOOTER NEWSLETTER SUBSCRIPTION SECTION -->
+      <div class="footer-newsletter-box">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="footer-newsletter-tag">Curated Journal</span>
+            <h3 class="footer-newsletter-title mb-2">Stay Inspired</h3>
+            <p class="footer-newsletter-desc mb-0">
+              Subscribe to receive curated rug stories, new collections, design inspiration, and exclusive Atelier Rugs updates.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-group">
+                <div class="input-icon-wrap flex-grow-1 position-relative">
+                  <i class="bi bi-envelope footer-input-icon"></i>
+                  <input 
+                    type="email" 
+                    class="form-control footer-newsletter-input" 
+                    placeholder="Enter your email address" 
+                    aria-label="Enter your email address"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+                <button type="submit" class="btn btn-luxury-primary footer-newsletter-btn">
+                  <span>Subscribe</span> <i class="bi bi-arrow-right ms-1"></i>
+                </button>
+              </div>
+              <div class="footer-newsletter-message mt-2" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
+            <i class="bi bi-gem text-gold"></i>
+            <span>ATELIER</span> RUGS
+          </a>
+          <p class="text-muted-custom mb-4">
+            Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="header-action-btn bg-dark text-light border-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (5 Core Pages) -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-title">Navigation</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-title">Atelier Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="service-details.html">Custom Rug Weaving</a></li>
+            <li><a href="custom-sizing.html">Bespoke Sizing &amp; CAD</a></li>
+            <li><a href="services.html#restoration">Handloom Restoration</a></li>
+            <li><a href="care-guide.html">Eco-Washing &amp; Care</a></li>
+            <li><a href="contact.html#showroomBooking">Book Showroom Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Showroom Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Flagship Showroom</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted-custom">
+            <li><i class="bi bi-geo-alt text-gold me-2"></i> 542 Madison Ave, New York, NY 10022</li>
+            <li><i class="bi bi-telephone text-gold me-2"></i> +1 (800) 482-7847</li>
+            <li><i class="bi bi-envelope text-gold me-2"></i> concierge@rugcarpetstore.com</li>
+            <li><i class="bi bi-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Atelier Rugs. All rights reserved. Crafted for luxury interiors.</div>
+        <div class="d-flex gap-3 small">
+          <a href="about.html">About Our Heritage</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Concierge Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER & MODALS -->
+  <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer">
+    <div class="offcanvas-header border-bottom border-custom">
+      <h5 class="offcanvas-title font-serif fw-bold"><i class="bi bi-bag me-2 text-terracotta"></i> Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" id="cartDrawerItems"></div>
+      <div class="pt-3 border-top border-custom mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Subtotal:</span>
+          <span class="fs-4 fw-bold font-serif text-terracotta cart-subtotal-amount">$850</span>
+        </div>
+        <a href="checkout.html" class="btn btn-luxury-primary w-100">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top-btn" id="backToTopBtn" title="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
