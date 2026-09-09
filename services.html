@@ -22,6 +22,158 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+  <!-- Page-Specific Styles for Services Content Box -->
+  <style>
+    .services-why-box {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services-why-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--color-terracotta), var(--color-gold), transparent);
+    }
+
+    .services-box-emblem {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: var(--color-terracotta-soft);
+      border: 1px solid rgba(194, 109, 83, 0.25);
+      color: var(--color-terracotta);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      transition: transform var(--transition-normal), background-color var(--transition-normal), color var(--transition-normal);
+    }
+
+    .services-why-box:hover .services-box-emblem {
+      transform: scale(1.06);
+    }
+
+    .services-box-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+
+    .services-box-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .service-feature-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.15rem;
+      box-shadow: 0 2px 6px rgba(42, 35, 30, 0.03);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+    }
+
+    .service-feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-feature-icon {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      border-radius: 10px;
+      background-color: var(--color-terracotta-soft);
+      color: var(--color-terracotta);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+    }
+
+    .service-feature-card:hover .service-feature-icon {
+      background-color: var(--color-terracotta);
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+
+    .service-feature-title {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--text-heading);
+      margin-bottom: 0.35rem;
+      line-height: 1.35;
+    }
+
+    .service-feature-desc {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 991.98px) {
+      .services-why-box {
+        padding: 2.5rem 1.75rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .services-why-box {
+        padding: 2rem 1.25rem;
+        border-radius: var(--radius-md);
+      }
+      .service-feature-card {
+        padding: 1.25rem 1rem;
+        gap: 0.85rem;
+      }
+      .service-feature-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1.1rem;
+      }
+    }
+
+    [data-theme="dark"] .services-why-box {
+      background-color: var(--bg-subtle);
+      border-color: var(--border-light);
+    }
+
+    [data-theme="dark"] .service-feature-card {
+      background-color: var(--bg-surface);
+      border-color: var(--border-light);
+    }
+
+    [data-theme="dark"] .service-feature-card:hover {
+      border-color: var(--color-gold);
+      background-color: var(--bg-surface-elevated);
+    }
+  </style>
 </head>
 <body>
 
@@ -98,7 +250,7 @@
     </div>
   </section>
 
-  <!-- 8 SERVICES GRID -->
+  <!-- 9 SERVICES GRID -->
   <section class="py-5">
     <div class="container py-4">
       <div class="row g-4">
@@ -202,6 +354,93 @@
               <h4 class="font-serif fw-bold mb-2">Commercial & Hospitality</h4>
               <p class="text-muted small mb-4 flex-grow-1">High-traffic fire-rated wool broadloom carpeting and custom runners engineered for boutique luxury hotels, embassies, and yachts.</p>
               <a href="contact.html" class="btn btn-luxury-primary btn-sm align-self-start">Inquire Today <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 9: Rug Appraisal & Valuation -->
+        <div class="col-lg-4 col-md-6">
+          <div class="luxury-card h-100 d-flex flex-column overflow-hidden">
+            <img src="assets/images/products/handwoven-kilim-rug.jpg" alt="Rug Appraisal & Valuation" class="w-100 object-fit-cover" style="height: 220px;">
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="text-terracotta fs-3 mb-2"><i class="bi bi-award"></i></div>
+              <h4 class="font-serif fw-bold mb-2">Rug Appraisal & Valuation</h4>
+              <p class="text-muted small mb-4 flex-grow-1">Professional evaluation of antique, vintage, and contemporary rugs with detailed assessment of age, craftsmanship, materials, condition, origin, and estimated market value.</p>
+              <a href="contact.html" class="btn btn-luxury-primary btn-sm align-self-start">Request Appraisal <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE OUR RUG SERVICES -->
+  <section class="pb-5 pt-2">
+    <div class="container pb-lg-3">
+      <div class="services-why-box">
+        <!-- Top Rug Textile Decorative Icon & Header -->
+        <div class="text-center mb-4 mb-lg-5">
+          <div class="services-box-emblem" aria-hidden="true">
+            <i class="bi bi-patch-check"></i>
+          </div>
+          <div class="section-tag justify-content-center mb-2">The Atelier Standard</div>
+          <h2 class="services-box-title">Why Choose Our Rug Services?</h2>
+          <p class="services-box-desc">
+            From bespoke rug design and exact custom sizing to professional cleaning, restoration, consultation, and white-glove installation, our specialists provide complete care for every stage of your rug journey.
+          </p>
+        </div>
+
+        <!-- 4 Compact Feature Items in 2-Column Grid -->
+        <div class="row g-3 g-md-4">
+          <!-- Feature 1: Bespoke Craftsmanship -->
+          <div class="col-12 col-md-6">
+            <div class="service-feature-card">
+              <div class="service-feature-icon" aria-hidden="true">
+                <i class="bi bi-palette"></i>
+              </div>
+              <div class="service-feature-content">
+                <h3 class="service-feature-title">Bespoke Craftsmanship</h3>
+                <p class="service-feature-desc">Handcrafted designs tailored to your interior and personal style.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2: Exact Custom Sizing -->
+          <div class="col-12 col-md-6">
+            <div class="service-feature-card">
+              <div class="service-feature-icon" aria-hidden="true">
+                <i class="bi bi-rulers"></i>
+              </div>
+              <div class="service-feature-content">
+                <h3 class="service-feature-title">Exact Custom Sizing</h3>
+                <p class="service-feature-desc">Precision sizing for any room, hallway, commercial space, or unique layout.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3: Expert Rug Care -->
+          <div class="col-12 col-md-6">
+            <div class="service-feature-card">
+              <div class="service-feature-icon" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="service-feature-content">
+                <h3 class="service-feature-title">Expert Rug Care</h3>
+                <p class="service-feature-desc">Professional cleaning, repair, restoration, and long-term preservation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 4: White-Glove Service -->
+          <div class="col-12 col-md-6">
+            <div class="service-feature-card">
+              <div class="service-feature-icon" aria-hidden="true">
+                <i class="bi bi-truck"></i>
+              </div>
+              <div class="service-feature-content">
+                <h3 class="service-feature-title">White-Glove Service</h3>
+                <p class="service-feature-desc">Careful delivery, placement, installation, and in-home consultation.</p>
+              </div>
             </div>
           </div>
         </div>
