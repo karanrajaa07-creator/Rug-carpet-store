@@ -165,18 +165,20 @@
   // Open Custom Quote Modal with pre-filled specs
   window.openCustomQuoteModal = function () {
     const calc = window.lastCalculatedRug || {
-      width: 8, length: 10, unit: 'feet', shape: 'Rectangular', material: 'Wool', estimatedTotal: 1000, sqFeet: 80
+      width: 9, length: 12, unit: 'feet', shape: 'Rectangle', material: 'Highland New Zealand Wool', estimatedTotal: 1350, sqFeet: 108
     };
 
     const quoteSpecsEl = document.getElementById('quoteSpecsSummary');
     if (quoteSpecsEl) {
+      const formattedPrice = typeof calc.estimatedTotal === 'number' ? calc.estimatedTotal.toLocaleString() : calc.estimatedTotal;
+      const formattedShape = typeof calc.shape === 'string' ? calc.shape.charAt(0).toUpperCase() + calc.shape.slice(1) : 'Rectangle';
       quoteSpecsEl.innerHTML = `
-        <div class="p-3 bg-light rounded mb-3 border">
+        <div class="quote-specs-box p-3 rounded-3 mb-3 border">
           <div class="row g-2 small">
-            <div class="col-6"><strong>Dimensions:</strong> ${calc.width} × ${calc.length} ${calc.unit}</div>
-            <div class="col-6"><strong>Total Area:</strong> ${calc.sqFeet} sq ft</div>
-            <div class="col-6"><strong>Material:</strong> ${calc.material.toUpperCase()}</div>
-            <div class="col-6"><strong>Est. Price:</strong> <span class="text-terracotta fw-bold">$${calc.estimatedTotal}</span></div>
+            <div class="col-6"><strong class="specs-label">Dimensions:</strong> <span class="specs-value">${calc.width} × ${calc.length} ${calc.unit}</span></div>
+            <div class="col-6"><strong class="specs-label">Total Area:</strong> <span class="specs-value">${calc.sqFeet} sq ft</span></div>
+            <div class="col-6"><strong class="specs-label">Shape & Material:</strong> <span class="specs-value">${formattedShape} · ${calc.material.toUpperCase()}</span></div>
+            <div class="col-6"><strong class="specs-label">Est. Price:</strong> <span class="text-terracotta fw-bold fs-6">$${formattedPrice}</span></div>
           </div>
         </div>
       `;

@@ -249,5 +249,30 @@
       });
     });
 
+    // 9. FAQ ACCORDION INTERACTION ENHANCEMENTS
+    const accordionElements = document.querySelectorAll('.accordion');
+    accordionElements.forEach(accordion => {
+      // Synchronize .is-open class on parent accordion-item
+      accordion.addEventListener('show.bs.collapse', (e) => {
+        const item = e.target.closest('.accordion-item');
+        if (item) item.classList.add('is-open');
+      });
+      accordion.addEventListener('hide.bs.collapse', (e) => {
+        const item = e.target.closest('.accordion-item');
+        if (item) item.classList.remove('is-open');
+      });
+
+      // Ensure entire header row triggers button click reliably
+      accordion.querySelectorAll('.accordion-header').forEach(header => {
+        header.style.cursor = 'pointer';
+        header.addEventListener('click', (e) => {
+          if (!e.target.closest('.accordion-button')) {
+            const btn = header.querySelector('.accordion-button');
+            if (btn) btn.click();
+          }
+        });
+      });
+    });
+
   });
 })();

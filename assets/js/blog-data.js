@@ -412,6 +412,53 @@ window.BLOG_ARTICLES_DATA = [
         This layered composition delivers rich visual depth, luxurious footfall cushion, and solves challenging dimensions without requiring bespoke loom setups.
       </p>
     `
+  },
+  {
+    id: "perfect-rug-material-guide",
+    numericId: 9,
+    category: "guide",
+    categoryName: "Rug Guide",
+    categoryLabel: "Rug Guide • Materials",
+    badgeClass: "badge-luxury-terracotta",
+    title: "Choosing the Perfect Rug Material for Every Room",
+    author: "Elena Rostova",
+    authorRole: "Principal Interior Architect & Material Consultant",
+    authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80",
+    date: "September 8, 2026",
+    readTime: "6 min read",
+    image: "assets/images/products/nordic-flatweave-rug.jpg",
+    imageAlt: "Choosing the perfect rug material for living and dining spaces",
+    imageCaption: "Comparing durability, tactile resilience, and maintenance across wool, silk, cotton, and jute weave types.",
+    excerpt: "Discover how wool, cotton, silk, and natural fibers perform in living rooms, bedrooms, dining spaces, and high-traffic areas.",
+    quote: "A room's purpose must dictate its fiber. When tactile luxury meets functional durability, a rug ceases to be a purchase and becomes an enduring architectural anchor.",
+    quoteAuthor: "Elena Rostova, Material Consultant",
+    content: `
+      <p class="fs-5 text-heading font-serif">
+        Selecting the ideal rug material is the crucial foundation of balanced interior design. Each fiber—from high-altitude virgin wool and hand-spun mulberry silk to organic jute and hand-loomed cotton—delivers distinct tactile characteristics, durability profiles, and acoustic warmth.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">Living Rooms: Resilient Virgin Wool</h3>
+      <p>
+        For high-traffic central living rooms, high-altitude virgin wool remains the gold standard. Natural lanolin repels accidental spills, while the fiber's inherent helical crimp allows the pile to spring back effortlessly under heavy sofas and frequent footfall.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">Bedrooms: Tactile Silk & Wool Blends</h3>
+      <p>
+        In private bedroom suites where shoes are left at the threshold, sensory indulgence takes priority. A silk-wool blend or hand-knotted pure mulberry silk delivers luminous morning light reflection and unparalleled softness under bare feet.
+      </p>
+
+      <blockquote class="p-4 my-5 bg-subtle-box border-start border-4 border-custom rounded-3" style="border-left-color: var(--color-terracotta) !important;">
+        <p class="font-serif fs-4 fst-italic text-heading mb-2">
+          "A room's purpose must dictate its fiber. When tactile luxury meets functional durability, a rug ceases to be a purchase and becomes an enduring architectural anchor."
+        </p>
+        <footer class="blockquote-footer mt-2 small text-muted">Elena Rostova, Material Consultant</footer>
+      </blockquote>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">Dining Rooms & Hallways: Flatweaves & Natural Plant Fibers</h3>
+      <p>
+        Dining chairs require flat surfaces so chair legs slide smoothly without catching on deep pile loops. Low-profile kilims, dhurries, and tight-braided organic jute or sisal provide high tensile resistance, easy spot-blotting, and timeless rustic geometry.
+      </p>
+    `
   }
 ];
 

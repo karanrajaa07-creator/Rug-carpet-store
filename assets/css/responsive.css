@@ -25,6 +25,10 @@
   .admin-sidebar {
     width: 240px;
   }
+  .site-header .nav-link {
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
+  }
 }
 
 /* --- 3. TABLETS (768px to 991px) --- */
@@ -38,31 +42,40 @@
   }
 
   .navbar-collapse {
-    background: var(--bg-surface);
+    background: var(--bg-dark-accent);
     border-radius: var(--radius-md);
     padding: 1.25rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
     margin-top: 1rem;
-    border: 1px solid var(--border-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .nav-link {
+    color: #D4CBC2 !important;
     padding: 0.75rem 0 !important;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: #FFFFFF !important;
   }
   .nav-link:not(.dropdown-toggle)::after {
     display: none;
   }
   .dropdown-menu {
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow-sm);
-    background-color: var(--bg-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 0.5rem;
     margin-top: 0.25rem;
     margin-bottom: 0.75rem;
     border-radius: var(--radius-sm);
   }
   .dropdown-item {
+    color: #D4CBC2;
     border-radius: var(--radius-sm);
     padding: 0.5rem 1rem;
+  }
+  .dropdown-item:hover, .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
   }
 
   .hero-home-1 {

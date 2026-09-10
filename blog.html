@@ -61,6 +61,9 @@
               <a class="nav-link active" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -96,8 +99,29 @@
         Curated insights on room proportions, antique rug history, organic dye origins, and interior styling harmony.
       </p>
 
+      <!-- Search Journal Bar -->
+      <div class="search-journal-container mx-auto mt-4 mb-3" style="max-width: 580px;">
+        <form id="journalSearchForm" role="search" onsubmit="return false;">
+          <div class="input-group shadow-sm search-journal-input-group">
+            <span class="input-group-text border-end-0">
+              <i class="bi bi-search"></i>
+            </span>
+            <input 
+              type="text" 
+              id="journalSearchInput" 
+              class="form-control border-start-0 py-2" 
+              placeholder="Search articles by title, keyword, or author..." 
+              aria-label="Search Journal"
+              autocomplete="off"
+            >
+            <button class="btn btn-luxury-primary px-4 fw-semibold" type="button" id="journalSearchBtn" title="Search Journal">Search</button>
+            <button class="btn btn-luxury-outline px-3 d-none" type="button" id="journalSearchClearBtn" title="Clear Search"><i class="bi bi-x-lg"></i></button>
+          </div>
+        </form>
+      </div>
+
       <!-- Category Filter Pills -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 mt-4" id="blogFilterContainer">
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-3" id="blogFilterContainer">
         <button type="button" class="btn btn-luxury-primary btn-sm blog-filter-btn active" data-category="all">All Articles</button>
         <button type="button" class="btn btn-luxury-outline btn-sm blog-filter-btn" data-category="care">Rug Care</button>
         <button type="button" class="btn btn-luxury-outline btn-sm blog-filter-btn" data-category="interior">Interior Design</button>
@@ -109,54 +133,18 @@
     </div>
   </section>
 
-  <!-- FEATURED ARTICLE -->
-  <section class="py-5" id="blogFeaturedSection" data-category="interior">
-    <div class="container py-3">
-      <div class="luxury-card overflow-hidden blog-card-hover">
-        <div class="row g-0 align-items-center">
-          <div class="col-lg-7">
-            <a href="blog-details.html?id=room-framing-proportions" class="d-block overflow-hidden" title="Read Full Essay">
-              <img src="assets/images/products/caspian-silk-rug.jpg" alt="Featured article rug" class="w-100 object-fit-cover blog-card-img" style="height: 440px;">
-            </a>
-          </div>
-          <div class="col-lg-5 p-4 p-md-5">
-            <button type="button" class="badge badge-luxury-terracotta mb-3 border-0 cursor-pointer blog-badge-filter" data-category="interior">Featured Essay • Interior Design</button>
-            <h2 class="font-serif fw-bold mb-3">
-              <a href="blog-details.html?id=room-framing-proportions" class="text-heading article-card-link">The Architectural Proportions of Room Framing: Sizing Your Rug to Anchor Furniture</a>
-            </h2>
-            <p class="text-muted small mb-4">
-              Why a rug that is six inches too short breaks room continuity, and how architects calculate the golden perimeter margin between baseboards and rug borders.
-            </p>
-            <div class="d-flex align-items-center justify-content-between border-top border-custom pt-3">
-              <div class="d-flex align-items-center gap-3">
-                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=100&q=80" alt="Author" class="rounded-circle" width="42" height="42">
-                <div>
-                  <div class="fw-bold small text-heading">Isabella Moreno</div>
-                  <div class="text-muted small">September 2, 2026 • 7 min read</div>
-                </div>
-              </div>
-              <a href="blog-details.html?id=room-framing-proportions" class="btn btn-luxury-outline btn-sm">
-                Read Essay <i class="bi bi-arrow-right ms-1"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- RECENT ARTICLES GRID -->
   <section class="py-5 bg-surface border-top border-bottom border-custom">
     <div class="container py-3">
       <!-- Active Filter Status & Count -->
       <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-custom">
         <h3 class="font-serif fw-bold mb-0" id="blogActiveCategoryTitle">All Published Articles</h3>
-        <span class="text-muted small" id="blogResultsCount">8 articles</span>
+        <span class="text-muted small" id="blogResultsCount">9 articles</span>
       </div>
 
       <div class="row g-4" id="blogArticlesGrid">
         <!-- Card 1: Materials -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="materials">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="materials">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=wool-vs-silk" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="assets/images/products/berber-wool-rug.jpg" alt="Berber wool rug" class="blog-card-img">
@@ -171,7 +159,7 @@
                 <span>By David Sterling</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>5 min read</span>
-                  <a href="blog-details.html?id=wool-vs-silk" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=wool-vs-silk" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -179,7 +167,7 @@
         </div>
 
         <!-- Card 2: Buying Guide -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="guide">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="guide">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=identify-authentic-rugs" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=600&q=80" alt="Modern room" class="blog-card-img">
@@ -194,7 +182,7 @@
                 <span>By Amina Al-Mansoor</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>8 min read</span>
-                  <a href="blog-details.html?id=identify-authentic-rugs" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=identify-authentic-rugs" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -202,7 +190,7 @@
         </div>
 
         <!-- Card 3: Rug Care -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="care">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="care">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=vacuuming-paradox" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="assets/images/products/jute-loop-rug.jpg" alt="Jute rug setting" class="blog-card-img">
@@ -217,7 +205,7 @@
                 <span>By Julian Meyer</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>4 min read</span>
-                  <a href="blog-details.html?id=vacuuming-paradox" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=vacuuming-paradox" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -225,7 +213,7 @@
         </div>
 
         <!-- Card 4: Home Decor -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="decor">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="decor">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=harmonizing-earth-tones" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="Living room decor" class="blog-card-img">
@@ -240,7 +228,7 @@
                 <span>By Maya Lin</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>6 min read</span>
-                  <a href="blog-details.html?id=harmonizing-earth-tones" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=harmonizing-earth-tones" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -248,7 +236,7 @@
         </div>
 
         <!-- Card 5: Trends -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="trends">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="trends">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=sculpted-piles-trends" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Modern interior trend" class="blog-card-img">
@@ -263,7 +251,7 @@
                 <span>By Elena Rostova</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>5 min read</span>
-                  <a href="blog-details.html?id=sculpted-piles-trends" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=sculpted-piles-trends" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -271,7 +259,7 @@
         </div>
 
         <!-- Card 6: Rug Care -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="care">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="care">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=emergency-spill-protocols" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=600&q=80" alt="Rug cleaning care" class="blog-card-img">
@@ -286,7 +274,7 @@
                 <span>By Marcus Vance</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>4 min read</span>
-                  <a href="blog-details.html?id=emergency-spill-protocols" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=emergency-spill-protocols" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -294,7 +282,7 @@
         </div>
 
         <!-- Card 7: Interior Design -->
-        <div class="col-lg-4 col-md-6 blog-article-item" data-category="interior">
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="interior">
           <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
             <a href="blog-details.html?id=layering-vintage-runners" class="d-block blog-card-img-wrap" title="Read Article">
               <img src="assets/images/products/moroccan-diamond-runner.jpg" alt="Runner in architectural space" class="blog-card-img">
@@ -309,7 +297,53 @@
                 <span>By Isabella Moreno</span>
                 <div class="d-flex align-items-center gap-2">
                   <span>6 min read</span>
-                  <a href="blog-details.html?id=layering-vintage-runners" class="text-terracotta fw-semibold text-decoration-none">Read <i class="bi bi-arrow-right"></i></a>
+                  <a href="blog-details.html?id=layering-vintage-runners" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Rug Guide (New Article filling empty space) -->
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="guide">
+          <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
+            <a href="blog-details.html?id=perfect-rug-material-guide" class="d-block blog-card-img-wrap" title="Read Article">
+              <img src="assets/images/products/nordic-flatweave-rug.jpg" alt="Choosing the Perfect Rug Material for Every Room" class="blog-card-img">
+            </a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <button type="button" class="badge badge-luxury-terracotta align-self-start mb-2 border-0 cursor-pointer blog-badge-filter" data-category="guide">Rug Guide</button>
+              <h4 class="font-serif fw-bold mb-2">
+                <a href="blog-details.html?id=perfect-rug-material-guide" class="text-heading article-card-link">Choosing the Perfect Rug Material for Every Room</a>
+              </h4>
+              <p class="small text-muted mb-4 flex-grow-1">Discover how wool, cotton, silk, and natural fibers perform in living rooms, bedrooms, dining spaces, and high-traffic areas.</p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-custom small text-muted">
+                <span>By Elena Rostova</span>
+                <div class="d-flex align-items-center gap-2">
+                  <span>6 min read</span>
+                  <a href="blog-details.html?id=perfect-rug-material-guide" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: Interior Design (Moved from top featured position to last available grid position) -->
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="interior">
+          <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
+            <a href="blog-details.html?id=room-framing-proportions" class="d-block blog-card-img-wrap" title="Read Article">
+              <img src="assets/images/products/caspian-silk-rug.jpg" alt="The Architectural Proportions of Room Framing: Sizing Your Rug to Anchor Furniture" class="blog-card-img">
+            </a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <button type="button" class="badge badge-luxury-terracotta align-self-start mb-2 border-0 cursor-pointer blog-badge-filter" data-category="interior">Interior Design</button>
+              <h4 class="font-serif fw-bold mb-2">
+                <a href="blog-details.html?id=room-framing-proportions" class="text-heading article-card-link">The Architectural Proportions of Room Framing: Sizing Your Rug to Anchor Furniture</a>
+              </h4>
+              <p class="small text-muted mb-4 flex-grow-1">Why a rug that is six inches too short breaks room continuity, and how architects calculate the golden perimeter margin between baseboards and rug borders.</p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-custom small text-muted">
+                <span>By Isabella Moreno</span>
+                <div class="d-flex align-items-center gap-2">
+                  <span>7 min read</span>
+                  <a href="blog-details.html?id=room-framing-proportions" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
@@ -319,10 +353,14 @@
 
       <!-- No Results State -->
       <div id="noBlogResults" class="text-center py-5" style="display: none;">
-        <i class="bi bi-journal-x display-3 text-muted mb-3 d-inline-block"></i>
-        <h4 class="font-serif fw-bold">No Articles Found</h4>
-        <p class="text-muted">There are currently no published essays in this specific topic.</p>
-        <button type="button" class="btn btn-luxury-primary btn-sm mt-2" onclick="filterBlog('all')">View All Articles</button>
+        <div class="empty-state-icon-wrap mb-3 mx-auto d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 72px; height: 72px; background: rgba(196, 112, 75, 0.1); color: var(--color-terracotta); font-size: 2rem;">
+          <i class="bi bi-journal-x"></i>
+        </div>
+        <h4 class="font-serif fw-bold mb-2" id="noBlogResultsTitle">No Articles Found</h4>
+        <p class="text-muted mx-auto" style="max-width: 520px;" id="noBlogResultsMsg">There are currently no published essays matching your search.</p>
+        <button type="button" class="btn btn-luxury-primary btn-sm mt-2 px-4" id="noBlogResultsResetBtn" onclick="window.clearSearchAndShowAll()">
+          <i class="bi bi-arrow-counterclockwise me-1"></i> View All Articles
+        </button>
       </div>
     </div>
   </section>
@@ -456,7 +494,7 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/main.js"></script>
-  <!-- BLOG CATEGORY FILTER JAVASCRIPT -->
+  <!-- BLOG SEARCH & CATEGORY FILTER JAVASCRIPT -->
   <script>
     (function () {
       'use strict';
@@ -471,13 +509,111 @@
         'trends': 'Contemporary Rug Trends'
       };
 
-      window.filterBlog = function (category, updateUrl = true) {
+      // Search Journal by keyword across title, excerpt, category, author, and tags
+      window.searchBlog = function (query, updateUrl = true) {
+        const q = (query || '').trim().toLowerCase();
+        const searchInput = document.getElementById('journalSearchInput');
+        const clearBtn = document.getElementById('journalSearchClearBtn');
         const filterButtons = document.querySelectorAll('.blog-filter-btn');
         const articleItems = document.querySelectorAll('.blog-article-item');
-        const featuredSection = document.getElementById('blogFeaturedSection');
         const titleEl = document.getElementById('blogActiveCategoryTitle');
         const countEl = document.getElementById('blogResultsCount');
         const noResults = document.getElementById('noBlogResults');
+        const noResultsTitle = document.getElementById('noBlogResultsTitle');
+        const noResultsMsg = document.getElementById('noBlogResultsMsg');
+
+        if (searchInput && searchInput.value !== (query || '')) {
+          searchInput.value = query || '';
+        }
+
+        if (clearBtn) {
+          if (q) {
+            clearBtn.classList.remove('d-none');
+          } else {
+            clearBtn.classList.add('d-none');
+          }
+        }
+
+        if (!q) {
+          window.filterBlog('all', updateUrl);
+          return;
+        }
+
+        // Deactivate category filter pills when actively searching
+        filterButtons.forEach(btn => {
+          btn.classList.remove('btn-luxury-primary', 'active');
+          btn.classList.add('btn-luxury-outline');
+        });
+
+        const words = q.split(/\s+/).filter(Boolean);
+        let matchCount = 0;
+
+        articleItems.forEach(item => {
+          const itemText = (item.textContent || '').toLowerCase();
+          const itemCategory = (item.getAttribute('data-category') || '').toLowerCase();
+          const imgAlt = (item.querySelector('img')?.getAttribute('alt') || '').toLowerCase();
+
+          const matches = words.every(w =>
+            itemText.includes(w) || itemCategory.includes(w) || imgAlt.includes(w)
+          );
+
+          if (matches) {
+            item.style.display = '';
+            matchCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (titleEl) {
+          titleEl.textContent = `Search Results for "${query.trim()}"`;
+        }
+        if (countEl) {
+          countEl.textContent = `${matchCount} ${matchCount === 1 ? 'article found' : 'articles found'}`;
+        }
+        if (noResults) {
+          if (matchCount === 0) {
+            noResults.style.display = 'block';
+            if (noResultsTitle) noResultsTitle.textContent = 'No Articles Found';
+            if (noResultsMsg) {
+              noResultsMsg.textContent = `We couldn't find any journal essays matching "${query.trim()}". Try searching for keywords like "wool", "silk", "care", "sizing", or "moroccan".`;
+            }
+          } else {
+            noResults.style.display = 'none';
+          }
+        }
+
+        if (updateUrl && window.history && window.history.replaceState) {
+          const url = new URL(window.location);
+          url.searchParams.set('q', query.trim());
+          url.searchParams.delete('cat');
+          window.history.replaceState({}, '', url);
+        }
+      };
+
+      // Clear search and reset view to all articles
+      window.clearSearchAndShowAll = function () {
+        const searchInput = document.getElementById('journalSearchInput');
+        const clearBtn = document.getElementById('journalSearchClearBtn');
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('d-none');
+        window.filterBlog('all', true);
+      };
+
+      // Filter articles by predefined category
+      window.filterBlog = function (category, updateUrl = true) {
+        const searchInput = document.getElementById('journalSearchInput');
+        const clearBtn = document.getElementById('journalSearchClearBtn');
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('d-none');
+
+        const filterButtons = document.querySelectorAll('.blog-filter-btn');
+        const articleItems = document.querySelectorAll('.blog-article-item');
+        const titleEl = document.getElementById('blogActiveCategoryTitle');
+        const countEl = document.getElementById('blogResultsCount');
+        const noResults = document.getElementById('noBlogResults');
+        const noResultsTitle = document.getElementById('noBlogResultsTitle');
+        const noResultsMsg = document.getElementById('noBlogResultsMsg');
 
         // 1. Update Buttons Active State
         filterButtons.forEach(btn => {
@@ -491,19 +627,7 @@
           }
         });
 
-        // 2. Filter Featured Section
-        let featuredCount = 0;
-        if (featuredSection) {
-          const featCat = featuredSection.getAttribute('data-category');
-          if (category === 'all' || featCat === category) {
-            featuredSection.style.display = 'block';
-            featuredCount = 1;
-          } else {
-            featuredSection.style.display = 'none';
-          }
-        }
-
-        // 3. Filter Grid Cards
+        // 2. Filter Grid Cards
         let gridCount = 0;
         articleItems.forEach(item => {
           const itemCat = item.getAttribute('data-category');
@@ -515,22 +639,27 @@
           }
         });
 
-        const totalVisible = featuredCount + gridCount;
-
-        // 4. Update Header Title & Count
+        // 3. Update Header Title & Count
         if (titleEl) {
           titleEl.textContent = CATEGORY_NAMES[category] || 'Published Articles';
         }
         if (countEl) {
-          countEl.textContent = `${totalVisible} ${totalVisible === 1 ? 'article' : 'articles'}`;
+          countEl.textContent = `${gridCount} ${gridCount === 1 ? 'article' : 'articles'}`;
         }
         if (noResults) {
-          noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+          if (gridCount === 0) {
+            noResults.style.display = 'block';
+            if (noResultsTitle) noResultsTitle.textContent = 'No Articles Found';
+            if (noResultsMsg) noResultsMsg.textContent = 'There are currently no published essays in this specific topic.';
+          } else {
+            noResults.style.display = 'none';
+          }
         }
 
-        // 5. Update URL param
+        // 4. Update URL param
         if (updateUrl && window.history && window.history.replaceState) {
           const url = new URL(window.location);
+          url.searchParams.delete('q');
           if (category === 'all') {
             url.searchParams.delete('cat');
           } else {
@@ -541,6 +670,49 @@
       };
 
       document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('journalSearchInput');
+        const searchBtn = document.getElementById('journalSearchBtn');
+        const clearBtn = document.getElementById('journalSearchClearBtn');
+
+        // Trigger search on button click
+        if (searchBtn) {
+          searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const q = (searchInput ? searchInput.value : '').trim();
+            window.searchBlog(q, true);
+          });
+        }
+
+        // Trigger search on Enter key press
+        if (searchInput) {
+          searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              const q = searchInput.value.trim();
+              window.searchBlog(q, true);
+            }
+          });
+
+          // Show / hide clear button as user types
+          searchInput.addEventListener('input', () => {
+            if (clearBtn) {
+              if (searchInput.value.trim().length > 0) {
+                clearBtn.classList.remove('d-none');
+              } else {
+                clearBtn.classList.add('d-none');
+              }
+            }
+          });
+        }
+
+        // Trigger clear button click
+        if (clearBtn) {
+          clearBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.clearSearchAndShowAll();
+          });
+        }
+
         // Attach click listeners to all filter buttons
         document.querySelectorAll('.blog-filter-btn').forEach(btn => {
           btn.addEventListener('click', (e) => {
@@ -557,15 +729,26 @@
             const cat = badge.getAttribute('data-category');
             if (cat) {
               window.filterBlog(cat, true);
-              window.scrollTo({ top: 300, behavior: 'smooth' });
+              const gridHeading = document.getElementById('blogActiveCategoryTitle');
+              if (gridHeading) {
+                gridHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                window.scrollTo({ top: 200, behavior: 'smooth' });
+              }
             }
           });
         });
 
-        // Check initial URL param
+        // Check initial URL params (?q=keyword or ?cat=category)
         const urlParams = new URLSearchParams(window.location.search);
-        const initialCat = urlParams.get('cat') || 'all';
-        window.filterBlog(initialCat, false);
+        const qParam = urlParams.get('q');
+        const catParam = urlParams.get('cat');
+
+        if (qParam && qParam.trim()) {
+          window.searchBlog(qParam.trim(), false);
+        } else {
+          window.filterBlog(catParam || 'all', false);
+        }
       });
     })();
   </script>

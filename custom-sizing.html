@@ -61,6 +61,9 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -106,34 +109,34 @@
         <!-- Left: Interactive Form -->
         <div class="col-lg-7">
           <div class="calc-card">
-            <h3 class="font-serif fw-bold mb-4"><i class="bi bi-sliders text-terracotta me-2"></i> Configure Your Specifications</h3>
+            <h3 class="font-serif fw-bold mb-4"><i class="bi bi-sliders text-terracotta me-2 spec-heading-icon" aria-hidden="true"></i> Configure Your Specifications</h3>
 
             <!-- 1. Shape Selection -->
             <div class="mb-4">
               <label class="form-label fw-bold">1. Select Rug Shape:</label>
               <div class="row g-2">
                 <div class="col-6 col-sm-3">
-                  <button type="button" class="shape-picker-btn active" data-shape="rectangular" onclick="selectRugShape(this, 'rectangular')">
-                    <i class="bi bi-square fs-3 d-block mb-1"></i>
-                    <span class="small fw-bold">Rectangle</span>
+                  <button type="button" class="shape-picker-btn active" data-shape="rectangular" onclick="selectRugShape(this, 'rectangular')" title="Rectangle Rug">
+                    <i class="bi bi-square shape-picker-icon"></i>
+                    <span class="shape-picker-label">Rectangle</span>
                   </button>
                 </div>
                 <div class="col-6 col-sm-3">
-                  <button type="button" class="shape-picker-btn" data-shape="round" onclick="selectRugShape(this, 'round')">
-                    <i class="bi bi-circle fs-3 d-block mb-1"></i>
-                    <span class="small fw-bold">Round</span>
+                  <button type="button" class="shape-picker-btn" data-shape="round" onclick="selectRugShape(this, 'round')" title="Round Rug">
+                    <i class="bi bi-circle shape-picker-icon"></i>
+                    <span class="shape-picker-label">Round</span>
                   </button>
                 </div>
                 <div class="col-6 col-sm-3">
-                  <button type="button" class="shape-picker-btn" data-shape="runner" onclick="selectRugShape(this, 'runner')">
-                    <i class="bi bi-distribute-vertical fs-3 d-block mb-1"></i>
-                    <span class="small fw-bold">Runner</span>
+                  <button type="button" class="shape-picker-btn" data-shape="runner" onclick="selectRugShape(this, 'runner')" title="Runner Rug">
+                    <i class="bi bi-distribute-vertical shape-picker-icon"></i>
+                    <span class="shape-picker-label">Runner</span>
                   </button>
                 </div>
                 <div class="col-6 col-sm-3">
-                  <button type="button" class="shape-picker-btn" data-shape="oval" onclick="selectRugShape(this, 'oval')">
-                    <i class="bi bi-egg fs-3 d-block mb-1"></i>
-                    <span class="small fw-bold">Oval</span>
+                  <button type="button" class="shape-picker-btn" data-shape="oval" onclick="selectRugShape(this, 'oval')" title="Oval Rug">
+                    <i class="bi bi-egg shape-picker-icon"></i>
+                    <span class="shape-picker-label">Oval</span>
                   </button>
                 </div>
               </div>
@@ -298,10 +301,19 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title font-serif fw-bold">Request Official Custom Quote</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-4">
-          <div id="quoteSpecsSummary"></div>
+          <div id="quoteSpecsSummary">
+            <div class="quote-specs-box p-3 rounded-3 mb-3 border">
+              <div class="row g-2 small">
+                <div class="col-6"><strong class="specs-label">Dimensions:</strong> <span class="specs-value">9 × 12 feet</span></div>
+                <div class="col-6"><strong class="specs-label">Total Area:</strong> <span class="specs-value">108 sq ft</span></div>
+                <div class="col-6"><strong class="specs-label">Shape &amp; Material:</strong> <span class="specs-value">Rectangle · HIGHLAND NEW ZEALAND WOOL</span></div>
+                <div class="col-6"><strong class="specs-label">Est. Price:</strong> <span class="text-terracotta fw-bold fs-6">$1,350</span></div>
+              </div>
+            </div>
+          </div>
           <form onsubmit="handleCustomQuoteSubmit(event)">
             <div class="mb-3">
               <label class="form-label small fw-bold">Full Name *</label>

@@ -61,6 +61,9 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -180,10 +183,10 @@
             <!-- Search Widget -->
             <div class="luxury-card p-4 mb-4">
               <h5 class="font-serif fw-bold mb-3">Search Journal</h5>
-              <form action="blog.html" method="GET">
+              <form action="blog.html" method="GET" id="sidebarSearchForm" role="search">
                 <div class="input-group">
-                  <input type="text" name="q" class="form-control" placeholder="Search essays...">
-                  <button class="btn btn-luxury-primary" type="submit"><i class="bi bi-search"></i></button>
+                  <input type="text" name="q" id="sidebarSearchInput" class="form-control" placeholder="Search essays..." aria-label="Search essays" required>
+                  <button class="btn btn-luxury-primary" type="submit" id="sidebarSearchBtn" title="Search Journal"><i class="bi bi-search"></i></button>
                 </div>
               </form>
             </div>
