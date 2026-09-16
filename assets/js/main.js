@@ -274,5 +274,47 @@
       });
     });
 
+    // 10. SCROLL REVEAL OBSERVER
+    const revealTargets = document.querySelectorAll('.reveal-on-scroll, .reveal-on-scroll-left, .reveal-on-scroll-right, .reveal-stagger');
+    if (revealTargets.length > 0) {
+      function revealVisibleElements() {
+        revealTargets.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
+            el.classList.add('is-revealed');
+          }
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          root: null,
+          threshold: 0.05,
+          rootMargin: '0px 0px 80px 0px'
+        });
+
+        revealTargets.forEach(el => revealObserver.observe(el));
+
+        // Immediately reveal any sections already in or near viewport on load
+        revealVisibleElements();
+        window.addEventListener('scroll', revealVisibleElements, { passive: true, once: true });
+      } else {
+        // Fallback for older browsers
+        revealTargets.forEach(el => el.classList.add('is-revealed'));
+      }
+
+      // Safety timer: ensure content is never permanently invisible
+      setTimeout(() => {
+        revealTargets.forEach(el => el.classList.add('is-revealed'));
+      }, 1500);
+    }
+
   });
 })();

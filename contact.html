@@ -423,44 +423,65 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const mapContainer = document.getElementById('showroomMap');
-      if (!mapContainer || typeof L === 'undefined') return;
+      if (!mapContainer) return;
 
       // Coordinates for 542 Madison Ave, New York, NY 10022
       const lat = 40.76075;
       const lng = -73.97345;
 
-      const map = L.map('showroomMap', {
-        center: [lat, lng],
-        zoom: 16,
-        scrollWheelZoom: false
-      });
+      try {
+        if (typeof L !== 'undefined') {
+          const map = L.map('showroomMap', {
+            center: [lat, lng],
+            zoom: 16,
+            scrollWheelZoom: false
+          });
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-      }).addTo(map);
+          // High-performance CartoDB Voyager tiles (Fastly CDN, authorized for web apps, zero 403 blocks)
+          const voyagerLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            subdomains: 'abcd',
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a>'
+          });
 
-      // Custom luxury terracotta marker with diamond icon
-      const customIcon = L.divIcon({
-        className: 'custom-map-pin',
-        html: '<div style="background:#C26D53;color:white;width:38px;height:38px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.35);border:2.5px solid white;"><i class="bi bi-gem" style="transform:rotate(45deg);font-size:16px;"></i></div>',
-        iconSize: [38, 38],
-        iconAnchor: [19, 38],
-        popupAnchor: [0, -34]
-      });
+          let tileErrors = 0;
+          voyagerLayer.on('tileerror', function () {
+            tileErrors++;
+            if (tileErrors > 4 && !document.getElementById('osmFallbackIframe')) {
+              mapContainer.innerHTML = '<iframe id="osmFallbackIframe" title="Manhattan Showroom Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.9780%2C40.7580%2C-73.9680%2C40.7635&layer=mapnik&marker=40.76075%2C-73.97345" style="border:0;width:100%;height:100%;display:block;" allowfullscreen loading="lazy"></iframe>';
+            }
+          });
 
-      const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
-      marker.bindPopup(
-        '<div style="min-width:180px;padding:2px 0;">' +
-          '<div style="font-family:\'Playfair Display\',Georgia,serif;font-weight:700;font-size:1rem;color:#231F1C;margin-bottom:2px;">Atelier Rugs</div>' +
-          '<div style="font-size:0.8rem;color:#766E65;line-height:1.35;">542 Madison Ave, 4th Floor<br>New York, NY 10022</div>' +
-          '<div style="margin-top:6px;"><a href="https://maps.google.com/?q=542+Madison+Avenue,+New+York,+NY+10022" target="_blank" rel="noopener" style="color:#C26D53;font-size:0.75rem;font-weight:600;text-decoration:none;">Get Directions &rarr;</a></div>' +
-        '</div>'
-      ).openPopup();
+          voyagerLayer.addTo(map);
 
-      setTimeout(function () {
-        map.invalidateSize();
-      }, 250);
+          // Custom luxury terracotta marker with diamond icon
+          const customIcon = L.divIcon({
+            className: 'custom-map-pin',
+            html: '<div style="background:#C26D53;color:white;width:38px;height:38px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.35);border:2.5px solid white;"><i class="bi bi-gem" style="transform:rotate(45deg);font-size:16px;"></i></div>',
+            iconSize: [38, 38],
+            iconAnchor: [19, 38],
+            popupAnchor: [0, -34]
+          });
+
+          const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+          marker.bindPopup(
+            '<div style="min-width:180px;padding:2px 0;">' +
+              '<div style="font-family:\'Playfair Display\',Georgia,serif;font-weight:700;font-size:1rem;color:#231F1C;margin-bottom:2px;">Atelier Rugs</div>' +
+              '<div style="font-size:0.8rem;color:#766E65;line-height:1.35;">542 Madison Ave, 4th Floor<br>New York, NY 10022</div>' +
+              '<div style="margin-top:6px;"><a href="https://maps.google.com/?q=542+Madison+Avenue,+New+York,+NY+10022" target="_blank" rel="noopener" style="color:#C26D53;font-size:0.75rem;font-weight:600;text-decoration:none;">Get Directions &rarr;</a></div>' +
+            '</div>'
+          ).openPopup();
+
+          setTimeout(function () {
+            map.invalidateSize();
+          }, 250);
+        } else {
+          // Direct fallback if Leaflet library is blocked or not loaded
+          mapContainer.innerHTML = '<iframe title="Manhattan Showroom Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.9780%2C40.7580%2C-73.9680%2C40.7635&layer=mapnik&marker=40.76075%2C-73.97345" style="border:0;width:100%;height:100%;display:block;" allowfullscreen loading="lazy"></iframe>';
+        }
+      } catch (e) {
+        mapContainer.innerHTML = '<iframe title="Manhattan Showroom Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.9780%2C40.7580%2C-73.9680%2C40.7635&layer=mapnik&marker=40.76075%2C-73.97345" style="border:0;width:100%;height:100%;display:block;" allowfullscreen loading="lazy"></iframe>';
+      }
     });
   </script>
 </body>

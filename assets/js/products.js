@@ -204,9 +204,9 @@
       style: 'Vintage',
       size: "8' x 10'",
       availableSizes: ["6' x 9'", "8' x 10'", "9' x 12'"],
-      image: 'assets/images/products/anatolian-vintage-rug.jpg',
+      image: 'assets/images/products/anatolian-vintage-distressed-rug.jpg',
       gallery: [
-        'assets/images/products/anatolian-vintage-rug.jpg',
+        'assets/images/products/anatolian-vintage-distressed-rug.jpg',
         'assets/images/products/anatolian-vintage-detail-1.jpg',
         'assets/images/products/anatolian-vintage-detail-2.jpg'
       ],
@@ -319,7 +319,7 @@
       style: 'Minimalist',
       size: "6' × 9'",
       availableSizes: ["5' × 8'", "6' × 9'", "8' × 10'"],
-      image: 'assets/images/products/nordic-flatweave-rug.jpg',
+      image: 'assets/images/products/scandinavian-cotton-medium.jpg',
       gallery: [
         'assets/images/products/scandinavian-cotton-medium.jpg',
         'assets/images/products/scandinavian-cotton-detail-1.jpg',
