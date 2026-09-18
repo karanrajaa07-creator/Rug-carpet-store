@@ -3201,6 +3201,41 @@ img {
   box-shadow: 0 0 0 3px rgba(184, 91, 53, 0.15);
 }
 
+.input-group > .checkout-form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.input-group > .input-group-text {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-right: none;
+  border-top-left-radius: var(--radius-sm) !important;
+  border-bottom-left-radius: var(--radius-sm) !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  transition: border-color var(--transition-fast);
+}
+
+.input-group:focus-within > .input-group-text {
+  border-color: var(--color-terracotta);
+}
+
+.card-fields-row .checkout-form-label {
+  min-height: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.45rem;
+}
+
 .checkout-selection-box {
   border: 1.5px solid var(--border-light);
   border-radius: var(--radius-sm);

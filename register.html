@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
         <span>ATELIER</span> RUGS
       </a>
       <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl"><span class="rtl-toggle-text">RTL</span></button>
+        <button class="btn btn-sm btn-outline-secondary" data-action="toggle-rtl" title="Current layout: LTR. Click to switch to RTL"><span class="rtl-toggle-text">LTR</span></button>
         <button class="btn btn-sm btn-outline-secondary" data-action="toggle-theme"><i class="bi bi-moon-stars theme-toggle-icon"></i></button>
       </div>
     </div>
@@ -67,7 +67,9 @@
                 </div>
                 <div class="col-sm-6">
                   <label class="form-label" for="regPhone">Phone Number</label>
-                  <input type="tel" id="regPhone" class="form-control" placeholder="+1 (555) 000-0000">
+                  <input type="tel" id="regPhone" class="form-control" placeholder="+1 (555) 000-0000"
+                    pattern="^\+?[0-9\s()\-]{7,20}$" inputmode="tel" maxlength="20"
+                    oninput="this.value = this.value.replace(/[^0-9+\s()\-]/g, '')">
                 </div>
               </div>
 

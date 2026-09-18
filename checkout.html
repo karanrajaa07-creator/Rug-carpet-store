@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,8 +74,8 @@
           <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
             <i class="bi bi-moon-stars theme-toggle-icon"></i>
           </button>
-          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
-            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Current layout: LTR. Click to switch to RTL">
+            <span class="fw-bold small rtl-toggle-text">LTR</span>
           </button>
           <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
             <i class="bi bi-heart"></i>
@@ -170,7 +170,9 @@
                 </div>
                 <div class="col-md-5">
                   <label for="checkoutPhone" class="checkout-form-label">Phone Number *</label>
-                  <input type="tel" class="checkout-form-control" id="checkoutPhone" placeholder="+1 (555) 000-0000" required>
+                  <input type="tel" class="checkout-form-control" id="checkoutPhone" placeholder="+1 (555) 000-0000" required
+                    pattern="^\+?[0-9\s()\-]{7,20}$" inputmode="tel" maxlength="20"
+                    oninput="this.value = this.value.replace(/[^0-9+\s()\-]/g, '')">
                   <div class="form-text smaller">Required for white-glove delivery appointment scheduling.</div>
                 </div>
                 <div class="col-12 mt-3">
@@ -330,25 +332,31 @@
 
                 <!-- Card Form Fields -->
                 <div class="p-3 bg-subtle-box rounded border border-custom" id="cardFieldsContainer">
-                  <div class="row g-3">
+                  <div class="row g-3 card-fields-row align-items-end">
                     <div class="col-12">
                       <label for="checkoutCardNumber" class="checkout-form-label">Card Number *</label>
                       <div class="input-group">
-                        <span class="input-group-text bg-surface border-light"><i class="bi bi-credit-card text-muted"></i></span>
+                        <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
                         <input type="text" class="checkout-form-control" id="checkoutCardNumber" placeholder="4242 •••• •••• 4242" maxlength="19" required>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <label for="checkoutCardName" class="checkout-form-label">Name on Card *</label>
-                      <input type="text" class="checkout-form-control" id="checkoutCardName" placeholder="Eleanor Vanderbilt" required>
+                    <div class="col-md-5 col-12">
+                      <div class="d-flex flex-column h-100 justify-content-end">
+                        <label for="checkoutCardName" class="checkout-form-label text-nowrap">Name on Card *</label>
+                        <input type="text" class="checkout-form-control" id="checkoutCardName" placeholder="Eleanor Vanderbilt" required>
+                      </div>
                     </div>
-                    <div class="col-sm-3 col-6">
-                      <label for="checkoutCardExpiry" class="checkout-form-label">Expires (MM/YY) *</label>
-                      <input type="text" class="checkout-form-control" id="checkoutCardExpiry" placeholder="08/28" maxlength="5" required>
+                    <div class="col-md-4 col-6">
+                      <div class="d-flex flex-column h-100 justify-content-end">
+                        <label for="checkoutCardExpiry" class="checkout-form-label text-nowrap">Expires (MM/YY) *</label>
+                        <input type="text" class="checkout-form-control text-center" id="checkoutCardExpiry" placeholder="08/28" maxlength="5" required>
+                      </div>
                     </div>
-                    <div class="col-sm-3 col-6">
-                      <label for="checkoutCardCvv" class="checkout-form-label">CVV / CVC *</label>
-                      <input type="password" class="checkout-form-control" id="checkoutCardCvv" placeholder="•••" maxlength="4" required>
+                    <div class="col-md-3 col-6">
+                      <div class="d-flex flex-column h-100 justify-content-end">
+                        <label for="checkoutCardCvv" class="checkout-form-label text-nowrap">CVV / CVC *</label>
+                        <input type="password" class="checkout-form-control text-center" id="checkoutCardCvv" placeholder="•••" maxlength="4" required>
+                      </div>
                     </div>
                   </div>
                 </div>

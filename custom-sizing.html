@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,8 +74,8 @@
           <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
             <i class="bi bi-moon-stars theme-toggle-icon"></i>
           </button>
-          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
-            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Current layout: LTR. Click to switch to RTL">
+            <span class="fw-bold small rtl-toggle-text">LTR</span>
           </button>
           <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
             <i class="bi bi-heart"></i>
@@ -325,7 +325,9 @@
             </div>
             <div class="mb-3">
               <label class="form-label small fw-bold">Phone Number</label>
-              <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+              <input type="tel" class="form-control" placeholder="+1 (555) 000-0000"
+                pattern="^\+?[0-9\s()\-]{7,20}$" inputmode="tel" maxlength="20"
+                oninput="this.value = this.value.replace(/[^0-9+\s()\-]/g, '')">
             </div>
             <div class="mb-3">
               <label class="form-label small fw-bold">Special Notes or Color Preferences</label>

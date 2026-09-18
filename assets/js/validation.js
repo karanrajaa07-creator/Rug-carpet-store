@@ -10,6 +10,24 @@
   window.handleShowroomBooking = function (event) {
     event.preventDefault();
     const form = event.target;
+    const phoneInput = form.querySelector('#apptPhone');
+    if (phoneInput) {
+      const phoneVal = phoneInput.value.trim();
+      const digitsOnly = phoneVal.replace(/\D/g, '');
+      const hasLetters = /[a-zA-Z]/.test(phoneVal);
+
+      if (!phoneVal || hasLetters || digitsOnly.length < 7) {
+        phoneInput.setCustomValidity('Please enter a valid phone number (digits only, e.g. +1 (212) 555-0199).');
+        phoneInput.classList.add('is-invalid');
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        phoneInput.focus();
+        return;
+      } else {
+        phoneInput.setCustomValidity('');
+        phoneInput.classList.remove('is-invalid');
+      }
+    }
 
     if (!form.checkValidity()) {
       event.stopPropagation();
@@ -222,6 +240,49 @@
       const el = document.getElementById(id);
       if (el) el.addEventListener('input', calculateRugPrice);
     });
+    // Phone number inputs: strictly accept numbers & phone symbols only (block alphabets)
+    const phoneInputs = document.querySelectorAll('input[type="tel"], #apptPhone, #checkoutPhone, #regPhone');
+    phoneInputs.forEach(input => {
+      // Prevent typing any letters (a-z, A-Z)
+      input.addEventListener('keydown', (e) => {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (e.key && e.key.length === 1 && !/[0-9+\s()\-]/i.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+
+      // Strip any alphabets or invalid characters immediately on input
+      input.addEventListener('input', function () {
+        const cleaned = this.value.replace(/[^0-9+\s()\-]/g, '');
+        if (this.value !== cleaned) {
+          this.value = cleaned;
+        }
+        if (this.id === 'apptPhone') {
+          const digitsOnly = this.value.replace(/\D/g, '');
+          if (/[a-zA-Z]/.test(this.value) || (this.value.length > 0 && digitsOnly.length < 7)) {
+            this.setCustomValidity('Please enter a valid phone number with digits only.');
+          } else {
+            this.setCustomValidity('');
+          }
+        }
+      });
+
+      // Prevent pasting text containing alphabets without sanitization
+      input.addEventListener('paste', function (e) {
+        e.preventDefault();
+        const clipboard = (e.clipboardData || window.clipboardData).getData('text') || '';
+        const cleaned = clipboard.replace(/[^0-9+\s()\-]/g, '');
+        if (document.queryCommandSupported && document.queryCommandSupported('insertText')) {
+          document.execCommand('insertText', false, cleaned);
+        } else {
+          const start = this.selectionStart || 0;
+          const end = this.selectionEnd || 0;
+          this.value = this.value.substring(0, start) + cleaned + this.value.substring(end);
+          this.setSelectionRange(start + cleaned.length, start + cleaned.length);
+        }
+      });
+    });
+
     calculateRugPrice();
   });
 })();

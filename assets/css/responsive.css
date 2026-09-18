@@ -38,15 +38,36 @@
   }
   
   .site-header {
-    padding: 0.75rem 0;
+    padding: 0.65rem 0;
   }
-
-  .navbar-collapse {
+  .site-header .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .site-header .navbar-brand-logo {
+    order: 1;
+    margin-inline-end: auto;
+  }
+  .site-header .d-flex.align-items-center.gap-2 {
+    order: 2;
+    margin-inline-start: auto;
+  }
+  .site-header .navbar-toggler {
+    order: 3;
+    margin-inline-start: 0.35rem;
+  }
+  .site-header .navbar-toggler i {
+    color: #FFFFFF !important;
+  }
+  .site-header .navbar-collapse {
+    order: 4;
+    width: 100%;
     background: var(--bg-dark-accent);
     border-radius: var(--radius-md);
     padding: 1.25rem;
     box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
-    margin-top: 1rem;
+    margin-top: 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .nav-link {
@@ -169,13 +190,46 @@
 
 /* --- 5. SMALL PHONES (320px to 575px) --- */
 @media (max-width: 575.98px) {
+  .site-header .container {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
   .navbar-brand-logo {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
+    gap: 0.25rem;
+    white-space: nowrap;
   }
   .header-action-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
+    width: 31px;
+    height: 31px;
+    font-size: 0.8rem;
+  }
+  .header-action-btn .rtl-toggle-text {
+    font-size: 0.65rem;
+  }
+  .header-badge {
+    min-width: 15px;
+    height: 15px;
+    font-size: 0.55rem;
+    top: -3px;
+    right: -3px;
+  }
+  .site-header .d-flex.align-items-center.gap-2 {
+    gap: 0.25rem !important;
+  }
+  .site-header .navbar-toggler {
+    padding: 0.15rem 0.25rem;
+    margin-left: 0.2rem;
+  }
+  .site-header .navbar-toggler i {
+    font-size: 1.45rem !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  .display-4 {
+    font-size: 1.85rem !important;
   }
   .hero-btn-group .btn {
     width: 100%;

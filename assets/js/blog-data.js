@@ -459,6 +459,142 @@ window.BLOG_ARTICLES_DATA = [
         Dining chairs require flat surfaces so chair legs slide smoothly without catching on deep pile loops. Low-profile kilims, dhurries, and tight-braided organic jute or sisal provide high tensile resistance, easy spot-blotting, and timeless rustic geometry.
       </p>
     `
+  },
+  {
+    id: "vintage-layered-harmony",
+    numericId: 10,
+    category: "decor",
+    categoryName: "Home Decor & Styling",
+    categoryLabel: "Styling Essay • Home Decor",
+    badgeClass: "badge-luxury-terracotta",
+    title: "The Art of Layered Harmony: Pairing Antique Medallion Rugs with Natural Fibers",
+    author: "Camilla Thorne",
+    authorRole: "Senior Residential Interior Stylist",
+    authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80",
+    date: "September 5, 2026",
+    readTime: "7 min read",
+    image: "assets/images/blog/blog-vintage-layered-harmony.jpg",
+    imageAlt: "Layered antique terracotta medallion rug over natural woven base rug with marble coffee table and wicker lighting",
+    imageCaption: "A dual-texture rug foundation adds visual weight and warmth to transitional living spaces.",
+    excerpt: "Why layering a smaller antique Turkish or Persian medallion over an oversized neutral jute base solves scale dilemmas while multiplying textural depth.",
+    quote: "Layering is not an exercise in excess; it is an architectural technique that allows an irreplaceable heirloom to command the center of a spacious modern room without floating lost in a sea of floor.",
+    quoteAuthor: "Camilla Thorne, Interior Stylist",
+    content: `
+      <p class="fs-5 text-heading font-serif">
+        One of the most persistent dilemmas in luxury interior curation is the scale mismatch: a client falls in love with an authentic 6' × 9' antique Anatolian or Heriz medallion rug, yet their open living room demands a 12' × 16' footprint to properly ground the seating arrangement. The master design solution is deliberate textural layering.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">1. The Anchor Foundation: Oversized Low-Profile Naturals</h3>
+      <p>
+        The base layer should act as a quiet architectural plinth. An oversized flatweave in bleached organic jute, un-dyed wool bouclé, or dense sisal establishes the spatial boundaries of the conversation zone. Its role is tactile and structural: defining walkways, dampening acoustic reverberation, and providing a clean border of 18 to 24 inches around the seating group.
+      </p>
+
+      <blockquote class="p-4 my-5 bg-subtle-box border-start border-4 border-custom rounded-3" style="border-left-color: var(--color-terracotta) !important;">
+        <p class="font-serif fs-4 fst-italic text-heading mb-2">
+          "Layering is not an exercise in excess; it is an architectural technique that allows an irreplaceable heirloom to command the center of a spacious modern room without floating lost in a sea of floor."
+        </p>
+        <footer class="blockquote-footer mt-2 small text-muted">Camilla Thorne, Interior Stylist</footer>
+      </blockquote>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">2. The Focal Masterpiece: The Antique Medallion</h3>
+      <p>
+        Centered atop the neutral base, the antique hand-knotted wool rug becomes the chromatic jewel. Because the base neutral rug handles the furniture front-leg anchoring, the antique piece can float freely beneath the marble or reclaimed timber coffee table, protecting its delicate vintage selvages and showcasing its intricate botanical motifs.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">3. Harmonizing Lighting and Textural Furniture</h3>
+      <p>
+        To complete the composition, echo the warmth of the layered foundation upward: woven wicker pendant lighting, textured linen drapery, and a low-slung leather ottoman create an organic visual dialogue that feels collected over generations rather than assembled in an afternoon.
+      </p>
+    `
+  },
+  {
+    id: "biophilic-rug-styling",
+    numericId: 11,
+    category: "decor",
+    categoryName: "Home Decor & Styling",
+    categoryLabel: "Biophilic Design • Home Decor",
+    badgeClass: "badge-luxury-terracotta",
+    title: "Biophilic Living: Harmonizing Woven Rugs with Botanical Greenery",
+    author: "Julian Meyer",
+    authorRole: "Head of Conservation & Architectural Living",
+    authorAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80",
+    date: "August 28, 2026",
+    readTime: "5 min read",
+    image: "assets/images/blog/blog-biophilic-rug-styling.jpg",
+    imageAlt: "Sunlit living space with natural olive plants, cane seating, and organic woven textured rug",
+    imageCaption: "Organic plant fibers and unbleached wool create seamless transitions between indoor living salons and garden terraces.",
+    excerpt: "How pairing unbleached organic wool, woven cane accent chairs, and potted Mediterranean flora fosters serene wellness-focused interiors.",
+    quote: "A biophilic interior is only as truthful as its floor. When feet step onto raw organic plant fibers, the subconscious immediately registers the serenity of the natural world.",
+    quoteAuthor: "Julian Meyer, Conservation Director",
+    content: `
+      <p class="fs-5 text-heading font-serif">
+        Biophilic design is far more than scattering potted houseplants across a living room. It is the deliberate spatial philosophy of connecting human occupants to nature through authentic materiality, filtered natural light, and organic sensory tactile textures underfoot.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">The Earthy Foundation: Unbleached Fibers & Cane</h3>
+      <p>
+        When natural morning light washes through large windows, synthetic carpets reveal their plastic artificiality. In contrast, an un-dyed virgin wool or river-retted organic jute rug absorbs and reflects light with soft warmth. Pairing this tactile base with woven cane accent chairs and low-sheen timber tables establishes an earthy baseline that grounds the eye.
+      </p>
+
+      <blockquote class="p-4 my-5 bg-subtle-box border-start border-4 border-custom rounded-3" style="border-left-color: var(--color-terracotta) !important;">
+        <p class="font-serif fs-4 fst-italic text-heading mb-2">
+          "A biophilic interior is only as truthful as its floor. When feet step onto raw organic plant fibers, the subconscious immediately registers the serenity of the natural world."
+        </p>
+        <footer class="blockquote-footer mt-2 small text-muted">Julian Meyer, Conservation Director</footer>
+      </blockquote>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">Curating Scale: Sculptural Trees vs. Low Weaves</h3>
+      <p>
+        To avoid clutter, designers recommend pairing low-pile, high-texture floor coverings with tall architectural greenery such as a potted European olive tree, mature fiddle-leaf fig, or Kentia palm. Place terracotta vessels on protective floor saucers directly beside the rug margin to create a gentle, layered transition from floor to canopy.
+      </p>
+    `
+  },
+  {
+    id: "open-concept-harmonization",
+    numericId: 12,
+    category: "decor",
+    categoryName: "Home Decor & Styling",
+    categoryLabel: "Space Planning • Home Decor",
+    badgeClass: "badge-luxury-terracotta",
+    title: "Open-Concept Harmonization: Defining Zones with Geometric Artisan Rugs",
+    author: "Elena Rostova",
+    authorRole: "Senior Curator & Spatial Consultant",
+    authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80",
+    date: "August 19, 2026",
+    readTime: "6 min read",
+    image: "assets/images/blog/blog-urban-penthouse-styling.jpg",
+    imageAlt: "High-rise penthouse living area with floor-to-ceiling glass, mid-century leather sofa, and geometric diamond rug",
+    imageCaption: "Crisp geometric lines delineate intimate conversational islands within expansive architectural floorplans.",
+    excerpt: "Practical rules for using contrasting pile textures and geometric motifs to delineate distinct functional zones in airy loft floorplans without walls.",
+    quote: "In a grand open-plan loft, walls divide spaces aggressively; artisanal rugs unite them musically, giving each zone its own cadence and purpose.",
+    quoteAuthor: "Elena Rostova, Spatial Consultant",
+    content: `
+      <p class="fs-5 text-heading font-serif">
+        Modern architectural residences—from glass curtain-wall penthouses to industrial concrete lofts—celebrate expansive open floorplans. Yet without structural partition walls, these spaces can quickly feel cavernous, drifting into visual chaos. The most refined tool for defining functional harmony is purposeful rug zoning.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">1. Establishing Islands of Purpose</h3>
+      <p>
+        Rather than attempting a single mammoth rug that spans dining and living zones, treat each zone as a distinct architectural island. A crisp geometric diamond flatweave in ivory and charcoal instantly creates a designated conversation salon, anchoring a cognac leather sofa and sculptured armchairs.
+      </p>
+
+      <blockquote class="p-4 my-5 bg-subtle-box border-start border-4 border-custom rounded-3" style="border-left-color: var(--color-terracotta) !important;">
+        <p class="font-serif fs-4 fst-italic text-heading mb-2">
+          "In a grand open-plan loft, walls divide spaces aggressively; artisanal rugs unite them musically, giving each zone its own cadence and purpose."
+        </p>
+        <footer class="blockquote-footer mt-2 small text-muted">Elena Rostova, Spatial Consultant</footer>
+      </blockquote>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">2. The Margin Rule: Preserving Floor Pathways</h3>
+      <p>
+        The golden rule for multi-rug open spaces is maintaining breathing room between islands. Always leave at least 3 to 4 feet of exposed hardwood or polished concrete flooring between the living room rug border and the adjacent dining room rug. This negative space forms intuitive pathways that guide foot traffic naturally throughout the home.
+      </p>
+
+      <h3 class="font-serif fw-bold mt-5 mb-3">3. Coordinating Without Matching</h3>
+      <p>
+        Never use identical matching rugs in adjacent open zones; doing so feels commercial and uninspired. Instead, create harmony through complementary fiber weights: pair a flatweave geometric rug in the living area with a plush low-pile ribbed neutral in the library nook, bonded by a shared foundation palette of warm sand and charcoal.
+      </p>
+    `
   }
 ];
 

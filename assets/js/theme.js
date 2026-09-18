@@ -7,7 +7,7 @@
   'use strict';
 
   const THEME_KEY = 'rug_store_theme';
-  const DIR_KEY = 'rug_store_direction';
+  const DIR_KEY = 'rug_store_direction_v2';
 
   // 1. Initialize Theme from localStorage or system preference
   function initTheme() {
@@ -47,11 +47,14 @@
 
   // 3. Initialize Direction (RTL / LTR)
   function initDirection() {
-    const savedDir = localStorage.getItem(DIR_KEY);
-    if (savedDir) {
-      document.documentElement.setAttribute('dir', savedDir);
-      updateRtlBadge(savedDir);
+    // Clear legacy stuck rtl value if present
+    if (localStorage.getItem('rug_store_direction')) {
+      localStorage.removeItem('rug_store_direction');
     }
+
+    const savedDir = localStorage.getItem(DIR_KEY) || 'ltr';
+    document.documentElement.setAttribute('dir', savedDir);
+    updateRtlBadge(savedDir);
   }
 
   // 4. Toggle RTL function
@@ -62,12 +65,26 @@
     document.documentElement.setAttribute('dir', newDir);
     localStorage.setItem(DIR_KEY, newDir);
     updateRtlBadge(newDir);
+
+    window.dispatchEvent(new CustomEvent('directionChanged', { detail: { direction: newDir } }));
   };
 
   function updateRtlBadge(dir) {
     const labels = document.querySelectorAll('.rtl-toggle-text');
     labels.forEach(el => {
-      el.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
+      // In LTR mode, indicate 'LTR'; in RTL mode, indicate 'RTL'
+      el.textContent = dir === 'rtl' ? 'RTL' : 'LTR';
+    });
+
+    const rtlButtons = document.querySelectorAll('[data-action="toggle-rtl"]');
+    rtlButtons.forEach(btn => {
+      if (dir === 'rtl') {
+        btn.setAttribute('title', 'Current layout: RTL (Right-to-Left). Click to switch to LTR');
+        btn.setAttribute('aria-label', 'Switch to Left-to-Right layout');
+      } else {
+        btn.setAttribute('title', 'Current layout: LTR (Left-to-Right). Click to switch to RTL');
+        btn.setAttribute('aria-label', 'Switch to Right-to-Left layout');
+      }
     });
   }
 

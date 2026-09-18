@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,8 +74,8 @@
           <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
             <i class="bi bi-moon-stars theme-toggle-icon"></i>
           </button>
-          <button class="header-action-btn" data-action="toggle-rtl" title="Toggle RTL/LTR Direction">
-            <span class="fw-bold small rtl-toggle-text">RTL</span>
+          <button class="header-action-btn" data-action="toggle-rtl" title="Current layout: LTR. Click to switch to RTL">
+            <span class="fw-bold small rtl-toggle-text">LTR</span>
           </button>
           <a href="wishlist.html" class="header-action-btn" title="Saved Wishlist">
             <i class="bi bi-heart"></i>
@@ -139,7 +139,7 @@
       <!-- Active Filter Status & Count -->
       <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-custom">
         <h3 class="font-serif fw-bold mb-0" id="blogActiveCategoryTitle">All Published Articles</h3>
-        <span class="text-muted small" id="blogResultsCount">9 articles</span>
+        <span class="text-muted small" id="blogResultsCount">12 articles</span>
       </div>
 
       <div class="row g-4" id="blogArticlesGrid">
@@ -344,6 +344,75 @@
                 <div class="d-flex align-items-center gap-2">
                   <span>7 min read</span>
                   <a href="blog-details.html?id=room-framing-proportions" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10: Home Decor -->
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="decor">
+          <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
+            <a href="blog-details.html?id=vintage-layered-harmony" class="d-block blog-card-img-wrap" title="Read Article">
+              <img src="assets/images/blog/blog-vintage-layered-harmony.jpg" alt="The Art of Layered Harmony: Pairing Antique Medallion Rugs with Natural Fibers" class="blog-card-img">
+            </a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <button type="button" class="badge badge-luxury-terracotta align-self-start mb-2 border-0 cursor-pointer blog-badge-filter" data-category="decor">Home Decor</button>
+              <h4 class="font-serif fw-bold mb-2">
+                <a href="blog-details.html?id=vintage-layered-harmony" class="text-heading article-card-link">The Art of Layered Harmony: Pairing Antique Medallion Rugs with Natural Fibers</a>
+              </h4>
+              <p class="small text-muted mb-4 flex-grow-1">A masterclass in scale, grounding oversized living spaces by framing historical hand-knotted heirlooms atop neutral low-profile jute plinths.</p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-custom small text-muted">
+                <span>By Camilla Thorne</span>
+                <div class="d-flex align-items-center gap-2">
+                  <span>7 min read</span>
+                  <a href="blog-details.html?id=vintage-layered-harmony" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11: Home Decor -->
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="decor">
+          <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
+            <a href="blog-details.html?id=biophilic-rug-styling" class="d-block blog-card-img-wrap" title="Read Article">
+              <img src="assets/images/blog/blog-biophilic-rug-styling.jpg" alt="Biophilic Living: Harmonizing Woven Rugs with Botanical Greenery" class="blog-card-img">
+            </a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <button type="button" class="badge badge-luxury-terracotta align-self-start mb-2 border-0 cursor-pointer blog-badge-filter" data-category="decor">Home Decor</button>
+              <h4 class="font-serif fw-bold mb-2">
+                <a href="blog-details.html?id=biophilic-rug-styling" class="text-heading article-card-link">Biophilic Living: Harmonizing Woven Rugs with Botanical Greenery</a>
+              </h4>
+              <p class="small text-muted mb-4 flex-grow-1">How pairing unbleached organic wool, woven cane accent chairs, and potted Mediterranean flora fosters serene wellness-focused interiors.</p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-custom small text-muted">
+                <span>By Julian Meyer</span>
+                <div class="d-flex align-items-center gap-2">
+                  <span>5 min read</span>
+                  <a href="blog-details.html?id=biophilic-rug-styling" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 12: Home Decor -->
+        <div class="col-lg-4 col-md-6 col-12 blog-article-item" data-category="decor">
+          <div class="luxury-card overflow-hidden h-100 d-flex flex-column blog-card-hover">
+            <a href="blog-details.html?id=open-concept-harmonization" class="d-block blog-card-img-wrap" title="Read Article">
+              <img src="assets/images/blog/blog-urban-penthouse-styling.jpg" alt="Open-Concept Harmonization: Defining Zones with Geometric Artisan Rugs" class="blog-card-img">
+            </a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <button type="button" class="badge badge-luxury-terracotta align-self-start mb-2 border-0 cursor-pointer blog-badge-filter" data-category="decor">Home Decor</button>
+              <h4 class="font-serif fw-bold mb-2">
+                <a href="blog-details.html?id=open-concept-harmonization" class="text-heading article-card-link">Open-Concept Harmonization: Defining Zones with Geometric Artisan Rugs</a>
+              </h4>
+              <p class="small text-muted mb-4 flex-grow-1">Practical rules for using contrasting pile textures and geometric motifs to delineate distinct functional zones in airy loft floorplans without walls.</p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top border-custom small text-muted">
+                <span>By Elena Rostova</span>
+                <div class="d-flex align-items-center gap-2">
+                  <span>6 min read</span>
+                  <a href="blog-details.html?id=open-concept-harmonization" class="text-terracotta fw-semibold text-decoration-none">Read Article <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
