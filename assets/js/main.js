@@ -58,6 +58,16 @@
         slider.style.left = `${percent}%`;
       }
 
+      function syncOverlayImageWidth() {
+        const overlayImg = overlay.querySelector('img');
+        if (overlayImg) {
+          overlayImg.style.width = `${container.offsetWidth}px`;
+          overlayImg.style.maxWidth = `${container.offsetWidth}px`;
+        }
+      }
+      syncOverlayImageWidth();
+      window.addEventListener('resize', syncOverlayImageWidth);
+
       slider.addEventListener('mousedown', () => isDragging = true);
       window.addEventListener('mouseup', () => isDragging = false);
       window.addEventListener('mousemove', (e) => {
