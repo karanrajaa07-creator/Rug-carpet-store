@@ -502,8 +502,8 @@
     const isWishlisted = typeof window.getWishlist === 'function' && window.getWishlist().includes(product.id);
 
     return `
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-${product.id}">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-${product.id}">
           <div class="product-thumb-box">
             <a href="product-details.html?id=${product.id}&size=${activeTier.tier}" id="cardThumbLink-${product.id}" class="product-thumb-link" title="View ${product.name}">
               <img id="cardImg-${product.id}" src="${activeTier.image}" alt="${product.name} — ${activeTier.label} (${activeTier.dimensions})" loading="lazy">

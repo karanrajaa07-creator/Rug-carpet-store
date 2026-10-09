@@ -12,10 +12,11 @@
     const header = document.querySelector('.site-header');
     const backToTopBtn = document.getElementById('backToTopBtn');
 
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
+    let isScrollTicking = false;
+    const updateHeaderOnScroll = () => {
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
       if (header) {
-        if (scrollY > 60) {
+        if (scrollY > 15) {
           header.classList.add('is-scrolled');
         } else {
           header.classList.remove('is-scrolled');
@@ -29,7 +30,19 @@
           backToTopBtn.classList.remove('show');
         }
       }
-    });
+      isScrollTicking = false;
+    };
+
+    const onScroll = () => {
+      if (!isScrollTicking) {
+        window.requestAnimationFrame(updateHeaderOnScroll);
+        isScrollTicking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    updateHeaderOnScroll();
 
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', (e) => {

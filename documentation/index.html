@@ -55,9 +55,36 @@
 
   <header class="py-3 bg-surface border-bottom border-custom sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand-logo" href="../index.html">
-        <i class="bi bi-gem text-gold"></i>
-        <span>ATELIER</span> RUGS
+      <a class="navbar-brand-logo" href="../index.html" aria-label="Atelier Rugs Home">
+        <span class="brand-logo-mark">
+          <svg class="brand-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoEmblemGoldDoc" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F2DEC6"/>
+                <stop offset="50%" stop-color="#D9B78C"/>
+                <stop offset="100%" stop-color="#B38F60"/>
+              </linearGradient>
+              <linearGradient id="logoEmblemTerraDoc" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D87E63"/>
+                <stop offset="100%" stop-color="#A8523A"/>
+              </linearGradient>
+            </defs>
+            <path d="M18 3.5 L32.5 18 L18 32.5 L3.5 18 Z" stroke="url(#logoEmblemGoldDoc)" stroke-width="1.4" stroke-linejoin="round" fill="rgba(35, 31, 28, 0.75)"/>
+            <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="url(#logoEmblemGoldDoc)" stroke-width="0.9" stroke-dasharray="2 1.4" stroke-linejoin="round" stroke-opacity="0.85"/>
+            <polygon points="18,10.2 25.8,18 18,25.8 10.2,18" fill="url(#logoEmblemTerraDoc)"/>
+            <polygon points="18,13.2 22.8,18 18,22.8 13.2,18" fill="#1A1714" stroke="url(#logoEmblemGoldDoc)" stroke-width="0.75"/>
+            <circle cx="18" cy="18" r="2.2" fill="url(#logoEmblemGoldDoc)"/>
+            <circle cx="18" cy="18" r="0.9" fill="#FFFFFF"/>
+            <circle cx="18" cy="3.5" r="1.1" fill="url(#logoEmblemGoldDoc)"/>
+            <circle cx="32.5" cy="18" r="1.1" fill="url(#logoEmblemGoldDoc)"/>
+            <circle cx="18" cy="32.5" r="1.1" fill="url(#logoEmblemGoldDoc)"/>
+            <circle cx="3.5" cy="18" r="1.1" fill="url(#logoEmblemGoldDoc)"/>
+          </svg>
+        </span>
+        <span class="brand-logo-text">
+          <span class="brand-name-atelier">ATELIER</span>
+          <span class="brand-name-rugs">RUGS</span>
+        </span>
       </a>
       <div class="d-flex align-items-center gap-3">
         <span class="badge badge-luxury-terracotta">Version 1.0.0</span>
@@ -178,8 +205,11 @@
             The template uses vector icon monograms + Google Fonts. To change the brand text or logo image in any header:
           </p>
           <pre><code>&lt;a class="navbar-brand navbar-brand-logo" href="index.html"&gt;
-  &lt;i class="bi bi-gem text-gold"&gt;&lt;/i&gt;
-  &lt;span&gt;YOUR BRAND&lt;/span&gt; STORE
+  &lt;span class="brand-logo-mark"&gt;&lt;!-- SVG Emblem --&gt;&lt;/span&gt;
+  &lt;span class="brand-logo-text"&gt;
+    &lt;span class="brand-name-atelier"&gt;ATELIER&lt;/span&gt;
+    &lt;span class="brand-name-rugs"&gt;RUGS&lt;/span&gt;
+  &lt;/span&gt;
 &lt;/a&gt;</code></pre>
           <p class="text-muted mt-3">
             To use a custom PNG or SVG image logo:

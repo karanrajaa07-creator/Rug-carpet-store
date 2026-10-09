@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Header Test Runner</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f0f2f5; }
+    .suite { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+    .pass { color: green; font-weight: bold; }
+    .fail { color: red; font-weight: bold; background: #ffebee; padding: 2px 5px; }
+  </style>
+  <script>
+    try { localStorage.clear(); } catch(e) {}
+  </script>
+</head>
+<body>
+  <h2>Mobile Header & RTL Button Test</h2>
+  <div id="results">Running tests...</div>
+
+  <iframe id="f320" src="../index.html" style="width:320px; height:500px;"></iframe>
+  <iframe id="f360" src="../index.html" style="width:360px; height:500px;"></iframe>
+  <iframe id="f375" src="../index.html" style="width:375px; height:500px;"></iframe>
+  <iframe id="f390" src="../index.html" style="width:390px; height:500px;"></iframe>
+  <iframe id="f412" src="../index.html" style="width:412px; height:500px;"></iframe>
+
+  <script>
+    window.addEventListener('load', () => {
+      try { localStorage.clear(); } catch(e) {}
+      const viewports = [320, 360, 375, 390, 412];
+      const logs = [];
+
+      function log(msg, pass = true) {
+        logs.push({ msg, pass });
+      }
+
+      viewports.forEach(width => {
+        try {
+          const iframe = document.getElementById('f' + width);
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          const win = iframe.contentWindow;
+
+          const rtlBtn = doc.querySelector('.header-action-btn[data-action="toggle-rtl"]');
+          const rtlComputed = rtlBtn ? win.getComputedStyle(rtlBtn) : null;
+          const rtlText = rtlBtn ? rtlBtn.querySelector('.rtl-toggle-text') : null;
+
+          doc.documentElement.setAttribute('dir', 'ltr');
+          if (rtlText) rtlText.textContent = 'LTR';
+
+          // 1. Button exists
+          log(`[${width}px] RTL button exists`, !!rtlBtn);
+
+          // 2. Visible
+          const isVisible = rtlBtn && rtlComputed.display !== 'none' && rtlComputed.visibility !== 'hidden';
+          log(`[${width}px] RTL button is visible (display: ${rtlComputed ? rtlComputed.display : 'n/a'})`, isVisible);
+
+          // 3. Size
+          const rect = rtlBtn ? rtlBtn.getBoundingClientRect() : { width: 0, height: 0 };
+          log(`[${width}px] RTL button dimension: ${rect.width.toFixed(1)}px x ${rect.height.toFixed(1)}px`, rect.width >= 25 && rect.height >= 25);
+
+          // 4. Label
+          log(`[${width}px] RTL button label is LTR`, rtlText && rtlText.textContent.trim() === 'LTR');
+
+          // 5. Overflow
+          const scrollW = doc.documentElement.scrollWidth;
+          const clientW = doc.documentElement.clientWidth;
+          log(`[${width}px] No horizontal overflow in LTR (${scrollW}px <= ${clientW}px)`, scrollW <= clientW);
+
+          // 6. Header items fit on single row
+          const logo = doc.querySelector('.navbar-brand-logo');
+          const actions = doc.querySelector('.site-header .d-flex.align-items-center.gap-2');
+          const toggler = doc.querySelector('.site-header .navbar-toggler');
+          if (logo && actions && toggler) {
+            const lRect = logo.getBoundingClientRect();
+            const aRect = actions.getBoundingClientRect();
+            const tRect = toggler.getBoundingClientRect();
+            const singleRow = Math.abs(lRect.top - aRect.top) < 18 && Math.abs(aRect.top - tRect.top) < 18;
+            log(`[${width}px] Header items on single line (logo: ${lRect.top.toFixed(0)}, actions: ${aRect.top.toFixed(0)}, toggler: ${tRect.top.toFixed(0)})`, singleRow);
+          }
+
+          // 7. RTL Toggle Click
+          if (rtlBtn) {
+            rtlBtn.click();
+            const dir = doc.documentElement.getAttribute('dir');
+            const updatedText = rtlText ? rtlText.textContent.trim() : '';
+            log(`[${width}px] RTL switch sets dir="rtl"`, dir === 'rtl');
+            log(`[${width}px] RTL button text updates to "RTL" (got: ${updatedText})`, updatedText === 'RTL');
+
+            const rtlScrollW = doc.documentElement.scrollWidth;
+            const rtlClientW = doc.documentElement.clientWidth;
+            log(`[${width}px] No horizontal overflow in RTL (${rtlScrollW}px <= ${rtlClientW}px)`, rtlScrollW <= rtlClientW);
+          }
+        } catch (e) {
+          log(`[${width}px] Error: ${e.message}`, false);
+        }
+      });
+
+      let passCount = 0;
+      let failCount = 0;
+      let html = '<div class="suite">';
+      logs.forEach(l => {
+        if (l.pass) {
+          passCount++;
+          html += `<div class="pass">PASS: ${l.msg}</div>`;
+        } else {
+          failCount++;
+          html += `<div class="fail">FAIL: ${l.msg}</div>`;
+        }
+      });
+      html += `<h3>Total: ${passCount} Passed, ${failCount} Failed</h3></div>`;
+      document.getElementById('results').innerHTML = html;
+      document.title = `RESULTS: ${passCount} passed, ${failCount} failed`;
+    });
+  </script>
+</body>
+</html>

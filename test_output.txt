@@ -346,8 +346,8 @@
   <!-- Hidden Sandbox for Rendering DOM Elements -->
   <div id="visualTestSandbox">
     <div id="productsGridContainer">
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-1">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-1">
           <div class="product-thumb-box">
             <a href="product-details.html?id=1&amp;size=large" id="cardThumbLink-1" class="product-thumb-link" title="View Isfahan Silk Medallion Rug">
               <img id="cardImg-1" src="assets/images/products/isfahan-silk-detail-2.jpg" alt="Isfahan Silk Medallion Rug — Large (10' × 14')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
@@ -410,8 +410,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-2">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-2">
           <div class="product-thumb-box">
             <a href="product-details.html?id=2&amp;size=medium" id="cardThumbLink-2" class="product-thumb-link" title="View Atlas Mountain Berber Wool Rug">
               <img id="cardImg-2" src="assets/images/products/atlas-berber-rug.jpg" alt="Atlas Mountain Berber Wool Rug — Medium (8' × 10')" loading="lazy">
@@ -474,8 +474,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-3">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-3">
           <div class="product-thumb-box">
             <a href="product-details.html?id=3&amp;size=medium" id="cardThumbLink-3" class="product-thumb-link" title="View Nordic Geometric Wool Flatweave">
               <img id="cardImg-3" src="assets/images/products/nordic-geometric-rug.jpg" alt="Nordic Geometric Wool Flatweave — Medium (8' × 10')" loading="lazy">
@@ -538,8 +538,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-4">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-4">
           <div class="product-thumb-box">
             <a href="product-details.html?id=4&amp;size=medium" id="cardThumbLink-4" class="product-thumb-link" title="View Oushak Heritage Botanical Runner">
               <img id="cardImg-4" src="assets/images/products/oushak-runner-rug.jpg" alt="Oushak Heritage Botanical Runner — Medium (2.5' × 10')" loading="lazy">
@@ -602,8 +602,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-5">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-5">
           <div class="product-thumb-box">
             <a href="product-details.html?id=5&amp;size=medium" id="cardThumbLink-5" class="product-thumb-link" title="View Kyoto Organic Jute Braided Carpet">
               <img id="cardImg-5" src="assets/images/products/braided-jute-carpet.jpg" alt="Kyoto Organic Jute Braided Carpet — Medium (8' × 10')" loading="lazy">
@@ -666,8 +666,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-6">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-6">
           <div class="product-thumb-box">
             <a href="product-details.html?id=6&amp;size=medium" id="cardThumbLink-6" class="product-thumb-link" title="View Bauhaus Modern Geometric Wool Rug">
               <img id="cardImg-6" src="assets/images/products/bauhaus-geometric-rug.jpg" alt="Bauhaus Modern Geometric Wool Rug — Medium (9' × 12')" loading="lazy">
@@ -730,8 +730,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-7">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-7">
           <div class="product-thumb-box">
             <a href="product-details.html?id=7&amp;size=medium" id="cardThumbLink-7" class="product-thumb-link" title="View Caspian Hand-Knotted Silk Rug">
               <img id="cardImg-7" src="assets/images/products/caspian-silk-rug.jpg" alt="Caspian Hand-Knotted Silk Rug — Medium (9' × 12')" loading="lazy">
@@ -794,8 +794,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-8">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-8">
           <div class="product-thumb-box">
             <a href="product-details.html?id=8&amp;size=medium" id="cardThumbLink-8" class="product-thumb-link" title="View Santorini Terrace Diamond Outdoor Rug">
               <img id="cardImg-8" src="assets/images/products/santorini-outdoor-terrace-rug.jpg" alt="Santorini Terrace Diamond Outdoor Rug — Medium (8' × 10')" loading="lazy">
@@ -858,8 +858,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-9">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-9">
           <div class="product-thumb-box">
             <a href="product-details.html?id=9&amp;size=medium" id="cardThumbLink-9" class="product-thumb-link" title="View Anatolian Vintage Distressed Rug">
               <img id="cardImg-9" src="assets/images/products/anatolian-vintage-distressed-rug.jpg" alt="Anatolian Vintage Distressed Rug — Medium (8' × 10')" loading="lazy">
@@ -922,8 +922,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-11">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-11">
           <div class="product-thumb-box">
             <a href="product-details.html?id=11&amp;size=medium" id="cardThumbLink-11" class="product-thumb-link" title="View Moroccan Tribal Diamond Runner">
               <img id="cardImg-11" src="assets/images/products/moroccan-diamond-runner.jpg" alt="Moroccan Tribal Diamond Runner — Medium (2.5' × 10')" loading="lazy">
@@ -986,8 +986,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-12">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-12">
           <div class="product-thumb-box">
             <a href="product-details.html?id=12&amp;size=medium" id="cardThumbLink-12" class="product-thumb-link" title="View Solstice Organic Jute Loop Rug">
               <img id="cardImg-12" src="assets/images/products/jute-loop-rug.jpg" alt="Solstice Organic Jute Loop Rug — Medium (6' × 9')" loading="lazy">
@@ -1050,8 +1050,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-13">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-13">
           <div class="product-thumb-box">
             <a href="product-details.html?id=13&amp;size=medium" id="cardThumbLink-13" class="product-thumb-link" title="View Amalfi Veranda Striped Outdoor Rug">
               <img id="cardImg-13" src="assets/images/products/amalfi-veranda-outdoor-rug.jpg" alt="Amalfi Veranda Striped Outdoor Rug — Medium (8' × 10')" loading="lazy">
@@ -1114,8 +1114,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-10">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-10">
           <div class="product-thumb-box">
             <a href="product-details.html?id=10&amp;size=medium" id="cardThumbLink-10" class="product-thumb-link" title="View Jaipur Hand-Block Printed Cotton Dhurrie">
               <img id="cardImg-10" src="assets/images/products/handwoven-kilim-rug.jpg" alt="Jaipur Hand-Block Printed Cotton Dhurrie — Medium (8' × 10')" loading="lazy">
@@ -1178,8 +1178,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-14">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-14">
           <div class="product-thumb-box">
             <a href="product-details.html?id=14&amp;size=large" id="cardThumbLink-14" class="product-thumb-link" title="View Scandinavian Ribbed Cotton Flatweave">
               <img id="cardImg-14" src="assets/images/products/scandinavian-cotton-detail-2.jpg" alt="Scandinavian Ribbed Cotton Flatweave — Large (8' × 10')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
@@ -1242,8 +1242,8 @@
         </div>
       </div>
     
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
-        <div class="product-card" id="productCard-15">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
+        <div class="product-card w-100" id="productCard-15">
           <div class="product-thumb-box">
             <a href="product-details.html?id=15&amp;size=medium" id="cardThumbLink-15" class="product-thumb-link" title="View Manhattan Velvet Plush Broadloom Carpet">
               <img id="cardImg-15" src="assets/images/products/manhattan-velvet-carpet.jpg" alt="Manhattan Velvet Plush Broadloom Carpet — Medium (10' × 14')" loading="lazy">

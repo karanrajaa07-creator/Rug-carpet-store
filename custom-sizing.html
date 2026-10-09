@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -29,12 +29,40 @@
   <header class="site-header sticky-top">
     <div class="container">
       <nav class="navbar navbar-expand-lg p-0">
-        <a class="navbar-brand navbar-brand-logo" href="index.html">
-          <i class="bi bi-gem"></i>
-          <span>ATELIER</span> RUGS
+                <!-- Brand Logo -->
+        <a class="navbar-brand navbar-brand-logo" href="index.html" aria-label="Atelier Rugs Home">
+          <span class="brand-logo-mark">
+            <svg class="brand-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="logoEmblemGoldHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F2DEC6"/>
+                  <stop offset="50%" stop-color="#D9B78C"/>
+                  <stop offset="100%" stop-color="#B38F60"/>
+                </linearGradient>
+                <linearGradient id="logoEmblemTerraHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#D87E63"/>
+                  <stop offset="100%" stop-color="#A8523A"/>
+                </linearGradient>
+              </defs>
+              <path d="M18 3.5 L32.5 18 L18 32.5 L3.5 18 Z" stroke="url(#logoEmblemGoldHeader)" stroke-width="1.4" stroke-linejoin="round" fill="rgba(35, 31, 28, 0.75)"/>
+              <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="url(#logoEmblemGoldHeader)" stroke-width="0.9" stroke-dasharray="2 1.4" stroke-linejoin="round" stroke-opacity="0.85"/>
+              <polygon points="18,10.2 25.8,18 18,25.8 10.2,18" fill="url(#logoEmblemTerraHeader)"/>
+              <polygon points="18,13.2 22.8,18 18,22.8 13.2,18" fill="#1A1714" stroke="url(#logoEmblemGoldHeader)" stroke-width="0.75"/>
+              <circle cx="18" cy="18" r="2.2" fill="url(#logoEmblemGoldHeader)"/>
+              <circle cx="18" cy="18" r="0.9" fill="#FFFFFF"/>
+              <circle cx="18" cy="3.5" r="1.1" fill="url(#logoEmblemGoldHeader)"/>
+              <circle cx="32.5" cy="18" r="1.1" fill="url(#logoEmblemGoldHeader)"/>
+              <circle cx="18" cy="32.5" r="1.1" fill="url(#logoEmblemGoldHeader)"/>
+              <circle cx="3.5" cy="18" r="1.1" fill="url(#logoEmblemGoldHeader)"/>
+            </svg>
+          </span>
+          <span class="brand-logo-text">
+            <span class="brand-name-atelier">ATELIER</span>
+            <span class="brand-name-rugs">RUGS</span>
+          </span>
         </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar">
-          <i class="bi bi-list fs-2 text-heading"></i>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
         </button>
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse justify-content-center" id="siteNavbar">
@@ -44,8 +72,18 @@
                 Home
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                <li>
+                  <a class="dropdown-item" href="index.html">
+                    <span class="dropdown-item-title">Hand-Knotted Rugs</span>
+                    <span class="dropdown-item-subtitle">Traditional &amp; Silk Heirlooms</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="home-2.html">
+                    <span class="dropdown-item-title">Architectural Rugs</span>
+                    <span class="dropdown-item-subtitle">Modern &amp; Bespoke Carpets</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -67,9 +105,15 @@
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
+          <!-- Mobile Menu CTA Button -->
+          <div class="site-header-mobile-cta d-lg-none">
+            <a href="contact.html#showroomBooking" class="btn btn-luxury-primary w-100 py-2">
+              <i class="bi bi-calendar-check me-2"></i> Book Consultation
+            </a>
+          </div>
         </div>
 
-<!-- Header Action Icons -->
+        <!-- Header Action Icons & CTA -->
         <div class="d-flex align-items-center gap-2">
           <button class="header-action-btn" data-action="toggle-theme" title="Toggle Light/Dark Mode">
             <i class="bi bi-moon-stars theme-toggle-icon"></i>
@@ -85,13 +129,17 @@
             <i class="bi bi-bag"></i>
             <span class="header-badge cart-count-badge">1</span>
           </button>
+          <a href="contact.html#showroomBooking" class="btn btn-luxury-primary nav-cta-btn d-none d-lg-inline-flex" title="Book Private Consultation">
+            <i class="bi bi-calendar-check"></i>
+            <span>Book Consultation</span>
+          </a>
         </div>
       </nav>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="py-5 bg-subtle-box border-bottom border-custom text-center">
+  <section class="page-hero-banner hero-custom-sizing bg-subtle-box border-bottom border-custom text-center">
     <div class="container py-4">
       <div class="section-tag justify-content-center">Atelier Engineering</div>
       <h1 class="display-4 font-serif fw-bold mb-3">Custom Rug Dimension Studio</h1>
@@ -379,9 +427,36 @@
 
       <div class="row g-5">
         <div class="col-lg-4 col-md-6">
-          <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html">
-            <i class="bi bi-gem text-gold"></i>
-            <span>ATELIER</span> RUGS
+                    <a class="navbar-brand-logo text-white mb-3 d-inline-flex" href="index.html" aria-label="Atelier Rugs Home">
+            <span class="brand-logo-mark">
+              <svg class="brand-logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logoEmblemGoldFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F2DEC6"/>
+                    <stop offset="50%" stop-color="#D9B78C"/>
+                    <stop offset="100%" stop-color="#B38F60"/>
+                  </linearGradient>
+                  <linearGradient id="logoEmblemTerraFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#D87E63"/>
+                    <stop offset="100%" stop-color="#A8523A"/>
+                  </linearGradient>
+                </defs>
+                <path d="M18 3.5 L32.5 18 L18 32.5 L3.5 18 Z" stroke="url(#logoEmblemGoldFooter)" stroke-width="1.4" stroke-linejoin="round" fill="rgba(35, 31, 28, 0.75)"/>
+                <path d="M18 7 L29 18 L18 29 L7 18 Z" stroke="url(#logoEmblemGoldFooter)" stroke-width="0.9" stroke-dasharray="2 1.4" stroke-linejoin="round" stroke-opacity="0.85"/>
+                <polygon points="18,10.2 25.8,18 18,25.8 10.2,18" fill="url(#logoEmblemTerraFooter)"/>
+                <polygon points="18,13.2 22.8,18 18,22.8 13.2,18" fill="#1A1714" stroke="url(#logoEmblemGoldFooter)" stroke-width="0.75"/>
+                <circle cx="18" cy="18" r="2.2" fill="url(#logoEmblemGoldFooter)"/>
+                <circle cx="18" cy="18" r="0.9" fill="#FFFFFF"/>
+                <circle cx="18" cy="3.5" r="1.1" fill="url(#logoEmblemGoldFooter)"/>
+                <circle cx="32.5" cy="18" r="1.1" fill="url(#logoEmblemGoldFooter)"/>
+                <circle cx="18" cy="32.5" r="1.1" fill="url(#logoEmblemGoldFooter)"/>
+                <circle cx="3.5" cy="18" r="1.1" fill="url(#logoEmblemGoldFooter)"/>
+              </svg>
+            </span>
+            <span class="brand-logo-text">
+              <span class="brand-name-atelier">ATELIER</span>
+              <span class="brand-name-rugs">RUGS</span>
+            </span>
           </a>
           <p class="text-muted-custom mb-4">
             Curators and purveyors of handwoven rugs, organic wool tapestries, and bespoke architectural carpets made by master weaver guilds across the world.
@@ -402,6 +477,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Our Services</a></li>
             <li><a href="blog.html">Design Journal</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
