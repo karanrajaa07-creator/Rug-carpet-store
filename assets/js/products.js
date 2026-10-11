@@ -471,6 +471,8 @@
     };
   }
 
+  window.buildProductSizesData = buildProductSizesData;
+
   // Attach sizesData to every product
   PRODUCTS_DATA.forEach(p => {
     p.sizesData = buildProductSizesData(p);
@@ -1021,12 +1023,14 @@
     document.querySelectorAll('#pdRoomScaleBar .room-scale-btn').forEach(btn => {
       const isMatch = btn.getAttribute('data-tier') === normTier;
       btn.classList.toggle('active', isMatch);
+      btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
     });
 
     // 4. Highlight thumbnail cards
     document.querySelectorAll('#pdThumbnailsRow .dimension-thumb-card').forEach(card => {
       const isMatch = card.getAttribute('data-tier') === normTier;
       card.classList.toggle('active', isMatch);
+      card.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
     });
 
     // 5. Highlight size pills under Select Dimensions
@@ -1071,10 +1075,14 @@
 
     // 8. Update browser URL without reload
     if (updateUrl && window.history && window.history.replaceState) {
-      const newUrl = new URL(window.location.href);
-      newUrl.searchParams.set('id', product.id);
-      newUrl.searchParams.set('size', normTier);
-      window.history.replaceState({ id: product.id, size: normTier }, '', newUrl.toString());
+      try {
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.set('id', product.id);
+        newUrl.searchParams.set('size', normTier);
+        window.history.replaceState({ id: product.id, size: normTier }, '', newUrl.toString());
+      } catch (e) {
+        // File protocol or restricted context safe fallback
+      }
     }
   };
 
@@ -1195,6 +1203,7 @@
                   id="scaleBtn-${t.tier}"
                   class="room-scale-btn ${isAct ? 'active' : ''}" 
                   data-tier="${t.tier}"
+                  aria-pressed="${isAct ? 'true' : 'false'}"
                   onclick="selectProductDetailTier('${t.tier}')">
             <span class="scale-label">${t.label}</span>
             <span class="scale-size">${t.dimensions}</span>
@@ -1215,7 +1224,11 @@
             <div class="dimension-thumb-card ${isAct ? 'active' : ''}" 
                  id="dimThumbCard-${t.tier}"
                  data-tier="${t.tier}"
+                 role="button"
+                 tabindex="0"
+                 aria-pressed="${isAct ? 'true' : 'false'}"
                  onclick="selectProductDetailTier('${t.tier}')"
+                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectProductDetailTier('${t.tier}');}"
                  title="View ${t.label} (${t.dimensions})">
               <img src="${t.image}" alt="${product.name} ${t.label}">
               <div class="dimension-thumb-tag">${t.label.toUpperCase()}: ${t.dimensions}</div>

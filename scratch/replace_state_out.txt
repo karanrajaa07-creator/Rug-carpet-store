@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head></head><body>
+<div id="status">REPLACE_STATE_SUCCESS</div>
+<script>
+try {
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set('size', 'small');
+    window.history.replaceState({}, '', newUrl.toString());
+    document.getElementById('status').textContent = 'REPLACE_STATE_SUCCESS';
+} catch (e) {
+    document.getElementById('status').textContent = 'REPLACE_STATE_ERROR: ' + e.name + ': ' + e.message;
+}
+</script>
+
+</body></html>

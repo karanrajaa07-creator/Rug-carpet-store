@@ -283,6 +283,23 @@
     top: auto !important;
     margin-top: 1.5rem;
   }
+
+  /* Subpage Hero Banner Tablet Scrim Optimization */
+  .page-hero-banner {
+    min-height: 250px;
+    padding: 3.5rem 0;
+  }
+  .page-hero-banner::before,
+  .page-hero-banner.hero-products::before {
+    background: linear-gradient(135deg, rgba(250, 246, 240, 0.74) 0%, rgba(247, 242, 234, 0.50) 50%, rgba(243, 236, 226, 0.20) 100%);
+  }
+  [data-theme="dark"] .page-hero-banner::before,
+  [data-theme="dark"] .page-hero-banner.hero-products::before {
+    background: linear-gradient(135deg, rgba(16, 14, 12, 0.78) 0%, rgba(22, 19, 16, 0.54) 50%, rgba(26, 23, 20, 0.25) 100%);
+  }
+  .product-thumb-box::after {
+    opacity: 1;
+  }
 }
 
 /* --- 4. PHONES / MOBILE (576px to 767.98px) --- */
@@ -649,6 +666,43 @@
     height: clamp(240px, 60vw, 320px);
   }
 
+  /* Subpage Hero Banner Mobile Polish & Contrast Scrim */
+  .page-hero-banner {
+    min-height: 220px;
+    padding: 2.75rem 0;
+  }
+  .page-hero-banner h1,
+  .page-hero-banner h1.display-5 {
+    font-size: clamp(1.25rem, 4.8vw, 1.45rem) !important;
+    line-height: 1.25;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .page-hero-banner .section-desc {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+  .page-hero-banner::before,
+  .page-hero-banner.hero-products::before {
+    background: linear-gradient(180deg, rgba(250, 246, 240, 0.80) 0%, rgba(247, 242, 234, 0.56) 55%, rgba(243, 236, 226, 0.26) 100%);
+  }
+  [data-theme="dark"] .page-hero-banner::before,
+  [data-theme="dark"] .page-hero-banner.hero-products::before {
+    background: linear-gradient(180deg, rgba(16, 14, 12, 0.82) 0%, rgba(22, 19, 16, 0.58) 55%, rgba(26, 23, 20, 0.28) 100%);
+  }
+  #wishlistHeaderActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  #wishlistHeaderActions .btn {
+    white-space: nowrap;
+    font-size: 0.8125rem !important;
+    padding: 0.4rem 0.75rem !important;
+  }
+
   /* Category Cards & 6-Card Category Grid */
   .luxury-card.p-4 {
     padding: 1.15rem 0.65rem !important;
@@ -737,6 +791,7 @@
   /* Shop by Material Cards */
   .material-card {
     padding: 1.25rem 0.85rem;
+    min-height: 185px;
   }
   .material-icon-box {
     width: 52px;

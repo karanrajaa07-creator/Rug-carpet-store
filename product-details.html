@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -233,13 +233,13 @@
               <a href="custom-sizing.html" class="small text-terracotta text-decoration-none fw-bold"><i class="bi bi-rulers me-1"></i> Custom Dimensions Needed?</a>
             </div>
             <div class="d-flex flex-wrap gap-2" id="pdSizeOptions" role="group" aria-label="Rug dimension selection">
-              <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small" onclick="selectProductDetailTier('small')">
+              <button type="button" class="btn size-pill" id="sizeBtn-small" data-tier="small" aria-pressed="false" onclick="selectProductDetailTier('small')">
                 <span class="fw-bold">Small</span>
               </button>
-              <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium" onclick="selectProductDetailTier('medium')">
+              <button type="button" class="btn size-pill active" id="sizeBtn-medium" data-tier="medium" aria-pressed="true" onclick="selectProductDetailTier('medium')">
                 <span class="fw-bold">Medium</span>
               </button>
-              <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large" onclick="selectProductDetailTier('large')">
+              <button type="button" class="btn size-pill" id="sizeBtn-large" data-tier="large" aria-pressed="false" onclick="selectProductDetailTier('large')">
                 <span class="fw-bold">Large</span>
               </button>
             </div>
@@ -555,10 +555,18 @@
     let currentSelectedSize = "8' × 10'";
 
     function selectProductDetailTier(tier, updateUrl = true) {
+      if (!currentProduct) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const idParam = parseInt(urlParams.get('id'), 10);
+        currentProduct = (window.PRODUCTS_DATA && window.PRODUCTS_DATA.find(p => p.id === idParam)) 
+          || (window.PRODUCTS_DATA ? window.PRODUCTS_DATA[0] : null);
+      }
       if (!currentProduct) return;
       if (!currentProduct.sizesData) {
         if (typeof buildProductSizesData === 'function') {
           currentProduct.sizesData = buildProductSizesData(currentProduct);
+        } else if (typeof window.buildProductSizesData === 'function') {
+          currentProduct.sizesData = window.buildProductSizesData(currentProduct);
         }
       }
       if (!currentProduct.sizesData) return;
@@ -570,6 +578,12 @@
       currentSelectedTier = normTier;
       currentSelectedSize = tierData.dimensions;
       currentProduct.size = tierData.dimensions;
+      window.currentProduct = currentProduct;
+      window.currentSelectedTier = normTier;
+      window.currentSelectedSize = tierData.dimensions;
+      if (typeof window.setCurrentDetailProduct === 'function') {
+        window.setCurrentDetailProduct(currentProduct);
+      }
 
       // 1. Smoothly update main image
       const mainImg = document.getElementById('mainProductImage');
@@ -593,12 +607,14 @@
       document.querySelectorAll('#pdRoomScaleBar .room-scale-btn').forEach(btn => {
         const isMatch = btn.getAttribute('data-tier') === normTier;
         btn.classList.toggle('active', isMatch);
+        btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
       });
 
       // 4. Highlight thumbnail cards
       document.querySelectorAll('#pdThumbnailsRow .dimension-thumb-card').forEach(card => {
         const isMatch = card.getAttribute('data-tier') === normTier;
         card.classList.toggle('active', isMatch);
+        card.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
       });
 
       // 5. Highlight size pills under Select Dimensions
@@ -643,10 +659,14 @@
 
       // 8. Update browser URL without reload
       if (updateUrl && window.history && window.history.replaceState) {
-        const newUrl = new URL(window.location.href);
-        newUrl.searchParams.set('id', currentProduct.id);
-        newUrl.searchParams.set('size', normTier);
-        window.history.replaceState({ id: currentProduct.id, size: normTier }, '', newUrl.toString());
+        try {
+          const newUrl = new URL(window.location.href);
+          newUrl.searchParams.set('id', currentProduct.id);
+          newUrl.searchParams.set('size', normTier);
+          window.history.replaceState({ id: currentProduct.id, size: normTier }, '', newUrl.toString());
+        } catch (e) {
+          // File protocol or restricted context safe fallback
+        }
       }
     }
 
@@ -691,10 +711,31 @@
     }
 
     function changeMainImage(src, thumbEl) {
+      if (thumbEl) {
+        const tier = thumbEl.getAttribute('data-tier') || thumbEl.closest('[data-tier]')?.getAttribute('data-tier');
+        if (tier) {
+          selectProductDetailTier(tier);
+          return;
+        }
+      }
+      if (currentProduct && currentProduct.sizesData) {
+        for (const [t, data] of Object.entries(currentProduct.sizesData)) {
+          if (data.image && (src.includes(data.image) || data.image.includes(src))) {
+            selectProductDetailTier(t);
+            return;
+          }
+        }
+      }
       const mainImg = document.getElementById('mainProductImage');
       if (mainImg) mainImg.src = src;
-      document.querySelectorAll('.dimension-thumb-card').forEach(el => el.classList.remove('active'));
-      if (thumbEl) thumbEl.classList.add('active');
+      document.querySelectorAll('.dimension-thumb-card').forEach(el => {
+        el.classList.remove('active');
+        el.setAttribute('aria-pressed', 'false');
+      });
+      if (thumbEl) {
+        thumbEl.classList.add('active');
+        thumbEl.setAttribute('aria-pressed', 'true');
+      }
     }
 
     function handleAddToCartFromDetails() {
@@ -761,8 +802,12 @@
       currentProduct = product;
 
       // Ensure sizesData exists
-      if (!product.sizesData && typeof buildProductSizesData === 'function') {
-        product.sizesData = buildProductSizesData(product);
+      if (!product.sizesData) {
+        if (typeof buildProductSizesData === 'function') {
+          product.sizesData = buildProductSizesData(product);
+        } else if (typeof window.buildProductSizesData === 'function') {
+          product.sizesData = window.buildProductSizesData(product);
+        }
       }
 
       // Check if size parameter is passed in URL (e.g. ?id=1&size=small)
@@ -798,6 +843,7 @@
                     id="scaleBtn-${t.tier}"
                     class="room-scale-btn ${isAct ? 'active' : ''}" 
                     data-tier="${t.tier}"
+                    aria-pressed="${isAct ? 'true' : 'false'}"
                     onclick="selectProductDetailTier('${t.tier}')">
               <span class="scale-label">${t.label}</span>
               <span class="scale-size">${t.dimensions}</span>
@@ -818,7 +864,11 @@
               <div class="dimension-thumb-card ${isAct ? 'active' : ''}" 
                    id="dimThumbCard-${t.tier}"
                    data-tier="${t.tier}"
+                   role="button"
+                   tabindex="0"
+                   aria-pressed="${isAct ? 'true' : 'false'}"
                    onclick="selectProductDetailTier('${t.tier}')"
+                   onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectProductDetailTier('${t.tier}');}"
                    title="View ${t.label} (${t.dimensions})">
                 <img src="${t.image}" alt="${product.name} ${t.label}">
                 <div class="dimension-thumb-tag">${t.label.toUpperCase()}: ${t.dimensions}</div>
@@ -951,9 +1001,11 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadProductDetails);
+    } else {
       loadProductDetails();
-    });
+    }
   </script>
 </body>
 </html>

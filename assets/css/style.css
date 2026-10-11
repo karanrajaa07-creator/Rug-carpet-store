@@ -240,17 +240,32 @@ img {
   padding: 0.4rem 0.85rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .badge-luxury-terracotta {
-  background: var(--color-terracotta-soft);
-  color: var(--color-terracotta);
+  background: rgba(255, 255, 255, 0.96);
+  color: #9C3B22;
+  border: 1px solid rgba(163, 64, 38, 0.42);
 }
 .badge-luxury-gold {
-  background: var(--color-gold-soft);
-  color: var(--color-gold);
+  background: rgba(255, 255, 255, 0.96);
+  color: #73531A;
+  border: 1px solid rgba(140, 102, 35, 0.45);
+}
+[data-theme="dark"] .badge-luxury-terracotta {
+  background: rgba(30, 27, 24, 0.92);
+  color: #E88E75;
+  border: 1px solid rgba(194, 109, 83, 0.4);
+}
+[data-theme="dark"] .badge-luxury-gold {
+  background: rgba(30, 27, 24, 0.92);
+  color: #DEC39B;
+  border: 1px solid rgba(197, 168, 128, 0.4);
 }
 .cursor-pointer {
   cursor: pointer !important;
@@ -1195,6 +1210,19 @@ img {
   background: var(--bg-subtle);
   flex-shrink: 0;
 }
+.product-thumb-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 18, 16, 0.16) 0%, transparent 35%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 1;
+}
+.product-card:hover .product-thumb-box::after {
+  opacity: 1;
+}
 .product-thumb-link {
   position: absolute;
   top: 0;
@@ -1249,13 +1277,15 @@ img {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-full);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  color: var(--text-heading);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(42, 35, 30, 0.20);
+  color: #1A1714;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -1263,6 +1293,19 @@ img {
   background: var(--color-terracotta);
   color: #FFFFFF;
   border-color: var(--color-terracotta);
+  box-shadow: 0 4px 14px rgba(194, 109, 83, 0.45);
+  transform: translateY(-2px);
+}
+[data-theme="dark"] .product-action-btn {
+  background: rgba(30, 27, 24, 0.94);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #FAF7F2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+[data-theme="dark"] .product-action-btn:hover {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
 }
 
 .product-info-box {
@@ -1490,6 +1533,13 @@ img {
 }
 
 .material-card {
+  width: 100%;
+  height: 100%;
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
@@ -2184,6 +2234,8 @@ img {
   gap: 0.75rem;
   padding: 0.45rem 0;
   font-size: 0.95rem;
+  font-weight: 400;
+  font-family: var(--font-sans);
 }
 .pricing-feature-item i {
   color: var(--color-terracotta);
@@ -4328,9 +4380,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   display: flex;
   align-items: center;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   background-repeat: no-repeat;
-  padding: 4.25rem 0;
+  padding: 4.5rem 0;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -4339,13 +4391,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(250, 247, 242, 0.92) 0%, rgba(240, 234, 224, 0.94) 100%);
+  background: linear-gradient(135deg, rgba(250, 247, 242, 0.76) 0%, rgba(245, 240, 232, 0.58) 50%, rgba(240, 234, 224, 0.72) 100%);
   z-index: 1;
   pointer-events: none;
 }
 
 [data-theme="dark"] .page-hero-banner::before {
-  background: linear-gradient(135deg, rgba(18, 16, 14, 0.91) 0%, rgba(26, 23, 20, 0.93) 100%);
+  background: linear-gradient(135deg, rgba(18, 16, 14, 0.80) 0%, rgba(26, 23, 20, 0.62) 50%, rgba(18, 16, 14, 0.76) 100%);
 }
 
 .page-hero-banner > .container {
@@ -4356,46 +4408,267 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .page-hero-banner .section-tag {
   letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
 }
 
 .page-hero-banner h1 {
   color: var(--text-heading);
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .page-hero-banner .section-desc {
   max-width: 680px;
-  color: var(--text-body);
+  color: #38302A;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.page-hero-banner .breadcrumb-item a {
+  color: var(--color-terracotta);
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+}
+
+.page-hero-banner .breadcrumb-item.active {
+  color: #544B43;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="dark"] .page-hero-banner h1 {
+  color: #FAF7F2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .page-hero-banner .section-desc {
+  color: #E2DAD0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .page-hero-banner .section-tag {
+  color: #E5A894;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .page-hero-banner .breadcrumb-item a {
+  color: #E5A894;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .page-hero-banner .breadcrumb-item.active {
+  color: #C5BCB2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Page-specific relevant background images */
 .page-hero-banner.hero-products {
   background-image: url('../images/products/hero-architectural-masterpiece.jpg');
+  background-position: center 55%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+/* Light Theme Contrast & Balanced Visibility for Shop Hero Banner */
+.page-hero-banner.hero-products::before {
+  background: linear-gradient(
+    100deg,
+    rgba(250, 246, 240, 0.72) 0%,
+    rgba(247, 242, 234, 0.46) 48%,
+    rgba(243, 236, 226, 0.16) 100%
+  );
+}
+
+.page-hero-banner.hero-products .section-tag {
+  color: #A3482C;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.page-hero-banner.hero-products h1 {
+  color: #1A1714;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 0 16px rgba(255, 255, 255, 0.7);
+}
+
+.page-hero-banner.hero-products .section-desc {
+  color: #2D2520;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.6);
+  max-width: 680px;
+}
+
+.page-hero-banner.hero-products .breadcrumb-item a {
+  color: #A3482C;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.page-hero-banner.hero-products .breadcrumb-item a:hover {
+  color: #7E341E;
+}
+
+.page-hero-banner.hero-products .breadcrumb-item.active {
+  color: #4A4038;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.page-hero-banner.hero-products .breadcrumb-item + .breadcrumb-item::before {
+  color: #8C7F73;
+}
+
+.page-hero-banner .btn-luxury-outline,
+.page-hero-banner .btn-outline-secondary {
+  background-color: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(42, 35, 30, 0.35);
+  color: #1A1714;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-fast);
+}
+
+.page-hero-banner .btn-luxury-outline:hover,
+.page-hero-banner .btn-outline-secondary:hover {
+  background-color: #1A1714;
+  border-color: #1A1714;
+  color: #FAF7F2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(26, 23, 20, 0.25);
+}
+
+/* Directional Scrim for Left-Aligned Hero Banners (Products, Wishlist, Service Details) */
+.page-hero-banner.hero-products::before,
+.page-hero-banner.hero-wishlist::before,
+.page-hero-banner.hero-service-details::before {
+  background: linear-gradient(
+    100deg,
+    rgba(250, 246, 240, 0.74) 0%,
+    rgba(247, 242, 234, 0.48) 50%,
+    rgba(243, 236, 226, 0.18) 100%
+  );
+}
+
+/* Dark Theme Overrides for Shop Hero Banner */
+[data-theme="dark"] .page-hero-banner.hero-products::before,
+[data-theme="dark"] .page-hero-banner.hero-wishlist::before,
+[data-theme="dark"] .page-hero-banner.hero-service-details::before {
+  background: linear-gradient(
+    100deg,
+    rgba(16, 14, 12, 0.76) 0%,
+    rgba(22, 19, 16, 0.50) 50%,
+    rgba(26, 23, 20, 0.22) 100%
+  );
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .section-tag {
+  color: #E5A894;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products h1 {
+  color: #FAF7F2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .section-desc {
+  color: #E2DAD0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .breadcrumb-item a {
+  color: #E5A894;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .breadcrumb-item a:hover {
+  color: #F2C4B4;
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .breadcrumb-item.active {
+  color: #C5BCB2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .page-hero-banner.hero-products .breadcrumb-item + .breadcrumb-item::before {
+  color: #8C8074;
+}
+
+[data-theme="dark"] .page-hero-banner .btn-luxury-outline,
+[data-theme="dark"] .page-hero-banner .btn-outline-secondary {
+  background-color: rgba(26, 23, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(237, 228, 218, 0.40);
+  color: #FAF7F2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .page-hero-banner .btn-luxury-outline:hover,
+[data-theme="dark"] .page-hero-banner .btn-outline-secondary:hover {
+  background-color: #FAF7F2;
+  border-color: #FAF7F2;
+  color: #141210;
+  box-shadow: 0 4px 14px rgba(250, 247, 242, 0.25);
+}
+
 .page-hero-banner.hero-about {
   background-image: url('../images/products/artisan-loom-weaving.jpg');
+  background-position: center 36%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-services {
   background-image: url('../images/services/service-details-bespoke-hero.jpg');
+  background-position: center 32%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-pricing {
-  background-image: url('../images/gallery/gallery-interior-3.jpg');
+  background-image: url('../images/home-2-como-villa.jpg');
+  background-position: center 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-contact {
   background-image: url('../images/services/service-showroom-vip.jpg');
+  background-position: center 36%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-blog {
-  background-image: url('../images/gallery/gallery-interior-4.jpg');
+  background-image: url('../images/blog/blog-vintage-layered-harmony.jpg');
+  background-position: center 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-custom-sizing {
   background-image: url('../images/services/service-custom-sizing.jpg');
+  background-position: center 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-care-guide {
   background-image: url('../images/services/service-rug-cleaning.jpg');
+  background-position: center 45%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-wishlist {
   background-image: url('../images/gallery/gallery-interior-2.jpg');
+  background-position: center 46%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .page-hero-banner.hero-service-details {
   background-image: url('../images/services/service-custom-design.jpg');
+  background-position: center 48%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 

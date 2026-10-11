@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mobile Viewport Verification</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #181614;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-family: sans-serif;
+    }
+    .device-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .device-title {
+      color: #EDE4DA;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .device {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      overflow: hidden;
+      border: 6px solid #2A2420;
+    }
+    iframe {
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. Light Theme Hero (375px) -->
+  <div class="device-wrap">
+    <div class="device-title">Light Theme Hero — 375px Mobile</div>
+    <div class="device">
+      <iframe id="f_hero_light" src="../products.html" style="width: 375px; height: 520px;"></iframe>
+    </div>
+  </div>
+
+  <!-- 2. Dark Theme Hero (375px) -->
+  <div class="device-wrap">
+    <div class="device-title">Dark Theme Hero — 375px Mobile</div>
+    <div class="device">
+      <iframe id="f_hero_dark" src="../products.html" style="width: 375px; height: 520px;"></iframe>
+    </div>
+  </div>
+
+  <!-- 3. Light Theme Cards (375px) -->
+  <div class="device-wrap">
+    <div class="device-title">Light Theme Product Cards — 375px Mobile</div>
+    <div class="device">
+      <iframe id="f_cards_light" src="../products.html" style="width: 375px; height: 600px;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function setupFrames() {
+      // 1. Light Hero
+      try {
+        const frame1 = document.getElementById('f_hero_light');
+        const doc1 = frame1.contentDocument || frame1.contentWindow.document;
+        doc1.documentElement.setAttribute('data-theme', 'light');
+        const banner1 = doc1.querySelector('.page-hero-banner');
+        if (banner1) banner1.scrollIntoView({ behavior: 'instant', block: 'start' });
+      } catch(e) {}
+
+      // 2. Dark Hero
+      try {
+        const frame2 = document.getElementById('f_hero_dark');
+        const doc2 = frame2.contentDocument || frame2.contentWindow.document;
+        doc2.documentElement.setAttribute('data-theme', 'dark');
+        const banner2 = doc2.querySelector('.page-hero-banner');
+        if (banner2) banner2.scrollIntoView({ behavior: 'instant', block: 'start' });
+      } catch(e) {}
+
+      // 3. Light Cards
+      try {
+        const frame3 = document.getElementById('f_cards_light');
+        const doc3 = frame3.contentDocument || frame3.contentWindow.document;
+        doc3.documentElement.setAttribute('data-theme', 'light');
+        const cards3 = doc3.getElementById('productsGridContainer') || doc3.querySelector('.product-card');
+        if (cards3) cards3.scrollIntoView({ behavior: 'instant', block: 'start' });
+      } catch(e) {}
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(setupFrames, 800);
+      setTimeout(setupFrames, 1800);
+    });
+  </script>
+</body>
+</html>
