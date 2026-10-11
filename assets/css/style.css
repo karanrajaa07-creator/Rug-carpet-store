@@ -115,7 +115,7 @@ img {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip;
+  overflow-x: visible;
   max-width: 100%;
   width: 100%;
 }
@@ -126,7 +126,7 @@ body {
   color: var(--text-body);
   line-height: 1.65;
   font-size: 1rem;
-  overflow-x: clip;
+  overflow-x: visible;
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -395,7 +395,8 @@ img {
 
 /* --- 5. MAIN NAVIGATION & STICKY HEADER --- */
 .site-header,
-.site-header.sticky-top {
+.site-header.sticky-top,
+header.sticky-top {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 0 !important;

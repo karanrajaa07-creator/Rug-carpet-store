@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Scroll Test</title>
+</head>
+<body>
+  <div id="status">Loading...</div>
+  <script>
+    fetch('http://localhost:8080/index.html')
+      .then(r => r.text())
+      .then(html => {
+        document.open();
+        document.write(html);
+        document.close();
+        setTimeout(() => {
+          const header = document.querySelector('.site-header');
+          const r0 = header ? header.getBoundingClientRect() : null;
+          window.scrollTo(0, 800);
+          setTimeout(() => {
+            const r1 = header ? header.getBoundingClientRect() : null;
+            const log = document.createElement('div');
+            log.id = 'scroll-diag';
+            log.style.cssText = 'position:fixed;bottom:10px;left:10px;background:white;color:black;padding:10px;z-index:99999;font-size:16px;border:2px solid red;';
+            log.textContent = JSON.stringify({
+              scrollY: window.scrollY,
+              beforeScrollTop: r0 ? r0.top : null,
+              afterScrollTop: r1 ? r1.top : null,
+              headerPosition: window.getComputedStyle(header).position,
+              headerTop: window.getComputedStyle(header).top,
+              bodyOverflow: window.getComputedStyle(document.body).overflow,
+              htmlOverflow: window.getComputedStyle(document.documentElement).overflow
+            });
+            document.body.appendChild(log);
+          }, 400);
+        }, 500);
+      });
+  </script>
+
+
+</body></html>

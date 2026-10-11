@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    body { height: 3000px; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header sticky-top">
+    <div style="height: 60px; background: gold;">NAVBAR CONTENT</div>
+  </header>
+  <div style="height: 2000px; background: #eee;">CONTENT</div>
+  <script>
+    window.scrollTo(0, 500);
+    const header = document.querySelector('.site-header');
+    const rect = header.getBoundingClientRect();
+    const st = window.getComputedStyle(header);
+    const res = document.createElement('div');
+    res.id = 'sticky-rect';
+    res.textContent = JSON.stringify({
+      scrollY: window.scrollY,
+      rectTop: rect.top,
+      rectY: rect.y,
+      position: st.position,
+      top: st.top,
+      isSticky: rect.top === 0
+    });
+    document.body.appendChild(res);
+  </script><div id="sticky-rect">{"scrollY":0,"rectTop":0,"rectY":0,"position":"sticky","top":"0px","isSticky":true}</div>
+
+
+</body></html>

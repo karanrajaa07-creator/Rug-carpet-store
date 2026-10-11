@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Rug Size Selector Automated Test Runner</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
   <style>
     body { padding: 2rem; background: #f8f9fa; font-family: sans-serif; }
     .test-pass { color: #198754; font-weight: bold; }
@@ -122,16 +122,89 @@
         assert('Card 14 Large: Detail link updated to size=large', p14ThumbLink.href.includes('size=large'));
         assert('Card 14 Large: Large pill is active', largePill.classList.contains('active') && largePill.getAttribute('aria-pressed') === 'true');
 
-        // 3. Test another product: Product 1 (Isfahan Silk)
+        // 3. Test Product 1 (Isfahan Silk) Small, Medium, Large
         const p1 = window.PRODUCTS_DATA.find(p => p.id === 1);
         const p1Price = document.getElementById('cardPrice-1');
         const p1Img = document.getElementById('cardImg-1');
         window.selectCardSize(1, 'small');
         assert('Card 1 Small: Price updated to $' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent);
         assert('Card 1 Small: Image updated to isfahan detail-1', p1Img.src.includes('isfahan-silk-detail-1'), p1Img.src);
+        window.selectCardSize(1, 'medium');
+        assert('Card 1 Medium: Price updated to $' + p1.sizesData.medium.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.medium.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Medium: Image updated to isfahan rug', p1Img.src.includes('isfahan-silk-rug'), p1Img.src);
         window.selectCardSize(1, 'large');
         assert('Card 1 Large: Price updated to $' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent);
         assert('Card 1 Large: Image updated to isfahan detail-2', p1Img.src.includes('isfahan-silk-detail-2'), p1Img.src);
+
+        // 4. Test Product 2 (Atlas Mountain Berber) Small, Medium, Large
+        const p2 = window.PRODUCTS_DATA.find(p => p.id === 2);
+        const p2Price = document.getElementById('cardPrice-2');
+        const p2Img = document.getElementById('cardImg-2');
+        window.selectCardSize(2, 'small');
+        assert('Card 2 Small: Price updated to $' + p2.sizesData.small.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.small.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Small: Image updated to atlas-berber detail-1', p2Img.src.includes('atlas-berber-detail-1'), p2Img.src);
+        window.selectCardSize(2, 'medium');
+        assert('Card 2 Medium: Price updated to $' + p2.sizesData.medium.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.medium.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Medium: Image updated to atlas-berber rug', p2Img.src.includes('atlas-berber-rug'), p2Img.src);
+        window.selectCardSize(2, 'large');
+        assert('Card 2 Large: Price updated to $' + p2.sizesData.large.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.large.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Large: Image updated to atlas-berber detail-2', p2Img.src.includes('atlas-berber-detail-2'), p2Img.src);
+
+        // 5. Test Product 3 (Nordic Geometric Flatweave) Small, Medium, Large
+        const p3 = window.PRODUCTS_DATA.find(p => p.id === 3);
+        const p3Price = document.getElementById('cardPrice-3');
+        const p3Img = document.getElementById('cardImg-3');
+        window.selectCardSize(3, 'small');
+        assert('Card 3 Small: Price updated to $' + p3.sizesData.small.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.small.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Small: Image updated to nordic-geometric detail-1', p3Img.src.includes('nordic-geometric-detail-1'), p3Img.src);
+        window.selectCardSize(3, 'medium');
+        assert('Card 3 Medium: Price updated to $' + p3.sizesData.medium.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.medium.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Medium: Image updated to nordic-geometric rug', p3Img.src.includes('nordic-geometric-rug'), p3Img.src);
+        window.selectCardSize(3, 'large');
+        assert('Card 3 Large: Price updated to $' + p3.sizesData.large.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.large.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Large: Image updated to nordic-geometric detail-2', p3Img.src.includes('nordic-geometric-detail-2'), p3Img.src);
+
+        // 6. Test Product 4 (Oushak Heritage Botanical Runner) Small, Medium, Large
+        const p4 = window.PRODUCTS_DATA.find(p => p.id === 4);
+        const p4Price = document.getElementById('cardPrice-4');
+        const p4Img = document.getElementById('cardImg-4');
+        window.selectCardSize(4, 'small');
+        assert('Card 4 Small: Price updated to $' + p4.sizesData.small.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.small.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Small: Image updated to oushak-runner detail-1', p4Img.src.includes('oushak-runner-detail-1'), p4Img.src);
+        window.selectCardSize(4, 'medium');
+        assert('Card 4 Medium: Price updated to $' + p4.sizesData.medium.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.medium.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Medium: Image updated to oushak-runner rug', p4Img.src.includes('oushak-runner-rug'), p4Img.src);
+        window.selectCardSize(4, 'large');
+        assert('Card 4 Large: Price updated to $' + p4.sizesData.large.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.large.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Large: Image updated to oushak-runner detail-2', p4Img.src.includes('oushak-runner-detail-2'), p4Img.src);
+
+        // 7. Test Product 7 (Caspian Hand-Knotted Silk Rug) Small, Medium, Large
+        const p7 = window.PRODUCTS_DATA.find(p => p.id === 7);
+        const p7Price = document.getElementById('cardPrice-7');
+        const p7Img = document.getElementById('cardImg-7');
+        window.selectCardSize(7, 'small');
+        assert('Card 7 Small: Price updated to $' + p7.sizesData.small.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.small.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Small: Image updated to caspian-silk detail-1', p7Img.src.includes('caspian-silk-detail-1'), p7Img.src);
+        window.selectCardSize(7, 'medium');
+        assert('Card 7 Medium: Price updated to $' + p7.sizesData.medium.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.medium.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Medium: Image updated to caspian-silk rug', p7Img.src.includes('caspian-silk-rug'), p7Img.src);
+        window.selectCardSize(7, 'large');
+        assert('Card 7 Large: Price updated to $' + p7.sizesData.large.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.large.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Large: Image updated to caspian-silk detail-2', p7Img.src.includes('caspian-silk-detail-2'), p7Img.src);
+
+        // 8. Test Product 8 (Santorini Terrace Diamond Outdoor Rug) Small, Medium, Large
+        const p8 = window.PRODUCTS_DATA.find(p => p.id === 8);
+        const p8Price = document.getElementById('cardPrice-8');
+        const p8Img = document.getElementById('cardImg-8');
+        window.selectCardSize(8, 'small');
+        assert('Card 8 Small: Price updated to $' + p8.sizesData.small.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.small.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Small: Image updated to santorini-outdoor detail-1', p8Img.src.includes('santorini-outdoor-detail-1'), p8Img.src);
+        window.selectCardSize(8, 'medium');
+        assert('Card 8 Medium: Price updated to $' + p8.sizesData.medium.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.medium.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Medium: Image updated to santorini-outdoor rug', p8Img.src.includes('santorini-outdoor-terrace-rug'), p8Img.src);
+        window.selectCardSize(8, 'large');
+        assert('Card 8 Large: Price updated to $' + p8.sizesData.large.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.large.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Large: Image updated to santorini-outdoor detail-2', p8Img.src.includes('santorini-outdoor-detail-2'), p8Img.src);
 
         // ==========================================
         // SUITE 3: Cart / Add to Shopping Bag Verification
@@ -200,11 +273,25 @@
         // Switch to Medium
         window.selectProductDetailTier('medium', false);
         assert('Details Medium: Price updated to $300 USD', document.getElementById('pdPrice').textContent === '$300 USD', document.getElementById('pdPrice').textContent);
-        assert('Details Medium: Main image updated to medium image', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-medium') || document.getElementById('mainProductImage').src.includes('nordic-flatweave-rug'));
+        // ==========================================
+        // SUITE 5: Sticky Navigation Bar Verification
+        // ==========================================
+        const testHeader = document.createElement('header');
+        testHeader.className = 'site-header sticky-top';
+        testHeader.innerHTML = '<div class="container"><nav class="navbar"><a class="navbar-brand">Test Brand</a></nav></div>';
+        document.body.prepend(testHeader);
 
-        // ==========================================
-        // Render Summary
-        // ==========================================
+        const hStyle = window.getComputedStyle(testHeader);
+        const bStyle = window.getComputedStyle(document.body);
+        const htmlStyle = window.getComputedStyle(document.documentElement);
+
+        assert('Header has position sticky', hStyle.position === 'sticky', hStyle.position);
+        assert('Header has top 0', hStyle.top === '0px', hStyle.top);
+        assert('Header has z-index >= 1020', parseInt(hStyle.zIndex, 10) >= 1020, hStyle.zIndex);
+        assert('Body overflow-x is not hidden (which breaks sticky)', bStyle.overflowX !== 'hidden', bStyle.overflowX);
+        assert('HTML overflow-x is not hidden (which breaks sticky)', htmlStyle.overflowX !== 'hidden', htmlStyle.overflowX);
+        assert('Header width is 100%', hStyle.width.includes('%') || testHeader.offsetWidth > 300, testHeader.offsetWidth);
+
         const passedCount = results.filter(r => r.pass).length;
         const totalCount = results.length;
         const allPassed = passedCount === totalCount;

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Size Switch Test</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div id="homeBestSellersRow" class="row"></div>
+  <script src="../assets/js/products.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const row = document.getElementById('homeBestSellersRow');
+      row.innerHTML = window.PRODUCTS_DATA.slice(0, 3).map(window.renderProductCard).join('');
+      
+      const results = [];
+      [1, 2, 3].forEach(id => {
+        const product = window.PRODUCTS_DATA.find(p => p.id === id);
+        ['small', 'medium', 'large'].forEach(tier => {
+          window.selectCardSize(id, tier);
+          const img = document.getElementById('cardImg-' + id);
+          const expectedImg = product.sizesData[tier].image;
+          const label = document.getElementById('cardSizeLabel-' + id).textContent;
+          const match = img.src.indexOf(expectedImg.replace('assets/images/products/', '')) !== -1;
+          const labelMatch = label.indexOf(product.sizesData[tier].label) !== -1;
+          results.push({ id, tier, match, expectedImg, actualSrc: img.src, labelMatch, label });
+        });
+      });
+      window.__TEST_RESULTS__ = results;
+      const resDiv = document.createElement('div');
+      resDiv.id = 'results-dump';
+      resDiv.textContent = JSON.stringify(results);
+      document.body.appendChild(resDiv);
+    });
+  </script>
+</body>
+</html>

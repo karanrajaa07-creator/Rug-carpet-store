@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <title>Rug Size Selector Automated Test Runner</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
   <style>
     body { padding: 2rem; background: #f8f9fa; font-family: sans-serif; }
     .test-pass { color: #198754; font-weight: bold; }
@@ -12,9 +12,9 @@
     #visualTestSandbox { display: none; }
   </style>
 </head>
-<body>
+<body><header class="site-header sticky-top"><div class="container"><nav class="navbar"><a class="navbar-brand">Test Brand</a></nav></div></header>
   <h1>Rug Size Selector Test Suite</h1>
-  <div id="testSummary" class="alert alert-success"><strong>ALL TESTS PASSED!</strong> 64 / 64 checks passed.</div>
+  <div id="testSummary" class="alert alert-success"><strong>ALL TESTS PASSED!</strong> 101 / 101 checks passed.</div>
   <div id="testResults">
           <div class="test-suite">
             <ol>
@@ -185,6 +185,16 @@
                 </li>
               
                 <li class="test-pass">
+                  ✓ Card 1 Medium: Price updated to $850
+                  <span class="text-muted small"> [$850]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 1 Medium: Image updated to isfahan rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/isfahan-silk-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
                   ✓ Card 1 Large: Price updated to $1,260
                   <span class="text-muted small"> [$1,260]</span>
                 </li>
@@ -192,6 +202,156 @@
                 <li class="test-pass">
                   ✓ Card 1 Large: Image updated to isfahan detail-2
                   <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/isfahan-silk-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Small: Price updated to $430
+                  <span class="text-muted small"> [$430]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Small: Image updated to atlas-berber detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/atlas-berber-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Medium: Price updated to $620
+                  <span class="text-muted small"> [$620]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Medium: Image updated to atlas-berber rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/atlas-berber-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Large: Price updated to $920
+                  <span class="text-muted small"> [$920]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 2 Large: Image updated to atlas-berber detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/atlas-berber-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Small: Price updated to $340
+                  <span class="text-muted small"> [$340]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Small: Image updated to nordic-geometric detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/nordic-geometric-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Medium: Price updated to $490
+                  <span class="text-muted small"> [$490]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Medium: Image updated to nordic-geometric rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/nordic-geometric-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Large: Price updated to $730
+                  <span class="text-muted small"> [$730]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 3 Large: Image updated to nordic-geometric detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/nordic-geometric-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Small: Price updated to $340
+                  <span class="text-muted small"> [$340]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Small: Image updated to oushak-runner detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/oushak-runner-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Medium: Price updated to $480
+                  <span class="text-muted small"> [$480]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Medium: Image updated to oushak-runner rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/oushak-runner-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Large: Price updated to $710
+                  <span class="text-muted small"> [$710]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 4 Large: Image updated to oushak-runner detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/oushak-runner-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Small: Price updated to $880
+                  <span class="text-muted small"> [$880]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Small: Image updated to caspian-silk detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/caspian-silk-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Medium: Price updated to $1,250
+                  <span class="text-muted small"> [$1,250]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Medium: Image updated to caspian-silk rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/caspian-silk-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Large: Price updated to $1,850
+                  <span class="text-muted small"> [$1,850]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 7 Large: Image updated to caspian-silk detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/caspian-silk-detail-2.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Small: Price updated to $220
+                  <span class="text-muted small"> [$220]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Small: Image updated to santorini-outdoor detail-1
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/santorini-outdoor-detail-1.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Medium: Price updated to $320
+                  <span class="text-muted small"> [$320]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Medium: Image updated to santorini-outdoor rug
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/santorini-outdoor-terrace-rug.jpg]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Large: Price updated to $470
+                  <span class="text-muted small"> [$470]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Card 8 Large: Image updated to santorini-outdoor detail-2
+                  <span class="text-muted small"> [file:///C:/Users/Karan/Downloads/Rug%20&amp;%20Carpet%20Store/assets/images/products/santorini-outdoor-detail-2.jpg]</span>
                 </li>
               
                 <li class="test-pass">
@@ -335,8 +495,33 @@
                 </li>
               
                 <li class="test-pass">
-                  ✓ Details Medium: Main image updated to medium image
-                  
+                  ✓ Header has position sticky
+                  <span class="text-muted small"> [sticky]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Header has top 0
+                  <span class="text-muted small"> [0px]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Header has z-index &gt;= 1020
+                  <span class="text-muted small"> [1040]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Body overflow-x is not hidden (which breaks sticky)
+                  <span class="text-muted small"> [visible]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ HTML overflow-x is not hidden (which breaks sticky)
+                  <span class="text-muted small"> [visible]</span>
+                </li>
+              
+                <li class="test-pass">
+                  ✓ Header width is 100%
+                  <span class="text-muted small"> [1186]</span>
                 </li>
               
             </ol>
@@ -413,8 +598,8 @@
       <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
         <div class="product-card w-100" id="productCard-2">
           <div class="product-thumb-box">
-            <a href="product-details.html?id=2&amp;size=medium" id="cardThumbLink-2" class="product-thumb-link" title="View Atlas Mountain Berber Wool Rug">
-              <img id="cardImg-2" src="assets/images/products/atlas-berber-rug.jpg" alt="Atlas Mountain Berber Wool Rug — Medium (8' × 10')" loading="lazy">
+            <a href="product-details.html?id=2&amp;size=large" id="cardThumbLink-2" class="product-thumb-link" title="View Atlas Mountain Berber Wool Rug">
+              <img id="cardImg-2" src="assets/images/products/atlas-berber-detail-2.jpg" alt="Atlas Mountain Berber Wool Rug — Large (9' × 12')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
             </a>
             <div class="product-badge-group">
               <span class="badge-luxury badge-luxury-gold">Artisan Crafted</span>
@@ -434,30 +619,30 @@
           <div class="product-info-box">
             <div class="product-category-tag">Handwoven Rugs • Wool</div>
             <h5 class="product-name">
-              <a href="product-details.html?id=2&amp;size=medium" id="cardTitleLink-2">Atlas Mountain Berber Wool Rug</a>
+              <a href="product-details.html?id=2&amp;size=large" id="cardTitleLink-2">Atlas Mountain Berber Wool Rug</a>
             </h5>
             
             <!-- Dynamic Small, Medium, Large Size Selector -->
             <div class="card-size-selector-group">
               <div class="card-size-selector-label">
                 <span>Select Dimension:</span>
-                <span class="card-size-val" id="cardSizeLabel-2">Medium (8' × 10')</span>
+                <span class="card-size-val" id="cardSizeLabel-2">Large (9' × 12')</span>
               </div>
               <div class="card-size-pills" id="cardSizePills-2" role="group" aria-label="Rug dimension selection">
-                <button type="button" class="card-size-pill " data-product-id="2" data-tier="small" onclick="selectCardSize(2, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
+                <button type="button" class="card-size-pill" data-product-id="2" data-tier="small" onclick="selectCardSize(2, 'small', event)" aria-pressed="false" title="Small: 6' × 9'">
                   Small
                 </button>
-                <button type="button" class="card-size-pill active" data-product-id="2" data-tier="medium" onclick="selectCardSize(2, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                <button type="button" class="card-size-pill" data-product-id="2" data-tier="medium" onclick="selectCardSize(2, 'medium', event)" aria-pressed="false" title="Medium: 8' × 10'">
                   Medium
                 </button>
-                <button type="button" class="card-size-pill " data-product-id="2" data-tier="large" onclick="selectCardSize(2, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                <button type="button" class="card-size-pill active" data-product-id="2" data-tier="large" onclick="selectCardSize(2, 'large', event)" aria-pressed="true" title="Large: 9' × 12'">
                   Large
                 </button>
               </div>
             </div>
 
             <div class="product-meta d-flex justify-content-between align-items-center">
-              <span id="cardMetaSize-2">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <span id="cardMetaSize-2">Size: <strong>9' × 12'</strong> <small class="text-muted">(Large)</small></span>
               <div class="rating-stars">
                 <i class="bi bi-star-fill"></i>
                 <span class="ms-1 fw-bold text-heading small">4.8</span>
@@ -466,9 +651,9 @@
             </div>
             
             <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
-              <span class="product-current-price" id="cardPrice-2">$620</span>
-              <span class="product-old-price" id="cardOldPrice-2" style="">$760</span>
-              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-2" style="">Save 18%</span>
+              <span class="product-current-price" id="cardPrice-2">$920</span>
+              <span class="product-old-price" id="cardOldPrice-2" style="display: inline;">$1,120</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-2" style="display: inline-block;">Save 18%</span>
             </div>
           </div>
         </div>
@@ -477,8 +662,8 @@
       <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
         <div class="product-card w-100" id="productCard-3">
           <div class="product-thumb-box">
-            <a href="product-details.html?id=3&amp;size=medium" id="cardThumbLink-3" class="product-thumb-link" title="View Nordic Geometric Wool Flatweave">
-              <img id="cardImg-3" src="assets/images/products/nordic-geometric-rug.jpg" alt="Nordic Geometric Wool Flatweave — Medium (8' × 10')" loading="lazy">
+            <a href="product-details.html?id=3&amp;size=large" id="cardThumbLink-3" class="product-thumb-link" title="View Nordic Geometric Wool Flatweave">
+              <img id="cardImg-3" src="assets/images/products/nordic-geometric-detail-2.jpg" alt="Nordic Geometric Wool Flatweave — Large (9' × 12')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
             </a>
             <div class="product-badge-group">
               <span class="badge-luxury badge-luxury-terracotta">Sale</span>
@@ -498,30 +683,30 @@
           <div class="product-info-box">
             <div class="product-category-tag">Modern Rugs • Wool</div>
             <h5 class="product-name">
-              <a href="product-details.html?id=3&amp;size=medium" id="cardTitleLink-3">Nordic Geometric Wool Flatweave</a>
+              <a href="product-details.html?id=3&amp;size=large" id="cardTitleLink-3">Nordic Geometric Wool Flatweave</a>
             </h5>
             
             <!-- Dynamic Small, Medium, Large Size Selector -->
             <div class="card-size-selector-group">
               <div class="card-size-selector-label">
                 <span>Select Dimension:</span>
-                <span class="card-size-val" id="cardSizeLabel-3">Medium (8' × 10')</span>
+                <span class="card-size-val" id="cardSizeLabel-3">Large (9' × 12')</span>
               </div>
               <div class="card-size-pills" id="cardSizePills-3" role="group" aria-label="Rug dimension selection">
-                <button type="button" class="card-size-pill " data-product-id="3" data-tier="small" onclick="selectCardSize(3, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                <button type="button" class="card-size-pill" data-product-id="3" data-tier="small" onclick="selectCardSize(3, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
                   Small
                 </button>
-                <button type="button" class="card-size-pill active" data-product-id="3" data-tier="medium" onclick="selectCardSize(3, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                <button type="button" class="card-size-pill" data-product-id="3" data-tier="medium" onclick="selectCardSize(3, 'medium', event)" aria-pressed="false" title="Medium: 8' × 10'">
                   Medium
                 </button>
-                <button type="button" class="card-size-pill " data-product-id="3" data-tier="large" onclick="selectCardSize(3, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                <button type="button" class="card-size-pill active" data-product-id="3" data-tier="large" onclick="selectCardSize(3, 'large', event)" aria-pressed="true" title="Large: 9' × 12'">
                   Large
                 </button>
               </div>
             </div>
 
             <div class="product-meta d-flex justify-content-between align-items-center">
-              <span id="cardMetaSize-3">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <span id="cardMetaSize-3">Size: <strong>9' × 12'</strong> <small class="text-muted">(Large)</small></span>
               <div class="rating-stars">
                 <i class="bi bi-star-fill"></i>
                 <span class="ms-1 fw-bold text-heading small">4.8</span>
@@ -530,9 +715,9 @@
             </div>
             
             <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
-              <span class="product-current-price" id="cardPrice-3">$490</span>
-              <span class="product-old-price" id="cardOldPrice-3" style="">$580</span>
-              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-3" style="">Save 16%</span>
+              <span class="product-current-price" id="cardPrice-3">$730</span>
+              <span class="product-old-price" id="cardOldPrice-3" style="display: inline;">$860</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-3" style="display: inline-block;">Save 15%</span>
             </div>
           </div>
         </div>
@@ -541,8 +726,8 @@
       <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
         <div class="product-card w-100" id="productCard-4">
           <div class="product-thumb-box">
-            <a href="product-details.html?id=4&amp;size=medium" id="cardThumbLink-4" class="product-thumb-link" title="View Oushak Heritage Botanical Runner">
-              <img id="cardImg-4" src="assets/images/products/oushak-runner-rug.jpg" alt="Oushak Heritage Botanical Runner — Medium (2.5' × 10')" loading="lazy">
+            <a href="product-details.html?id=4&amp;size=large" id="cardThumbLink-4" class="product-thumb-link" title="View Oushak Heritage Botanical Runner">
+              <img id="cardImg-4" src="assets/images/products/oushak-runner-detail-2.jpg" alt="Oushak Heritage Botanical Runner — Large (2.5' × 12')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
             </a>
             <div class="product-badge-group">
               <span class="badge-luxury badge-luxury-gold">Popular</span>
@@ -562,30 +747,30 @@
           <div class="product-info-box">
             <div class="product-category-tag">Runner Rugs • Wool</div>
             <h5 class="product-name">
-              <a href="product-details.html?id=4&amp;size=medium" id="cardTitleLink-4">Oushak Heritage Botanical Runner</a>
+              <a href="product-details.html?id=4&amp;size=large" id="cardTitleLink-4">Oushak Heritage Botanical Runner</a>
             </h5>
             
             <!-- Dynamic Small, Medium, Large Size Selector -->
             <div class="card-size-selector-group">
               <div class="card-size-selector-label">
                 <span>Select Dimension:</span>
-                <span class="card-size-val" id="cardSizeLabel-4">Medium (2.5' × 10')</span>
+                <span class="card-size-val" id="cardSizeLabel-4">Large (2.5' × 12')</span>
               </div>
               <div class="card-size-pills" id="cardSizePills-4" role="group" aria-label="Rug dimension selection">
-                <button type="button" class="card-size-pill " data-product-id="4" data-tier="small" onclick="selectCardSize(4, 'small', event)" aria-pressed="false" title="Small: 2.5' × 8'">
+                <button type="button" class="card-size-pill" data-product-id="4" data-tier="small" onclick="selectCardSize(4, 'small', event)" aria-pressed="false" title="Small: 2.5' × 8'">
                   Small
                 </button>
-                <button type="button" class="card-size-pill active" data-product-id="4" data-tier="medium" onclick="selectCardSize(4, 'medium', event)" aria-pressed="true" title="Medium: 2.5' × 10'">
+                <button type="button" class="card-size-pill" data-product-id="4" data-tier="medium" onclick="selectCardSize(4, 'medium', event)" aria-pressed="false" title="Medium: 2.5' × 10'">
                   Medium
                 </button>
-                <button type="button" class="card-size-pill " data-product-id="4" data-tier="large" onclick="selectCardSize(4, 'large', event)" aria-pressed="false" title="Large: 2.5' × 12'">
+                <button type="button" class="card-size-pill active" data-product-id="4" data-tier="large" onclick="selectCardSize(4, 'large', event)" aria-pressed="true" title="Large: 2.5' × 12'">
                   Large
                 </button>
               </div>
             </div>
 
             <div class="product-meta d-flex justify-content-between align-items-center">
-              <span id="cardMetaSize-4">Size: <strong>2.5' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <span id="cardMetaSize-4">Size: <strong>2.5' × 12'</strong> <small class="text-muted">(Large)</small></span>
               <div class="rating-stars">
                 <i class="bi bi-star-fill"></i>
                 <span class="ms-1 fw-bold text-heading small">4.9</span>
@@ -594,9 +779,9 @@
             </div>
             
             <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
-              <span class="product-current-price" id="cardPrice-4">$480</span>
-              <span class="product-old-price" id="cardOldPrice-4" style="">$560</span>
-              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-4" style="">Save 14%</span>
+              <span class="product-current-price" id="cardPrice-4">$710</span>
+              <span class="product-old-price" id="cardOldPrice-4" style="display: inline;">$830</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-4" style="display: inline-block;">Save 14%</span>
             </div>
           </div>
         </div>
@@ -733,8 +918,8 @@
       <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
         <div class="product-card w-100" id="productCard-7">
           <div class="product-thumb-box">
-            <a href="product-details.html?id=7&amp;size=medium" id="cardThumbLink-7" class="product-thumb-link" title="View Caspian Hand-Knotted Silk Rug">
-              <img id="cardImg-7" src="assets/images/products/caspian-silk-rug.jpg" alt="Caspian Hand-Knotted Silk Rug — Medium (9' × 12')" loading="lazy">
+            <a href="product-details.html?id=7&amp;size=large" id="cardThumbLink-7" class="product-thumb-link" title="View Caspian Hand-Knotted Silk Rug">
+              <img id="cardImg-7" src="assets/images/products/caspian-silk-detail-2.jpg" alt="Caspian Hand-Knotted Silk Rug — Large (10' × 14')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
             </a>
             <div class="product-badge-group">
               <span class="badge-luxury badge-luxury-gold">Masterpiece</span>
@@ -754,30 +939,30 @@
           <div class="product-info-box">
             <div class="product-category-tag">Traditional Rugs • Silk</div>
             <h5 class="product-name">
-              <a href="product-details.html?id=7&amp;size=medium" id="cardTitleLink-7">Caspian Hand-Knotted Silk Rug</a>
+              <a href="product-details.html?id=7&amp;size=large" id="cardTitleLink-7">Caspian Hand-Knotted Silk Rug</a>
             </h5>
             
             <!-- Dynamic Small, Medium, Large Size Selector -->
             <div class="card-size-selector-group">
               <div class="card-size-selector-label">
                 <span>Select Dimension:</span>
-                <span class="card-size-val" id="cardSizeLabel-7">Medium (9' × 12')</span>
+                <span class="card-size-val" id="cardSizeLabel-7">Large (10' × 14')</span>
               </div>
               <div class="card-size-pills" id="cardSizePills-7" role="group" aria-label="Rug dimension selection">
-                <button type="button" class="card-size-pill " data-product-id="7" data-tier="small" onclick="selectCardSize(7, 'small', event)" aria-pressed="false" title="Small: 8' × 10'">
+                <button type="button" class="card-size-pill" data-product-id="7" data-tier="small" onclick="selectCardSize(7, 'small', event)" aria-pressed="false" title="Small: 8' × 10'">
                   Small
                 </button>
-                <button type="button" class="card-size-pill active" data-product-id="7" data-tier="medium" onclick="selectCardSize(7, 'medium', event)" aria-pressed="true" title="Medium: 9' × 12'">
+                <button type="button" class="card-size-pill" data-product-id="7" data-tier="medium" onclick="selectCardSize(7, 'medium', event)" aria-pressed="false" title="Medium: 9' × 12'">
                   Medium
                 </button>
-                <button type="button" class="card-size-pill " data-product-id="7" data-tier="large" onclick="selectCardSize(7, 'large', event)" aria-pressed="false" title="Large: 10' × 14'">
+                <button type="button" class="card-size-pill active" data-product-id="7" data-tier="large" onclick="selectCardSize(7, 'large', event)" aria-pressed="true" title="Large: 10' × 14'">
                   Large
                 </button>
               </div>
             </div>
 
             <div class="product-meta d-flex justify-content-between align-items-center">
-              <span id="cardMetaSize-7">Size: <strong>9' × 12'</strong> <small class="text-muted">(Medium)</small></span>
+              <span id="cardMetaSize-7">Size: <strong>10' × 14'</strong> <small class="text-muted">(Large)</small></span>
               <div class="rating-stars">
                 <i class="bi bi-star-fill"></i>
                 <span class="ms-1 fw-bold text-heading small">5</span>
@@ -786,9 +971,9 @@
             </div>
             
             <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
-              <span class="product-current-price" id="cardPrice-7">$1,250</span>
-              <span class="product-old-price" id="cardOldPrice-7" style="">$1,500</span>
-              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-7" style="">Save 17%</span>
+              <span class="product-current-price" id="cardPrice-7">$1,850</span>
+              <span class="product-old-price" id="cardOldPrice-7" style="display: inline;">$2,220</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-7" style="display: inline-block;">Save 17%</span>
             </div>
           </div>
         </div>
@@ -797,8 +982,8 @@
       <div class="col-lg-4 col-md-6 col-sm-6 mb-4 d-flex align-items-stretch">
         <div class="product-card w-100" id="productCard-8">
           <div class="product-thumb-box">
-            <a href="product-details.html?id=8&amp;size=medium" id="cardThumbLink-8" class="product-thumb-link" title="View Santorini Terrace Diamond Outdoor Rug">
-              <img id="cardImg-8" src="assets/images/products/santorini-outdoor-terrace-rug.jpg" alt="Santorini Terrace Diamond Outdoor Rug — Medium (8' × 10')" loading="lazy">
+            <a href="product-details.html?id=8&amp;size=large" id="cardThumbLink-8" class="product-thumb-link" title="View Santorini Terrace Diamond Outdoor Rug">
+              <img id="cardImg-8" src="assets/images/products/santorini-outdoor-detail-2.jpg" alt="Santorini Terrace Diamond Outdoor Rug — Large (9' × 12')" loading="lazy" style="transition: opacity 0.22s; opacity: 1;">
             </a>
             <div class="product-badge-group">
               <span class="badge-luxury badge-luxury-terracotta">Weatherproof</span>
@@ -818,30 +1003,30 @@
           <div class="product-info-box">
             <div class="product-category-tag">Outdoor Rugs • Natural Fibers</div>
             <h5 class="product-name">
-              <a href="product-details.html?id=8&amp;size=medium" id="cardTitleLink-8">Santorini Terrace Diamond Outdoor Rug</a>
+              <a href="product-details.html?id=8&amp;size=large" id="cardTitleLink-8">Santorini Terrace Diamond Outdoor Rug</a>
             </h5>
             
             <!-- Dynamic Small, Medium, Large Size Selector -->
             <div class="card-size-selector-group">
               <div class="card-size-selector-label">
                 <span>Select Dimension:</span>
-                <span class="card-size-val" id="cardSizeLabel-8">Medium (8' × 10')</span>
+                <span class="card-size-val" id="cardSizeLabel-8">Large (9' × 12')</span>
               </div>
               <div class="card-size-pills" id="cardSizePills-8" role="group" aria-label="Rug dimension selection">
-                <button type="button" class="card-size-pill " data-product-id="8" data-tier="small" onclick="selectCardSize(8, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
+                <button type="button" class="card-size-pill" data-product-id="8" data-tier="small" onclick="selectCardSize(8, 'small', event)" aria-pressed="false" title="Small: 5' × 8'">
                   Small
                 </button>
-                <button type="button" class="card-size-pill active" data-product-id="8" data-tier="medium" onclick="selectCardSize(8, 'medium', event)" aria-pressed="true" title="Medium: 8' × 10'">
+                <button type="button" class="card-size-pill" data-product-id="8" data-tier="medium" onclick="selectCardSize(8, 'medium', event)" aria-pressed="false" title="Medium: 8' × 10'">
                   Medium
                 </button>
-                <button type="button" class="card-size-pill " data-product-id="8" data-tier="large" onclick="selectCardSize(8, 'large', event)" aria-pressed="false" title="Large: 9' × 12'">
+                <button type="button" class="card-size-pill active" data-product-id="8" data-tier="large" onclick="selectCardSize(8, 'large', event)" aria-pressed="true" title="Large: 9' × 12'">
                   Large
                 </button>
               </div>
             </div>
 
             <div class="product-meta d-flex justify-content-between align-items-center">
-              <span id="cardMetaSize-8">Size: <strong>8' × 10'</strong> <small class="text-muted">(Medium)</small></span>
+              <span id="cardMetaSize-8">Size: <strong>9' × 12'</strong> <small class="text-muted">(Large)</small></span>
               <div class="rating-stars">
                 <i class="bi bi-star-fill"></i>
                 <span class="ms-1 fw-bold text-heading small">4.8</span>
@@ -850,9 +1035,9 @@
             </div>
             
             <div class="product-price-box d-flex align-items-center flex-wrap gap-2">
-              <span class="product-current-price" id="cardPrice-8">$320</span>
-              <span class="product-old-price" id="cardOldPrice-8" style="">$390</span>
-              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-8" style="">Save 18%</span>
+              <span class="product-current-price" id="cardPrice-8">$470</span>
+              <span class="product-old-price" id="cardOldPrice-8" style="display: inline;">$580</span>
+              <span class="badge bg-danger-subtle text-danger small fw-semibold px-2 py-0.5 rounded-pill card-discount-badge" id="cardDiscount-8" style="display: inline-block;">Save 19%</span>
             </div>
           </div>
         </div>
@@ -1461,16 +1646,89 @@
         assert('Card 14 Large: Detail link updated to size=large', p14ThumbLink.href.includes('size=large'));
         assert('Card 14 Large: Large pill is active', largePill.classList.contains('active') && largePill.getAttribute('aria-pressed') === 'true');
 
-        // 3. Test another product: Product 1 (Isfahan Silk)
+        // 3. Test Product 1 (Isfahan Silk) Small, Medium, Large
         const p1 = window.PRODUCTS_DATA.find(p => p.id === 1);
         const p1Price = document.getElementById('cardPrice-1');
         const p1Img = document.getElementById('cardImg-1');
         window.selectCardSize(1, 'small');
         assert('Card 1 Small: Price updated to $' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.small.price.toLocaleString(), p1Price.textContent);
         assert('Card 1 Small: Image updated to isfahan detail-1', p1Img.src.includes('isfahan-silk-detail-1'), p1Img.src);
+        window.selectCardSize(1, 'medium');
+        assert('Card 1 Medium: Price updated to $' + p1.sizesData.medium.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.medium.price.toLocaleString(), p1Price.textContent);
+        assert('Card 1 Medium: Image updated to isfahan rug', p1Img.src.includes('isfahan-silk-rug'), p1Img.src);
         window.selectCardSize(1, 'large');
         assert('Card 1 Large: Price updated to $' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent === '$' + p1.sizesData.large.price.toLocaleString(), p1Price.textContent);
         assert('Card 1 Large: Image updated to isfahan detail-2', p1Img.src.includes('isfahan-silk-detail-2'), p1Img.src);
+
+        // 4. Test Product 2 (Atlas Mountain Berber) Small, Medium, Large
+        const p2 = window.PRODUCTS_DATA.find(p => p.id === 2);
+        const p2Price = document.getElementById('cardPrice-2');
+        const p2Img = document.getElementById('cardImg-2');
+        window.selectCardSize(2, 'small');
+        assert('Card 2 Small: Price updated to $' + p2.sizesData.small.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.small.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Small: Image updated to atlas-berber detail-1', p2Img.src.includes('atlas-berber-detail-1'), p2Img.src);
+        window.selectCardSize(2, 'medium');
+        assert('Card 2 Medium: Price updated to $' + p2.sizesData.medium.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.medium.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Medium: Image updated to atlas-berber rug', p2Img.src.includes('atlas-berber-rug'), p2Img.src);
+        window.selectCardSize(2, 'large');
+        assert('Card 2 Large: Price updated to $' + p2.sizesData.large.price.toLocaleString(), p2Price.textContent === '$' + p2.sizesData.large.price.toLocaleString(), p2Price.textContent);
+        assert('Card 2 Large: Image updated to atlas-berber detail-2', p2Img.src.includes('atlas-berber-detail-2'), p2Img.src);
+
+        // 5. Test Product 3 (Nordic Geometric Flatweave) Small, Medium, Large
+        const p3 = window.PRODUCTS_DATA.find(p => p.id === 3);
+        const p3Price = document.getElementById('cardPrice-3');
+        const p3Img = document.getElementById('cardImg-3');
+        window.selectCardSize(3, 'small');
+        assert('Card 3 Small: Price updated to $' + p3.sizesData.small.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.small.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Small: Image updated to nordic-geometric detail-1', p3Img.src.includes('nordic-geometric-detail-1'), p3Img.src);
+        window.selectCardSize(3, 'medium');
+        assert('Card 3 Medium: Price updated to $' + p3.sizesData.medium.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.medium.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Medium: Image updated to nordic-geometric rug', p3Img.src.includes('nordic-geometric-rug'), p3Img.src);
+        window.selectCardSize(3, 'large');
+        assert('Card 3 Large: Price updated to $' + p3.sizesData.large.price.toLocaleString(), p3Price.textContent === '$' + p3.sizesData.large.price.toLocaleString(), p3Price.textContent);
+        assert('Card 3 Large: Image updated to nordic-geometric detail-2', p3Img.src.includes('nordic-geometric-detail-2'), p3Img.src);
+
+        // 6. Test Product 4 (Oushak Heritage Botanical Runner) Small, Medium, Large
+        const p4 = window.PRODUCTS_DATA.find(p => p.id === 4);
+        const p4Price = document.getElementById('cardPrice-4');
+        const p4Img = document.getElementById('cardImg-4');
+        window.selectCardSize(4, 'small');
+        assert('Card 4 Small: Price updated to $' + p4.sizesData.small.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.small.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Small: Image updated to oushak-runner detail-1', p4Img.src.includes('oushak-runner-detail-1'), p4Img.src);
+        window.selectCardSize(4, 'medium');
+        assert('Card 4 Medium: Price updated to $' + p4.sizesData.medium.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.medium.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Medium: Image updated to oushak-runner rug', p4Img.src.includes('oushak-runner-rug'), p4Img.src);
+        window.selectCardSize(4, 'large');
+        assert('Card 4 Large: Price updated to $' + p4.sizesData.large.price.toLocaleString(), p4Price.textContent === '$' + p4.sizesData.large.price.toLocaleString(), p4Price.textContent);
+        assert('Card 4 Large: Image updated to oushak-runner detail-2', p4Img.src.includes('oushak-runner-detail-2'), p4Img.src);
+
+        // 7. Test Product 7 (Caspian Hand-Knotted Silk Rug) Small, Medium, Large
+        const p7 = window.PRODUCTS_DATA.find(p => p.id === 7);
+        const p7Price = document.getElementById('cardPrice-7');
+        const p7Img = document.getElementById('cardImg-7');
+        window.selectCardSize(7, 'small');
+        assert('Card 7 Small: Price updated to $' + p7.sizesData.small.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.small.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Small: Image updated to caspian-silk detail-1', p7Img.src.includes('caspian-silk-detail-1'), p7Img.src);
+        window.selectCardSize(7, 'medium');
+        assert('Card 7 Medium: Price updated to $' + p7.sizesData.medium.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.medium.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Medium: Image updated to caspian-silk rug', p7Img.src.includes('caspian-silk-rug'), p7Img.src);
+        window.selectCardSize(7, 'large');
+        assert('Card 7 Large: Price updated to $' + p7.sizesData.large.price.toLocaleString(), p7Price.textContent === '$' + p7.sizesData.large.price.toLocaleString(), p7Price.textContent);
+        assert('Card 7 Large: Image updated to caspian-silk detail-2', p7Img.src.includes('caspian-silk-detail-2'), p7Img.src);
+
+        // 8. Test Product 8 (Santorini Terrace Diamond Outdoor Rug) Small, Medium, Large
+        const p8 = window.PRODUCTS_DATA.find(p => p.id === 8);
+        const p8Price = document.getElementById('cardPrice-8');
+        const p8Img = document.getElementById('cardImg-8');
+        window.selectCardSize(8, 'small');
+        assert('Card 8 Small: Price updated to $' + p8.sizesData.small.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.small.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Small: Image updated to santorini-outdoor detail-1', p8Img.src.includes('santorini-outdoor-detail-1'), p8Img.src);
+        window.selectCardSize(8, 'medium');
+        assert('Card 8 Medium: Price updated to $' + p8.sizesData.medium.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.medium.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Medium: Image updated to santorini-outdoor rug', p8Img.src.includes('santorini-outdoor-terrace-rug'), p8Img.src);
+        window.selectCardSize(8, 'large');
+        assert('Card 8 Large: Price updated to $' + p8.sizesData.large.price.toLocaleString(), p8Price.textContent === '$' + p8.sizesData.large.price.toLocaleString(), p8Price.textContent);
+        assert('Card 8 Large: Image updated to santorini-outdoor detail-2', p8Img.src.includes('santorini-outdoor-detail-2'), p8Img.src);
 
         // ==========================================
         // SUITE 3: Cart / Add to Shopping Bag Verification
@@ -1539,11 +1797,25 @@
         // Switch to Medium
         window.selectProductDetailTier('medium', false);
         assert('Details Medium: Price updated to $300 USD', document.getElementById('pdPrice').textContent === '$300 USD', document.getElementById('pdPrice').textContent);
-        assert('Details Medium: Main image updated to medium image', document.getElementById('mainProductImage').src.includes('scandinavian-cotton-medium') || document.getElementById('mainProductImage').src.includes('nordic-flatweave-rug'));
+        // ==========================================
+        // SUITE 5: Sticky Navigation Bar Verification
+        // ==========================================
+        const testHeader = document.createElement('header');
+        testHeader.className = 'site-header sticky-top';
+        testHeader.innerHTML = '<div class="container"><nav class="navbar"><a class="navbar-brand">Test Brand</a></nav></div>';
+        document.body.prepend(testHeader);
 
-        // ==========================================
-        // Render Summary
-        // ==========================================
+        const hStyle = window.getComputedStyle(testHeader);
+        const bStyle = window.getComputedStyle(document.body);
+        const htmlStyle = window.getComputedStyle(document.documentElement);
+
+        assert('Header has position sticky', hStyle.position === 'sticky', hStyle.position);
+        assert('Header has top 0', hStyle.top === '0px', hStyle.top);
+        assert('Header has z-index >= 1020', parseInt(hStyle.zIndex, 10) >= 1020, hStyle.zIndex);
+        assert('Body overflow-x is not hidden (which breaks sticky)', bStyle.overflowX !== 'hidden', bStyle.overflowX);
+        assert('HTML overflow-x is not hidden (which breaks sticky)', htmlStyle.overflowX !== 'hidden', htmlStyle.overflowX);
+        assert('Header width is 100%', hStyle.width.includes('%') || testHeader.offsetWidth > 300, testHeader.offsetWidth);
+
         const passedCount = results.filter(r => r.pass).length;
         const totalCount = results.length;
         const allPassed = passedCount === totalCount;
