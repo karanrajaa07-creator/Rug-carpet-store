@@ -115,7 +115,7 @@ img {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: visible;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -126,7 +126,7 @@ body {
   color: var(--text-body);
   line-height: 1.65;
   font-size: 1rem;
-  overflow-x: visible;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -411,14 +411,41 @@ header.sticky-top {
   border-bottom: 1px solid rgba(197, 168, 128, 0.18);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
   padding: 0.62rem 0;
-  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+  transform: translateY(0);
+  will-change: transform, padding, background-color, box-shadow, border-color;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Smart Sticky Navbar: Auto-hide on scroll down, reveal smoothly on scroll up */
+.site-header.is-hidden,
+header.sticky-top.is-hidden {
+  transform: translateY(-100%) !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* Keep navbar visible if dropdown or mobile menu is active */
+.site-header:has(.navbar-collapse.show),
+.site-header:has(.dropdown-menu.show),
+header.sticky-top:has(.navbar-collapse.show),
+header.sticky-top:has(.dropdown-menu.show) {
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure utility page headers retain their background while staying sticky */
+header.sticky-top.bg-surface {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-heading) !important;
+}
+
 /* Sticky / Scrolled State Enhancement */
-.site-header.is-scrolled {
+.site-header.is-scrolled,
+header.sticky-top.is-scrolled {
   padding: 0.38rem 0;
   background-color: rgba(20, 18, 15, 0.98) !important;
   backdrop-filter: blur(20px) saturate(200%);
@@ -427,6 +454,11 @@ header.sticky-top {
               0 4px 12px -2px rgba(0, 0, 0, 0.35), 
               0 1px 0 rgba(197, 168, 128, 0.22) !important;
   border-bottom: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+header.sticky-top.bg-surface.is-scrolled {
+  background-color: var(--bg-surface-elevated) !important;
+  box-shadow: var(--shadow-md) !important;
 }
 
 .site-header .navbar {
@@ -831,11 +863,13 @@ header.sticky-top {
 /* --- 6. HERO SECTIONS --- */
 .hero-home-1 {
   position: relative;
-  min-height: 88vh;
+  min-height: calc(100vh - var(--header-height, 84px));
+  min-height: calc(100dvh - var(--header-height, 84px));
   display: flex;
   align-items: center;
   background: radial-gradient(circle at 85% 25%, var(--color-sand-soft) 0%, transparent 55%), radial-gradient(circle at 15% 85%, var(--color-terracotta-soft) 0%, transparent 50%), var(--bg-body);
-  padding: 5rem 0 4rem;
+  padding: clamp(1.75rem, 3.5vh, 3.25rem) 0 clamp(1.5rem, 3vh, 2.75rem);
+  box-sizing: border-box;
   overflow: hidden;
 }
 .hero-badge {
@@ -851,7 +885,7 @@ header.sticky-top {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
   animation: heroBadgeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -864,11 +898,11 @@ header.sticky-top {
 }
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 4.5vw, 4.1rem);
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
   font-weight: 700;
   line-height: 1.15;
   color: var(--text-heading);
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
   letter-spacing: -0.5px;
   word-break: normal;
   overflow-wrap: break-word;
@@ -886,19 +920,19 @@ header.sticky-top {
   display: inline;
 }
 .hero-lead {
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: clamp(0.95rem, 1.05vw, 1.075rem);
+  line-height: 1.65;
   color: var(--text-body);
   max-width: 540px;
-  margin-bottom: 2.25rem;
+  margin-bottom: clamp(1rem, 2.2vh, 1.75rem);
   animation: heroLeadIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
 }
 .hero-btn-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: clamp(0.6rem, 1vw, 0.85rem);
+  margin-bottom: clamp(1.1rem, 2.4vh, 1.85rem);
   animation: heroBtnIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
 }
 .hero-btn-group .btn {
@@ -912,8 +946,8 @@ header.sticky-top {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
-  padding-top: 1.5rem;
+  gap: clamp(1rem, 1.6vw, 1.5rem);
+  padding-top: clamp(0.85rem, 1.8vh, 1.25rem);
   border-top: 1px solid var(--border-subtle);
   animation: heroMetricsIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
 }
@@ -940,7 +974,7 @@ header.sticky-top {
 }
 .hero-visual-container {
   position: relative;
-  padding: 1.5rem;
+  padding: clamp(0.5rem, 1.2vw, 1rem);
 }
 .hero-visual-frame {
   position: relative;
@@ -958,7 +992,9 @@ header.sticky-top {
 }
 .hero-visual-frame img {
   width: 100%;
-  height: 520px;
+  height: clamp(320px, 46vh, 460px);
+  max-height: calc(100vh - var(--header-height, 84px) - 6rem);
+  max-height: calc(100dvh - var(--header-height, 84px) - 6rem);
   object-fit: cover;
   display: block;
   transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
@@ -968,15 +1004,15 @@ header.sticky-top {
 }
 .hero-card-float-top {
   position: absolute;
-  top: 0.5rem;
-  right: -0.75rem;
+  top: 0.25rem;
+  right: -0.5rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.1rem;
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(12px);
-  max-width: 250px;
+  max-width: 240px;
   z-index: 5;
   animation: cardEntranceTop 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both, floatSlowTop 6s ease-in-out infinite 1.5s;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -987,15 +1023,15 @@ header.sticky-top {
 }
 .hero-card-float-bottom {
   position: absolute;
-  bottom: 0.5rem;
-  left: -0.75rem;
+  bottom: 0.25rem;
+  left: -0.5rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.1rem;
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(12px);
-  max-width: 280px;
+  max-width: 270px;
   z-index: 5;
   animation: cardEntranceBottom 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both, floatSlowBottom 6s ease-in-out infinite 1.65s;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -1135,15 +1171,56 @@ header.sticky-top {
 
 .hero-home-2 {
   position: relative;
-  min-height: 90vh;
+  min-height: calc(100vh - var(--header-height, 84px));
+  min-height: calc(100dvh - var(--header-height, 84px));
   display: flex;
   align-items: center;
-  background-color: var(--bg-dark-accent);
-  color: #FAF7F2;
-  padding: 5rem 0;
+  background: radial-gradient(circle at 85% 25%, var(--color-sand-soft) 0%, transparent 55%), radial-gradient(circle at 15% 85%, var(--color-terracotta-soft) 0%, transparent 50%), var(--bg-body);
+  color: var(--text-body);
+  padding: clamp(1.75rem, 3.5vh, 3.25rem) 0 clamp(1.5rem, 3vh, 2.75rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+.hero-home-2 .hero-badge-h2,
+.hero-home-2 .badge {
+  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
+}
+.hero-home-2 .hero-title-h2,
+.hero-home-2 h1 {
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  line-height: 1.15;
+  color: var(--text-heading);
+  margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
+  letter-spacing: -0.5px;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 .hero-home-2 .hero-lead {
-  color: #D4CBC2;
+  color: var(--text-body);
+  font-size: clamp(0.95rem, 1.05vw, 1.075rem);
+  line-height: 1.65;
+  margin-bottom: clamp(1.1rem, 2.4vh, 1.85rem);
+}
+.hero-home-2 .hero-visual-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero-home-2 .hero-visual-img {
+  width: 100%;
+  height: clamp(300px, 44vh, 440px);
+  max-height: calc(100vh - var(--header-height, 84px) - 6rem);
+  max-height: calc(100dvh - var(--header-height, 84px) - 6rem);
+  object-fit: cover;
+  display: block;
+}
+.hero-home-2 .hero-floating-card {
+  position: absolute;
+  bottom: 1.25rem;
+  left: -1rem;
+  padding: 0.9rem 1.25rem;
 }
 
 /* Category / Style Cards (Browse by Style) */
@@ -3105,6 +3182,19 @@ header.sticky-top {
 [data-theme="dark"] .lead {
   color: var(--text-body) !important;
 }
+
+/* Hero Home 2 Dark Mode Contrast & Legibility */
+[data-theme="dark"] .hero-home-2 {
+  background: radial-gradient(circle at 85% 25%, rgba(197, 168, 128, 0.08) 0%, transparent 55%), radial-gradient(circle at 15% 85%, rgba(224, 135, 108, 0.08) 0%, transparent 50%), var(--bg-dark-accent);
+  color: #FAF7F2;
+}
+[data-theme="dark"] .hero-home-2 .hero-title-h2,
+[data-theme="dark"] .hero-home-2 h1 {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .hero-home-2 .hero-lead {
+  color: #EDE4DA !important;
+}
 [data-theme="dark"] .text-light {
   color: #EDE4DA !important;
 }
@@ -4472,14 +4562,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   background-repeat: no-repeat;
 }
 
-/* Light Theme Contrast & Balanced Visibility for Shop Hero Banner */
-.page-hero-banner.hero-products::before {
-  background: linear-gradient(
-    100deg,
-    rgba(250, 246, 240, 0.72) 0%,
-    rgba(247, 242, 234, 0.46) 48%,
-    rgba(243, 236, 226, 0.16) 100%
-  );
+/* Balanced Center Scrim for Centered Shop & Contact Hero Banners */
+.page-hero-banner.hero-products::before,
+.page-hero-banner.hero-contact::before {
+  background: radial-gradient(circle at 50% 50%, rgba(250, 246, 240, 0.88) 0%, rgba(247, 242, 234, 0.75) 55%, rgba(243, 236, 226, 0.60) 100%),
+              linear-gradient(180deg, rgba(250, 246, 240, 0.65) 0%, rgba(247, 242, 234, 0.55) 100%);
 }
 
 .page-hero-banner.hero-products .section-tag {
@@ -4500,6 +4587,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   font-weight: 500;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.6);
   max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .page-hero-banner.hero-products .breadcrumb-item a {
@@ -4543,8 +4633,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-shadow: 0 4px 14px rgba(26, 23, 20, 0.25);
 }
 
-/* Directional Scrim for Left-Aligned Hero Banners (Products, Wishlist, Service Details) */
-.page-hero-banner.hero-products::before,
+/* Directional Scrim for Left-Aligned Hero Banners (Wishlist, Service Details) */
 .page-hero-banner.hero-wishlist::before,
 .page-hero-banner.hero-service-details::before {
   background: linear-gradient(
@@ -4555,8 +4644,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   );
 }
 
-/* Dark Theme Overrides for Shop Hero Banner */
-[data-theme="dark"] .page-hero-banner.hero-products::before,
 [data-theme="dark"] .page-hero-banner.hero-wishlist::before,
 [data-theme="dark"] .page-hero-banner.hero-service-details::before {
   background: linear-gradient(
@@ -4565,6 +4652,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     rgba(22, 19, 16, 0.50) 50%,
     rgba(26, 23, 20, 0.22) 100%
   );
+}
+
+/* Dark Theme Overrides for Centered Shop & Contact Hero Banners */
+[data-theme="dark"] .page-hero-banner.hero-products::before,
+[data-theme="dark"] .page-hero-banner.hero-contact::before {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 14, 12, 0.90) 0%, rgba(22, 19, 16, 0.78) 55%, rgba(16, 14, 12, 0.68) 100%),
+              linear-gradient(180deg, rgba(16, 14, 12, 0.70) 0%, rgba(22, 19, 16, 0.70) 100%);
 }
 
 [data-theme="dark"] .page-hero-banner.hero-products .section-tag {

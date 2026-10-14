@@ -511,12 +511,12 @@
               
                 <li class="test-pass">
                   ✓ Body overflow-x is not hidden (which breaks sticky)
-                  <span class="text-muted small"> [visible]</span>
+                  <span class="text-muted small"> [clip]</span>
                 </li>
               
                 <li class="test-pass">
                   ✓ HTML overflow-x is not hidden (which breaks sticky)
-                  <span class="text-muted small"> [visible]</span>
+                  <span class="text-muted small"> [clip]</span>
                 </li>
               
                 <li class="test-pass">

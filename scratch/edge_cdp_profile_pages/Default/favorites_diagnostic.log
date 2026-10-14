@@ -1,0 +1,19 @@
+2026-10-14 12:36:34.717: [INFO] CurrentProfilePath: C:\Users\Karan\Downloads\Rug & Carpet Store\scratch\edge_cdp_profile_pages\Default
+2026-10-14 12:36:34.717: [INFO] Profiles total count: 1
+2026-10-14 12:36:34.717: [INFO] Profile: name=Profile 1 path=C:\Users\Karan\Downloads\Rug & Carpet Store\scratch\edge_cdp_profile_pages\Default lastActive=null
+2026-10-14 12:36:34.717: [INFO] LastUsedProfileDir: C:\Users\Karan\Downloads\Rug & Carpet Store\scratch\edge_cdp_profile_pages\Default
+2026-10-14 12:36:34.717: [INFO] VisibilityChanged: 0
+2026-10-14 12:36:34.791: [INFO] OnDoneLoading sync enabled: 0
+2026-10-14 12:36:34.791: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-14 12:36:34.791: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-14 12:36:34.791: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-14 12:36:34.798: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-14 12:36:37.483: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-14 12:36:37.497: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-14 12:36:37.509: [INFO] Primary account changed.
+2026-10-14 12:36:37.509: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-10-14 12:36:37.546: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-14 12:36:37.775: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-14 12:36:43.246: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-14 12:36:43.247: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-14 12:36:45.524: [INFO] Sync initialization duration: 7524ms

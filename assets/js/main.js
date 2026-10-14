@@ -8,20 +8,51 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. STICKY HEADER & BACK-TO-TOP BUTTON
-    const header = document.querySelector('.site-header');
+    // 1. SMART STICKY HEADER & BACK-TO-TOP BUTTON
+    const header = document.querySelector('.site-header, header.sticky-top');
     const backToTopBtn = document.getElementById('backToTopBtn');
 
     let isScrollTicking = false;
+    let lastScrollY = Math.max(0, window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0);
+    const scrollThreshold = 15;
+    const hideThreshold = 80;
+    const scrollDeltaThreshold = 6;
+
     const updateHeaderOnScroll = () => {
-      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+      const scrollY = Math.max(0, window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0);
+      const deltaY = scrollY - lastScrollY;
+
       if (header) {
-        if (scrollY > 15) {
+        // Toggle compact scrolled styling
+        if (scrollY > scrollThreshold) {
           header.classList.add('is-scrolled');
         } else {
           header.classList.remove('is-scrolled');
         }
+
+        // Check if any navigation dropdown or mobile menu is currently open
+        const isMenuOpen = header.querySelector('.navbar-collapse.show, .dropdown-menu.show') !== null;
+
+        // Smart Sticky Behavior:
+        // Always reveal header when at or near top of page
+        if (scrollY <= hideThreshold) {
+          header.classList.remove('is-hidden');
+        } else if (!isMenuOpen) {
+          // Scrolling down past hero threshold: hide navbar to maximize view area
+          if (deltaY > scrollDeltaThreshold && scrollY > hideThreshold) {
+            header.classList.add('is-hidden');
+          }
+          // Scrolling up: reveal navbar smoothly for quick access
+          else if (deltaY < -scrollDeltaThreshold) {
+            header.classList.remove('is-hidden');
+          }
+        } else {
+          // Keep visible while menu is expanded
+          header.classList.remove('is-hidden');
+        }
       }
+
+      lastScrollY = scrollY;
 
       if (backToTopBtn) {
         if (scrollY > 300) {
@@ -42,12 +73,31 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('orientationchange', onScroll, { passive: true });
     updateHeaderOnScroll();
+
+    if (header) {
+      // Accessibility: Reveal header immediately when keyboard focus enters navigation
+      header.addEventListener('focusin', () => {
+        header.classList.remove('is-hidden');
+      });
+
+      // Mobile toggler: Reveal header when user interacts with menu toggler
+      const toggler = header.querySelector('.navbar-toggler');
+      if (toggler) {
+        toggler.addEventListener('click', () => {
+          header.classList.remove('is-hidden');
+        });
+      }
+    }
 
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (header) {
+          header.classList.remove('is-hidden');
+        }
       });
     }
 

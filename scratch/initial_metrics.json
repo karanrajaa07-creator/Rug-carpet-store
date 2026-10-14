@@ -1,0 +1,219 @@
+[
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 1890,
+      "h": 985
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 1875,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 946,
+      "height": 867,
+      "paddingTop": 80,
+      "paddingBottom": 64,
+      "fitsInInitialViewport": true,
+      "overflowBeyondViewport": -39
+    },
+    "titleBottom": 508,
+    "leadBottom": 628,
+    "buttonsBottom": 771,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 866,
+    "visualBottom": 806,
+    "imgHeight": 489
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 1410,
+      "h": 805
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 1395,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 867,
+      "height": 788,
+      "paddingTop": 80,
+      "paddingBottom": 64,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 62
+    },
+    "titleBottom": 472,
+    "leadBottom": 582,
+    "buttonsBottom": 726,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 821,
+    "visualBottom": 767,
+    "imgHeight": 489
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 1336,
+      "h": 673
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 1321,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 933,
+      "height": 854,
+      "paddingTop": 80,
+      "paddingBottom": 64,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 260
+    },
+    "titleBottom": 537,
+    "leadBottom": 648,
+    "buttonsBottom": 792,
+    "buttonsFitsInViewport": false,
+    "metricsBottom": 887,
+    "visualBottom": 800,
+    "imgHeight": 489
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 1250,
+      "h": 705
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 1235,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 845,
+      "height": 766,
+      "paddingTop": 80,
+      "paddingBottom": 64,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 140
+    },
+    "titleBottom": 450,
+    "leadBottom": 560,
+    "buttonsBottom": 704,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 799,
+    "visualBottom": 756,
+    "imgHeight": 489
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 738,
+      "h": 929
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 723,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 1099,
+      "height": 1021,
+      "paddingTop": 40,
+      "paddingBottom": 48,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 170
+    },
+    "titleBottom": 292,
+    "leadBottom": 402,
+    "buttonsBottom": 546,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 641,
+    "visualBottom": 1051,
+    "imgHeight": 338
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 504,
+      "h": 749
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 489,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 980,
+      "height": 901,
+      "paddingTop": 32,
+      "paddingBottom": 40,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 231
+    },
+    "titleBottom": 235,
+    "leadBottom": 341,
+    "buttonsBottom": 536,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 616,
+    "visualBottom": 940,
+    "imgHeight": 295
+  },
+  {
+    "page": "index.html",
+    "viewport": {
+      "w": 504,
+      "h": 572
+    },
+    "hasHorizontalOverflow": false,
+    "scrollWidth": 489,
+    "headerHeight": 79,
+    "hero": {
+      "top": 79,
+      "bottom": 980,
+      "height": 901,
+      "paddingTop": 32,
+      "paddingBottom": 40,
+      "fitsInInitialViewport": false,
+      "overflowBeyondViewport": 408
+    },
+    "titleBottom": 228,
+    "leadBottom": 325,
+    "buttonsBottom": 519,
+    "buttonsFitsInViewport": true,
+    "metricsBottom": 599,
+    "visualBottom": 940,
+    "imgHeight": 302
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "desktop_1920x1080",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "desktop_1440x900",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "desktop_1366x768",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "desktop_1280x800",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "tablet_768x1024",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "mobile_390x844",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  },
+  {
+    "page": "home-2.html",
+    "viewport": "mobile_375x667",
+    "error": "spawnSync C:\\WINDOWS\\system32\\cmd.exe ETIMEDOUT"
+  }
+]
